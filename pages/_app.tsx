@@ -1,8 +1,14 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { Stitches } from "@nsfw/ui";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  // Stitches `globalCss` modules
+  Stitches.globals.base();
+  Stitches.globals.fonts();
+  Stitches.globals.scrollbar();
+
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
