@@ -1,4 +1,4 @@
-import { Stitches, Text, Icon, Button, Flex, Heading } from '@nsfw/ui'
+import { Stitches, Text, Icon, Button, Flex, Heading } from '@nsfw-app/ui'
 import { spaces } from 'config'
 
 import { GridContent, GridSection } from 'components/GridLayout'

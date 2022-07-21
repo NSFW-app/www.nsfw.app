@@ -1,4 +1,4 @@
-import { Stitches, Section } from '@nsfw/ui'
+import { Stitches, Section } from '@nsfw-app/ui'
 
 /**
  * GridSection

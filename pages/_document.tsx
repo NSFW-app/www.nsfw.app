@@ -1,23 +1,23 @@
-import React from "react";
-import NextDocument, { Html, Head, Main, NextScript } from "next/document";
-import { Stitches } from "@nsfw/ui";
+import React from 'react'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import { Stitches } from '@nsfw-app/ui'
 
 export default class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en">
+      <Html lang='en'>
         <Head>
           <style
-            id="stitches"
+            id='stitches'
             dangerouslySetInnerHTML={{ __html: Stitches.getCssText() }}
           />
         </Head>
-        <body style={{ position: "relative" }}>
+        <body style={{ position: 'relative' }}>
           {/* TODO: this is a requirement for @nfsw/ui modals, review this for lib consumers */}
           <div
-            id="modal-container"
+            id='modal-container'
             style={{
-              position: "absolute",
+              position: 'absolute',
               top: 0,
               right: 0,
               bottom: 0,
@@ -28,6 +28,6 @@ export default class Document extends NextDocument {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }

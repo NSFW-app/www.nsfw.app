@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { Squash as Hamburger } from 'hamburger-react'
 
-import { Stitches, Text, Icons } from '@nsfw/ui'
+import { Stitches, Text, Icons } from '@nsfw-app/ui'
 
 import { spaces, sizes, links, AppRoutes } from 'config'
 

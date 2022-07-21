@@ -1,5 +1,5 @@
 import { AppRoutes } from 'config/routes'
-import { IconProps } from '@nsfw/ui'
+import { IconProps } from '@nsfw-app/ui'
 
 interface NavigationLink {
   title: string
@@ -14,7 +14,8 @@ export const links: NavigationLink[] = [
 
   {
     title: 'Creators',
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSdDneYo-3R552Q_mCRwIZ6xpZMtZVQbrjLbODQOruELeSoswA/viewform',
+    href:
+      'https://docs.google.com/forms/d/e/1FAIpQLSdDneYo-3R552Q_mCRwIZ6xpZMtZVQbrjLbODQOruELeSoswA/viewform',
   },
   {
     title: 'FAQs',

@@ -1,4 +1,12 @@
-import { Stitches, Grid, Flex, Text, Heading, Icon, IconProps } from '@nsfw/ui'
+import {
+  Stitches,
+  Grid,
+  Flex,
+  Text,
+  Heading,
+  Icon,
+  IconProps,
+} from '@nsfw-app/ui'
 import { Link } from 'components/Link'
 
 export interface CardProps {

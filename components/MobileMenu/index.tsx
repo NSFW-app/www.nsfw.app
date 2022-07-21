@@ -1,4 +1,4 @@
-import { Stitches, Flex, Text } from '@nsfw/ui'
+import { Stitches, Flex, Text } from '@nsfw-app/ui'
 
 import { links, sizes, spaces } from 'config'
 import { LaunchButton } from 'components/LaunchButton'

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { Stitches, Flex, Heading } from '@nsfw/ui'
+import { Stitches, Flex, Heading } from '@nsfw-app/ui'
 
 import { spaces } from 'config'
 import { SerializedFAQ } from 'lib/cms/queries/faqs'
@@ -39,7 +39,7 @@ interface Props {
   filterValues: string[]
 }
 
-// TODO: should this be in @nsfw/ui ?
+// TODO: should this be in @nsfw-app/ui ?
 
 export const Accordion: React.FC<Props> = ({ data, filterValues }) => {
   const [items, setItems] = useState<SerializedFAQ[]>(data)

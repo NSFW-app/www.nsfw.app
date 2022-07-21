@@ -1,4 +1,4 @@
-import { Stitches, Box } from '@nsfw/ui'
+import { Stitches, Box } from '@nsfw-app/ui'
 
 interface GridColumns {
   tablet: string

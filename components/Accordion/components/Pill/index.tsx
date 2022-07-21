@@ -1,5 +1,5 @@
 import { ComponentProps } from '@stitches/react'
-import { Stitches, Text } from '@nsfw/ui'
+import { Stitches, Text } from '@nsfw-app/ui'
 
 interface Props extends ComponentProps<typeof Text> {
   active?: boolean

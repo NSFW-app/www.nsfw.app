@@ -1,7 +1,7 @@
 import { Layout } from 'components/Layout'
 import { OperationResult } from 'urql'
 import { serialize } from 'next-mdx-remote/serialize'
-import { Flex, Heading, Text } from '@nsfw/ui'
+import { Flex, Heading, Text } from '@nsfw-app/ui'
 
 import { sizes, spaces } from 'config'
 import { SerializedFAQ, FAQs, FAQsResponse } from 'lib/cms/queries/faqs'

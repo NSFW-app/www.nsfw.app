@@ -2,7 +2,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { animated, useTransition } from '@react-spring/web'
 
 import { spaces } from 'config'
-import { Anchor, Text } from '@nsfw/ui'
+import { Anchor, Text } from '@nsfw-app/ui'
 
 interface Props {
   id: string

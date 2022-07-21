@@ -8,7 +8,7 @@ import {
   Flex,
   Icon,
   Anchor,
-} from '@nsfw/ui'
+} from '@nsfw-app/ui'
 
 import { FOOTER_LINKS, FOOTER_SOCIAL_LINKS } from 'config'
 import { Link } from 'components/Link'

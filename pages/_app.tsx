@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { Stitches } from "@nsfw/ui";
+import { Stitches } from "@nsfw-app/ui";
 
 function MyApp({ Component, pageProps }: AppProps) {
   // Stitches `globalCss` modules

@@ -1,5 +1,5 @@
 {
-  "name": "marketing",
+  "name": "@nsfw-app/marketing",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -14,9 +14,10 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^2.1.2",
+    "@mdx-js/react": "^2.1.2",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@next/mdx": "^12.2.2",
-    "@nsfw/ui": "file:.yalc/@nsfw/ui",
+    "@nsfw-app/ui": "^1.0.0",
     "@react-spring/web": "^9.5.0",
     "@stitches/react": "^1.2.8",
     "graphql": "^16.5.0",

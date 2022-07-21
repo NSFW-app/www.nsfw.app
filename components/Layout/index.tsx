@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Stitches, Box } from '@nsfw/ui'
+import { Stitches, Box } from '@nsfw-app/ui'
 import Nexthead from 'next/head'
 import { SITE_DOMAIN } from 'config'
 import { Navigation } from 'components/Navigation'

@@ -1,5 +1,5 @@
 import NextImage from 'next/image'
-import { Box, Flex } from '@nsfw/ui'
+import { Box, Flex } from '@nsfw-app/ui'
 import { GridContent, GridSection } from 'components/GridLayout'
 
 export const HeroImageSection = () => {

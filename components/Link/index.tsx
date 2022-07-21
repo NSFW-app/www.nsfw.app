@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import NextJsLink, { LinkProps as NextJsLinkProps } from 'next/link'
 import { ComponentProps } from '@stitches/react'
-import { Anchor } from '@nsfw/ui'
+import { Anchor } from '@nsfw-app/ui'
 
 export type LinkProps = NextJsLinkProps &
   ComponentProps<typeof Anchor> & { disabled?: boolean }

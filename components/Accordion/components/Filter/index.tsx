@@ -1,5 +1,5 @@
 import { sizes, spaces } from 'config'
-import { Flex, Heading, Text } from '@nsfw/ui'
+import { Flex, Heading, Text } from '@nsfw-app/ui'
 import { Pill } from '../Pill'
 
 interface Props {

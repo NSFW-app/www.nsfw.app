@@ -1,4 +1,4 @@
-import { Stitches, Button } from '@nsfw/ui'
+import { Stitches, Button } from '@nsfw-app/ui'
 
 interface Props extends Stitches.ComponentProps<typeof Button> {
   onLaunch?: () => void

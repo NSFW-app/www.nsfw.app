@@ -1,4 +1,4 @@
-import { Grid, Stitches } from '@nsfw/ui'
+import { Grid, Stitches } from '@nsfw-app/ui'
 import { GridContent, GridSection } from 'components/GridLayout'
 
 import { Card } from 'components/Card'
