@@ -810,8 +810,8 @@
 
 "@nsfw-app/ui@^1.0.0":
   version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@nsfw-app/ui/1.0.0/6976a970438731a9bb64fd56610e07a9259c98639969afb44f2e5e6b6de87597#7f26a6430f5a211755d6b2a15f468c8a0b37b10c"
-  integrity sha512-KO4LtZwVboz3jznkvfwrrFHUfL9LonPOg9NLW7Hx0GW04+YxsibSrWFP5ks1J1x1Gz/pQoRhgOM9D8jjPFPoGw==
+  resolved "https://npm.pkg.github.com/download/@nsfw-app/ui/1.0.0/260a8097747a2dbb2c29531fbba8b05f754f17e2e77bac6c9f0395b1a6e99b31#6a47f6db1bcba3cfc3a88a1259db1c981655ed85"
+  integrity sha512-cJZB4me7042a7ZzSskKD9HtQgsPxfA+5bDFTv2EQ5Ynp8vIkM0DiqqWt4M+SnINnQ7OPC2tuT60/TAjDcvQSww==
   dependencies:
     "@mantine/core" "^4.2.6"
     "@mantine/dates" "^4.2.6"
