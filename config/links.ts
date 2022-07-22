@@ -1,25 +1,24 @@
-import { AppRoutes } from 'config/routes'
+import { APP_ROUTES } from 'config/routes'
 import { IconProps } from '@nsfw-app/ui'
 
 interface NavigationLink {
   title: string
   href: string
+  target?: string
 }
 
 export const links: NavigationLink[] = [
   {
     title: 'Features',
-    href: '#',
+    href: `${APP_ROUTES.HOME}#features`,
   },
-
   {
     title: 'Creators',
-    href:
-      'https://docs.google.com/forms/d/e/1FAIpQLSdDneYo-3R552Q_mCRwIZ6xpZMtZVQbrjLbODQOruELeSoswA/viewform',
+    href: APP_ROUTES.CREATORS,
   },
   {
     title: 'FAQs',
-    href: AppRoutes.FAQ,
+    href: APP_ROUTES.FAQ,
   },
 ]
 

@@ -1,7 +1,8 @@
 import { Stitches, Text, Icon, Button, Flex, Heading } from '@nsfw-app/ui'
-import { spaces } from 'config'
+import { APP_ROUTES, spaces } from 'config'
 
 import { GridContent, GridSection } from 'components/GridLayout'
+import { Link } from 'components/Link'
 
 const HeroFlex = Stitches.styled(Flex, {
   height: '100vh',
@@ -21,10 +22,6 @@ export const HeroSection = () => {
     console.log('handleFeatures')
   }
 
-  const handleGetStarted = () => {
-    console.log('handleGetStarted')
-  }
-
   return (
     <GridSection>
       <GridContent
@@ -34,18 +31,24 @@ export const HeroSection = () => {
         }}
       >
         <HeroFlex center column>
-          {/* <Text type='body2' css={{ marginBottom: spaces[4] }}>
-            Open Public Beta
-          </Text> */}
           <Heading css={{ marginBottom: spaces[3] }}>
-            Goodbye censorship. Hello freedom.
+            Goodbye censored content. Hello privacy.
           </Heading>
+          <Text
+            type='body1'
+            subText
+            css={{ marginBottom: spaces[1], '@md': { width: '80%' } }}
+          >
+            Explore & enjoy your favourite uncensored kinks & fetishes from
+            global creators with the added bonus of total privacy with Crypto
+            payments.
+          </Text>
           <Text
             type='body1'
             subText
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
-            We empower creators and their communities using Web3 technology.
+            Show your love by following, tipping, subscribing & PPVs.
           </Text>
           <Flex
             fullWidth
@@ -57,17 +60,18 @@ export const HeroSection = () => {
               },
             }}
           >
-            <Button theme='primary' css={buttonCss} onClick={handleFeatures}>
+            <Link button theme='primary' css={buttonCss} href='#features'>
               Features
-            </Button>
-            <Button
+            </Link>
+            <Link
+              button
               theme='secondary'
               css={buttonCss}
-              onClick={handleGetStarted}
+              href={APP_ROUTES.ADMIRER_SIGNUP}
             >
-              <p style={{ margin: 0 }}>Get started</p>
-              <Icon icon='Arrow' css={{ paddingLeft: spaces[1] }} />
-            </Button>
+              Get started
+              <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />
+            </Link>
           </Flex>
         </HeroFlex>
       </GridContent>

@@ -10,7 +10,7 @@ import {
 import { Link } from 'components/Link'
 
 export interface CardProps {
-  icon: IconProps['icon']
+  icon?: IconProps['icon']
   heading: string
   body: string
   primaryLink?: string
@@ -18,7 +18,7 @@ export interface CardProps {
 }
 
 export const Card: React.FC<Stitches.CSSProp & CardProps> = ({
-  icon,
+  icon = 'Asterisk',
   heading,
   body,
   primaryLink,

@@ -1,8 +1,7 @@
 import { Grid, Stitches } from '@nsfw-app/ui'
 import { GridContent, GridSection } from 'components/GridLayout'
 
-import { Card } from 'components/Card'
-import { data } from './data'
+import { Card, CardProps } from 'components/Card'
 
 const InnerGrid = Stitches.styled(Grid, {
   gridGap: '16px',
@@ -12,9 +11,14 @@ const InnerGrid = Stitches.styled(Grid, {
   },
 })
 
-export const CardSection: React.FC = () => {
+interface CardSectionProps {
+  features: CardProps[]
+}
+
+export const CardSection: React.FC<CardSectionProps> = ({ features }) => {
   return (
     <GridSection
+      id='features'
       css={{
         backgroundColor: '$gray500',
         paddingTop: '100px',
@@ -29,7 +33,7 @@ export const CardSection: React.FC = () => {
         css={{ backgroundColor: 'transparent' }}
       >
         <InnerGrid>
-          {data.map((card, i) => (
+          {features.map((card, i) => (
             <Card
               key={`${i}-${card.primaryLink}`}
               icon={card.icon}

@@ -1,0 +1,2 @@
+export const GRAPHCMS_CONTENT_API_URL =
+  process.env.NEXT_GRAPHCMS_CONTENT_API_URL ?? ''

@@ -4,7 +4,7 @@ import { Squash as Hamburger } from 'hamburger-react'
 
 import { Stitches, Text, Icons } from '@nsfw-app/ui'
 
-import { spaces, sizes, links, AppRoutes } from 'config'
+import { spaces, sizes, links, APP_ROUTES } from 'config'
 
 import { MobileMenu } from 'components/MobileMenu'
 import { LaunchButton } from 'components/LaunchButton'
@@ -99,18 +99,17 @@ export const Navigation = () => {
     <>
       <Container css={containerStyles}>
         <LeftSection>
-          <Link href={AppRoutes.HOME}>
+          <Link href={APP_ROUTES.HOME}>
             <Icons.LogoGradient css={{ width: 150, height: 90 }} />
           </Link>
         </LeftSection>
         <MiddleSection css={{ justifyContent: 'center', alignItems: 'center' }}>
           {links.map((link) => (
-            <a
+            <Link
               key={link.title}
               href={link.href}
               style={{ textDecoration: 'none' }}
-              target={link.title == links[2].title ? '_blank' : ''}
-              rel='noreferrer'
+              target={link.target ?? ''}
             >
               <Text
                 type='body2'
@@ -118,7 +117,7 @@ export const Navigation = () => {
               >
                 {link.title}
               </Text>
-            </a>
+            </Link>
           ))}
         </MiddleSection>
         <RightSection>

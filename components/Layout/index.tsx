@@ -69,7 +69,7 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta content='summary_large_image' name='twitter:card' />
       </Nexthead>
       <Navigation />
-      <Box css={{ minHeight: '100vh', ...css }}>{children}</Box>
+      <Box css={css}>{children}</Box>
       <Footer />
     </Box>
   )
