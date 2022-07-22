@@ -1,9 +1,11 @@
-import { Stitches, Flex, Text } from '@nsfw-app/ui'
+import { useRouter } from 'next/router'
+import { Stitches, Flex, Text, Nav } from '@nsfw-app/ui'
 
-import { links, sizes, spaces } from 'config'
+import { APP_ROUTES, sizes, spaces } from 'config'
 import { LaunchButton } from 'components/LaunchButton'
+import { Link } from 'components/Link'
 
-const Container = Stitches.styled('div', {
+const Container = Stitches.styled(Nav, {
   background: Stitches.theme.colors.gray300,
   position: 'fixed',
   top: 0,
@@ -17,12 +19,17 @@ const Container = Stitches.styled('div', {
   },
 })
 
+const NavLinkText = Stitches.styled(Text, {
+  margin: `${spaces[2]} 0`,
+})
+
 interface Props {
   visible: boolean
   handleAction: () => void
 }
 
 export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
+  const { asPath } = useRouter()
   return (
     <Container css={{ display: visible ? 'block' : 'none' }}>
       <Flex
@@ -34,23 +41,17 @@ export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
           paddingTop: sizes.navigationHeight,
         }}
       >
-        <div>
-          {links.map((link) => (
-            <a
-              key={link.title}
-              href={link.href}
-              style={{ textDecoration: 'none' }}
-              onClick={handleAction}
-            >
-              <Text
-                type='body1'
-                css={{ margin: `${sizes.navigationItemMargin} 0` }}
-              >
-                {link.title}
-              </Text>
-            </a>
-          ))}
-        </div>
+        <Flex column transparent>
+          <Link nounderline href={`${asPath}#features`} onClick={handleAction}>
+            <NavLinkText type='body1'>Features</NavLinkText>
+          </Link>
+          <Link nounderline href={APP_ROUTES.CREATORS} onClick={handleAction}>
+            <NavLinkText type='body1'>Creators</NavLinkText>
+          </Link>
+          <Link nounderline href={APP_ROUTES.FAQ} onClick={handleAction}>
+            <NavLinkText type='body1'>FAQs</NavLinkText>
+          </Link>
+        </Flex>
         <LaunchButton
           css={{ margin: `${spaces[2]} 0` }}
           onLaunch={handleAction}

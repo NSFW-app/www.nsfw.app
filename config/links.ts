@@ -1,26 +1,5 @@
-import { APP_ROUTES } from 'config/routes'
 import { IconProps } from '@nsfw-app/ui'
-
-interface NavigationLink {
-  title: string
-  href: string
-  target?: string
-}
-
-export const links: NavigationLink[] = [
-  {
-    title: 'Features',
-    href: `${APP_ROUTES.HOME}#features`,
-  },
-  {
-    title: 'Creators',
-    href: APP_ROUTES.CREATORS,
-  },
-  {
-    title: 'FAQs',
-    href: APP_ROUTES.FAQ,
-  },
-]
+import { APP_ROUTES } from 'config/routes'
 
 export const FOOTER_LINKS = [
   { name: 'About', href: APP_ROUTES.ABOUT },

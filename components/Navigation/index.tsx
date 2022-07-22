@@ -2,15 +2,16 @@ import { useState } from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { Squash as Hamburger } from 'hamburger-react'
 
-import { Stitches, Text, Icons } from '@nsfw-app/ui'
+import { Stitches, Text, Icons, Nav, Box, Flex } from '@nsfw-app/ui'
 
-import { spaces, sizes, links, APP_ROUTES } from 'config'
+import { spaces, sizes, APP_ROUTES } from 'config'
 
 import { MobileMenu } from 'components/MobileMenu'
 import { LaunchButton } from 'components/LaunchButton'
 import { Link } from 'components/Link'
+import { useRouter } from 'next/router'
 
-const Container = Stitches.styled('nav', {
+const Container = Stitches.styled(Nav, {
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   alignItems: 'center',
@@ -31,34 +32,40 @@ const Container = Stitches.styled('nav', {
   zIndex: Stitches.theme.zIndices.layerThree,
 })
 
-const LeftSection = Stitches.styled('div', {
+const LeftSection = Stitches.styled(Box, {
+  backgroundColor: 'transparent',
   justifySelf: 'start',
 })
 
-const MiddleSection = Stitches.styled('div', {
+const MiddleSection = Stitches.styled(Box, {
   display: 'none',
-  background: 'transparent',
+  backgroundColor: 'transparent',
   '@lg': {
     display: 'flex',
   },
 })
 
-const RightSection = Stitches.styled('div', {
+const RightSection = Stitches.styled(Flex, {
   justifySelf: 'end',
-  display: 'flex',
   alignItems: 'center',
+  backgroundColor: 'transparent',
 })
 
-const ToggleContainer = Stitches.styled('div', {
+const ToggleContainer = Stitches.styled(Box, {
   cursor: 'pointer',
   display: 'block',
-  background: 'transparent',
+  backgroundColor: 'transparent',
   '@lg': {
     display: 'none',
   },
 })
 
+const NavLinkText = Stitches.styled(Text, {
+  margin: `0 ${sizes.navigationItemMargin}`,
+})
+
 export const Navigation = () => {
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -104,21 +111,15 @@ export const Navigation = () => {
           </Link>
         </LeftSection>
         <MiddleSection css={{ justifyContent: 'center', alignItems: 'center' }}>
-          {links.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              style={{ textDecoration: 'none' }}
-              target={link.target ?? ''}
-            >
-              <Text
-                type='body2'
-                css={{ margin: `0 ${sizes.navigationItemMargin}` }}
-              >
-                {link.title}
-              </Text>
-            </Link>
-          ))}
+          <Link nounderline href={`${router.pathname}#features`}>
+            <NavLinkText type='body2'>Features</NavLinkText>
+          </Link>
+          <Link nounderline href={APP_ROUTES.CREATORS}>
+            <NavLinkText type='body2'>Creators</NavLinkText>
+          </Link>
+          <Link nounderline href={APP_ROUTES.FAQ}>
+            <NavLinkText type='body2'>FAQs</NavLinkText>
+          </Link>
         </MiddleSection>
         <RightSection>
           <LaunchButton

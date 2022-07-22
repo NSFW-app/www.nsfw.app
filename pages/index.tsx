@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { Layout } from 'components/Layout'
-import { HeroSection } from 'components/HeroSection'
+import { HeroSection } from 'components/FansHeroSection'
 import { HeroImageSection } from 'components/HeroImageSection'
 import { CardSection } from 'components/CardSection'
 import { CardProps } from 'components/Card'

@@ -12,4 +12,5 @@ export const APP_ROUTES = {
   PRIVACY_POLICY: '/privacy-policy',
   APP: APP_SITE_DOMAIN,
   ADMIRER_SIGNUP: `${APP_SITE_DOMAIN}/signup`,
+  CREATOR_SIGNUP: `${APP_SITE_DOMAIN}/signup?accountType=creator`,
 }
