@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Layout } from 'components/Layout'
 import { CreatorsHeroSection } from 'components/CreatorsHeroSection'
-import { HeroImageSection } from 'components/HeroImageSection'
+import { CreatorEarningsSection } from 'components/CreatorEarningsSection'
 import { CardSection } from 'components/CardSection'
 import { CardProps } from 'components/Card'
 
@@ -37,7 +37,7 @@ const CreatorsLanding: NextPage = () => {
   return (
     <Layout>
       <CreatorsHeroSection />
-      <HeroImageSection />
+      <CreatorEarningsSection />
       <CardSection features={features} />
     </Layout>
   )

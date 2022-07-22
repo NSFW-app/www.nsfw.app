@@ -3,7 +3,6 @@ import { APP_ROUTES, spaces } from 'config'
 
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
-import { useRouter } from 'next/router'
 
 const HeroFlex = Stitches.styled(Flex, {
   height: '100vh',
@@ -19,10 +18,6 @@ const buttonCss = {
 }
 
 export const CreatorsHeroSection = () => {
-  const handleFeatures = () => {
-    console.log('handleFeatures')
-  }
-
   return (
     <GridSection>
       <GridContent

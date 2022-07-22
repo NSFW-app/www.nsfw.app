@@ -4,6 +4,7 @@ import { HeroSection } from 'components/FansHeroSection'
 import { HeroImageSection } from 'components/HeroImageSection'
 import { CardSection } from 'components/CardSection'
 import { CardProps } from 'components/Card'
+import { CreatorEarningsSection } from 'components/CreatorEarningsSection'
 
 export const features: CardProps[] = [
   {

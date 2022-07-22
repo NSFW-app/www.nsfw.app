@@ -37,7 +37,7 @@ const LeftSection = Stitches.styled(Box, {
   justifySelf: 'start',
 })
 
-const MiddleSection = Stitches.styled(Box, {
+const MiddleSection = Stitches.styled(Flex, {
   display: 'none',
   backgroundColor: 'transparent',
   '@lg': {
@@ -110,7 +110,7 @@ export const Navigation = () => {
             <Icons.LogoGradient css={{ width: 150, height: 90 }} />
           </Link>
         </LeftSection>
-        <MiddleSection css={{ justifyContent: 'center', alignItems: 'center' }}>
+        <MiddleSection center>
           <Link nounderline href={`${router.pathname}#features`}>
             <NavLinkText type='body2'>Features</NavLinkText>
           </Link>
