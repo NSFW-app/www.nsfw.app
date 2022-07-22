@@ -22,7 +22,6 @@ const FAQPage = ({ data, filterValues }: FAQProps) => {
             tablet: '2 / 8',
             desktop: '3 / 11',
           }}
-          css={{ minHeight: `calc(100vh - ${sizes.footerHeight})` }}
         >
           <Flex
             center
