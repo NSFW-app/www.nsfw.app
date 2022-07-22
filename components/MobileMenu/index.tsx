@@ -29,7 +29,7 @@ interface Props {
 }
 
 export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
-  const { asPath } = useRouter()
+  const router = useRouter()
   return (
     <Container css={{ display: visible ? 'block' : 'none' }}>
       <Flex
@@ -42,7 +42,11 @@ export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
         }}
       >
         <Flex column transparent>
-          <Link nounderline href={`${asPath}#features`} onClick={handleAction}>
+          <Link
+            nounderline
+            href={`${router.pathname}#features`}
+            onClick={handleAction}
+          >
             <NavLinkText type='body1'>Features</NavLinkText>
           </Link>
           <Link nounderline href={APP_ROUTES.CREATORS} onClick={handleAction}>
