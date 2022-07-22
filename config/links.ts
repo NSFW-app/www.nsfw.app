@@ -23,8 +23,9 @@ export const links: NavigationLink[] = [
 ]
 
 export const FOOTER_LINKS = [
-  { name: 'Privacy Policy', href: '/privacy-policy' },
-  { name: 'Contact Us', href: 'mailto:support@nsfw.app' },
+  { name: 'About', href: APP_ROUTES.ABOUT },
+  { name: 'Contact', href: 'mailto:support@nsfw.app' },
+  { name: 'Privacy Policy', href: APP_ROUTES.PRIVACY_POLICY },
 ]
 
 interface FooterSocialLink {

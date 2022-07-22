@@ -1,0 +1,55 @@
+import { MDXProvider } from '@mdx-js/react'
+import { Stitches, Button, Text, Heading } from '@nsfw-app/ui'
+import { META_TITLE_SUFFIX } from 'config'
+import { Layout } from 'components/Layout'
+
+# About us
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis quam. Vestibulum ut tempor mi. Nulla mattis eget risus at venenatis. Duis libero nulla, tincidunt nec urna et, posuere maximus ipsum. Ut dignissim lorem at aliquet semper. Curabitur faucibus tortor lectus, porta facilisis sem dictum nec. Nunc egestas velit vitae ex interdum sagittis. Maecenas vestibulum mauris libero, ac consequat ligula egestas a. Nullam mauris turpis, consequat sit amet nulla vel, facilisis aliquet lorem.
+
+Aenean bibendum vestibulum lectus quis eleifend. Duis sagittis malesuada vehicula. Phasellus malesuada pellentesque mauris et varius. Etiam ante est, malesuada non tellus sit amet, accumsan venenatis odio. Vivamus gravida, neque eu aliquet volutpat, leo dui vestibulum est, sit amet bibendum nisl ante placerat mauris. Nulla sit amet dui lobortis, porttitor nunc nec, suscipit arcu. Sed quis elit a tellus euismod scelerisque. Aliquam fringilla nibh ac enim fermentum condimentum. Maecenas maximus erat euismod, tincidunt lectus ac, fringilla orci.
+
+Etiam hendrerit at turpis quis auctor. Duis euismod at ligula non placerat. Duis quis eros nec urna rutrum malesuada posuere sed dui. Fusce at erat nibh. Aliquam vel nibh egestas, semper quam sit amet, facilisis neque. Cras vel purus at est porttitor porttitor at ut nibh. Quisque sit amet aliquam libero, et interdum ligula. Etiam id molestie mi. Proin a tortor diam. Donec tristique nisi id mi mattis, eu efficitur orci placerat. Phasellus eget accumsan ligula. Ut porttitor elit nisi, sed sodales diam venenatis quis.
+
+export default ({ children }) => (
+  <Layout
+    metaTitle={`About us${META_TITLE_SUFFIX}`}
+    css={{
+      maxWidth: Stitches.theme.container.maxWidth,
+      margin: '0 auto',
+      padding: '200px 16px 24px 16px',
+    }}
+  >
+    <MDXProvider
+      components={{
+        h1: (props) => (
+          <Heading
+            {...props}
+            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+          />
+        ),
+        h2: (props) => (
+          <Heading
+            {...props}
+            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+          />
+        ),
+        h3: (props) => (
+          <Heading
+            {...props}
+            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+          />
+        ),
+        p: (props) => (
+          <Text
+            {...props}
+            subText
+            css={{ fontSize: '14px', margin: '24px 0' }}
+          />
+        ),
+      }}
+    >
+      {children}
+    </MDXProvider>
+  </Layout>
+)

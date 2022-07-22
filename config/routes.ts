@@ -9,6 +9,7 @@ export const APP_ROUTES = {
   CREATORS: '/creators',
   FAQ: '/faq',
   ABOUT: '/about-us',
+  PRIVACY_POLICY: '/privacy-policy',
   APP: APP_SITE_DOMAIN,
   ADMIRER_SIGNUP: `${APP_SITE_DOMAIN}/signup`,
 }
