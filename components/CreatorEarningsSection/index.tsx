@@ -4,7 +4,7 @@ import { GridContent, GridSection } from 'components/GridLayout'
 
 export const CreatorEarningsSection = () => {
   return (
-    <GridSection css={{ overflowX: 'auto', paddingBottom: '64px' }}>
+    <GridSection id='fees' css={{ overflowX: 'auto', padding: '128px 0' }}>
       <GridContent
         columns={{
           tablet: '2 / 8',
@@ -12,8 +12,10 @@ export const CreatorEarningsSection = () => {
         }}
       >
         <Flex column css={{ padding: '24px 8px' }}>
-          <Heading as='h2'>Earnings</Heading>
-          <Text subText>Some text about earning heaps of red rockets</Text>
+          <Heading as='h2'>Fees</Heading>
+          <Text subText>
+            Keep 100% of your earnings with <strong>0% fees.</strong>
+          </Text>
           <CreatorEarningsTable />
         </Flex>
       </GridContent>

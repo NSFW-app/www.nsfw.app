@@ -69,6 +69,8 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
+  const isCreatorPage = router.pathname === APP_ROUTES.CREATORS
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
@@ -111,12 +113,17 @@ export const Navigation = () => {
           </Link>
         </LeftSection>
         <MiddleSection center transparent>
+          <Link nounderline href={`${router.pathname}#fees`}>
+            <NavLinkText type='body2'>Fees</NavLinkText>
+          </Link>
           <Link nounderline href={`${router.pathname}#features`}>
             <NavLinkText type='body2'>Features</NavLinkText>
           </Link>
-          <Link nounderline href={APP_ROUTES.CREATORS}>
-            <NavLinkText type='body2'>Creators</NavLinkText>
-          </Link>
+          {!isCreatorPage && (
+            <Link nounderline href={APP_ROUTES.CREATORS}>
+              <NavLinkText type='body2'>Creators</NavLinkText>
+            </Link>
+          )}
           <Link nounderline href={APP_ROUTES.FAQ}>
             <NavLinkText type='body2'>FAQs</NavLinkText>
           </Link>
