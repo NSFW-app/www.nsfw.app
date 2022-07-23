@@ -2,7 +2,7 @@ import { Flex, Heading, Text } from '@nsfw-app/ui'
 import { CreatorEarningsTable } from 'components/CreatorEarningsTable'
 import { GridContent, GridSection } from 'components/GridLayout'
 
-export const CreatorEarningsSection = () => {
+export const CreatorFeesSection = () => {
   return (
     <GridSection id='fees' css={{ overflowX: 'auto', padding: '128px 0' }}>
       <GridContent

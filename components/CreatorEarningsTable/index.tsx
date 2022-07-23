@@ -52,7 +52,9 @@ const EarningsHeaderRow = Stitches.styled(EarningsCell, {
 })
 
 export const CreatorEarningsTable = () => {
+  // TODO: fix SSR
   const isDesktop = useIsDesktopSize()
+
   return (
     <EarningsGrid css={{ marginTop: '24px' }}>
       <EarningsHeaderRow css={{ gridColumn: '2/-1' }}>
