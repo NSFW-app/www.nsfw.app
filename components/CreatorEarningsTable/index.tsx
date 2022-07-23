@@ -10,7 +10,7 @@ const ROW_DATA = [
   ['$7,500.00', '$7,500.00', '$6,000.00', '$4,875.00', '$3,750.00'],
   ['$10,000.00', '$10,000.00', '$8,000.00', '$6,500.00', '$5,000.00'],
 ]
-const BASE_HIGHLIGHT_COLOR = '#1a024cc7'
+const BASE_HIGHLIGHT_COLOR = '#220e4c'
 const INCREMENT_DIVISOR = 20
 
 const EarningsGrid = Stitches.styled(Grid, {
@@ -94,9 +94,8 @@ export const CreatorEarningsTable = () => {
                         backgroundColor: lighten(
                           // lighten percentage incremented.
                           rowIndex / INCREMENT_DIVISOR +
-                            // Applies manual increment of 1 notch to first row (as the header is
-                            // manually set above "0%").
-                            (rowIndex === 0 ? 1 / INCREMENT_DIVISOR : 0),
+                            // Add an additional notch (as the header is manually set above "0%").
+                            1 / INCREMENT_DIVISOR,
                           BASE_HIGHLIGHT_COLOR
                         ),
                       }

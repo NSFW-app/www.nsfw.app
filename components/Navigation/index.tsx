@@ -110,7 +110,7 @@ export const Navigation = () => {
             <Icons.LogoGradient css={{ width: 150, height: 90 }} />
           </Link>
         </LeftSection>
-        <MiddleSection center>
+        <MiddleSection center transparent>
           <Link nounderline href={`${router.pathname}#features`}>
             <NavLinkText type='body2'>Features</NavLinkText>
           </Link>
