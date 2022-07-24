@@ -1,6 +1,6 @@
-import { CardProps } from 'components/Card'
+import { FeatureCardProps } from 'components/FeatureCard'
 
-export const data: CardProps[] = [
+export const data: FeatureCardProps[] = [
   {
     // icon: 'Blockchain',
     heading: 'Enjoy Instant withdrawals',

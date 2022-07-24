@@ -9,7 +9,7 @@ import {
 } from '@nsfw-app/ui'
 import { Link } from 'components/Link'
 
-export interface CardProps {
+export interface FeatureCardProps {
   icon?: IconProps['icon']
   heading: string
   body: string
@@ -17,7 +17,7 @@ export interface CardProps {
   secondaryLink?: string
 }
 
-export const Card: React.FC<Stitches.CSSProp & CardProps> = ({
+export const FeatureCard: React.FC<Stitches.CSSProp & FeatureCardProps> = ({
   icon = 'Asterisk',
   heading,
   body,
