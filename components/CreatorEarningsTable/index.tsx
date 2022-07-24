@@ -1,4 +1,11 @@
-import { Stitches, Flex, Grid, Text, useIsDesktopSize } from '@nsfw-app/ui'
+import {
+  Stitches,
+  Flex,
+  Grid,
+  Text,
+  useIsDesktopSize,
+  useHasMounted,
+} from '@nsfw-app/ui'
 import { lighten } from 'polished'
 import { Link } from 'components/Link'
 import { APP_ROUTES } from 'config'
@@ -52,8 +59,11 @@ const EarningsHeaderRow = Stitches.styled(EarningsCell, {
 })
 
 export const CreatorEarningsTable = () => {
-  // TODO: fix SSR
   const isDesktop = useIsDesktopSize()
+  const isMounted = useHasMounted()
+
+  // render client side only
+  if (!isMounted) return null
 
   return (
     <EarningsGrid css={{ marginTop: '24px' }}>
