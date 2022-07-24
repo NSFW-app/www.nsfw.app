@@ -46,7 +46,7 @@ export const FansHeroSection = () => {
           <Text
             type='body1'
             subText
-            css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
+            css={{ margin: `12px 0 ${spaces[4]} 0`, '@md': { width: '80%' } }}
           >
             Show your love by following, tipping, subscribing & PPVs.
           </Text>
