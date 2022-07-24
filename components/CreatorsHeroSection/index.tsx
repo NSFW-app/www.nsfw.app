@@ -3,6 +3,7 @@ import { APP_ROUTES, spaces } from 'config'
 
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
+import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
 
 const HeroFlex = Stitches.styled(Flex, {
   height: '100vh',
@@ -18,6 +19,7 @@ const buttonCss = {
 }
 
 export const CreatorsHeroSection = () => {
+  const analytics = useAnalytics()
   return (
     <GridSection>
       <GridContent
@@ -57,6 +59,7 @@ export const CreatorsHeroSection = () => {
               theme='secondary'
               css={buttonCss}
               href={APP_ROUTES.CREATOR_SIGNUP}
+              onClick={() => analytics.track(NSFW_EVENT.GET_STARTED_CLICK)}
             >
               Get started
               <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />

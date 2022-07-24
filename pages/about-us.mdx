@@ -2,6 +2,8 @@ import { MDXProvider } from '@mdx-js/react'
 import { Stitches, Button, Text, Heading } from '@nsfw-app/ui'
 import { META_TITLE_SUFFIX } from 'config'
 import { Layout } from 'components/Layout'
+import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
+import { useEffect } from 'react'
 
 # About us
 
@@ -11,45 +13,51 @@ Aenean bibendum vestibulum lectus quis eleifend. Duis sagittis malesuada vehicul
 
 Etiam hendrerit at turpis quis auctor. Duis euismod at ligula non placerat. Duis quis eros nec urna rutrum malesuada posuere sed dui. Fusce at erat nibh. Aliquam vel nibh egestas, semper quam sit amet, facilisis neque. Cras vel purus at est porttitor porttitor at ut nibh. Quisque sit amet aliquam libero, et interdum ligula. Etiam id molestie mi. Proin a tortor diam. Donec tristique nisi id mi mattis, eu efficitur orci placerat. Phasellus eget accumsan ligula. Ut porttitor elit nisi, sed sodales diam venenatis quis.
 
-export default ({ children }) => (
-  <Layout
-    metaTitle={`About us${META_TITLE_SUFFIX}`}
-    css={{
-      maxWidth: Stitches.theme.container.maxWidth,
-      margin: '0 auto',
-      padding: '200px 16px 24px 16px',
-    }}
-  >
-    <MDXProvider
-      components={{
-        h1: (props) => (
-          <Heading
-            {...props}
-            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
-          />
-        ),
-        h2: (props) => (
-          <Heading
-            {...props}
-            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
-          />
-        ),
-        h3: (props) => (
-          <Heading
-            {...props}
-            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
-          />
-        ),
-        p: (props) => (
-          <Text
-            {...props}
-            subText
-            css={{ fontSize: '14px', margin: '24px 0' }}
-          />
-        ),
+export default ({ children }) => {
+  const analytics = useAnalytics()
+  useEffect(() => {
+    analytics.track(NSFW_EVENT.VIEW_ABOUT)
+  }, [analytics])
+  return (
+    <Layout
+      metaTitle={`About us${META_TITLE_SUFFIX}`}
+      css={{
+        maxWidth: Stitches.theme.container.maxWidth,
+        margin: '0 auto',
+        padding: '200px 16px 24px 16px',
       }}
     >
-      {children}
-    </MDXProvider>
-  </Layout>
-)
+      <MDXProvider
+        components={{
+          h1: (props) => (
+            <Heading
+              {...props}
+              css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+            />
+          ),
+          h2: (props) => (
+            <Heading
+              {...props}
+              css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+            />
+          ),
+          h3: (props) => (
+            <Heading
+              {...props}
+              css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+            />
+          ),
+          p: (props) => (
+            <Text
+              {...props}
+              subText
+              css={{ fontSize: '14px', margin: '24px 0' }}
+            />
+          ),
+        }}
+      >
+        {children}
+      </MDXProvider>
+    </Layout>
+  )
+}
