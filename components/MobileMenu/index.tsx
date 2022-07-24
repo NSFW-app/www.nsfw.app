@@ -4,6 +4,7 @@ import { Stitches, Flex, Nav, NavLink } from '@nsfw-app/ui'
 import { APP_ROUTES, sizes, spaces } from 'config'
 import { LaunchButton } from 'components/LaunchButton'
 import NextJsLink from 'next/link'
+import { useAnalytics, NSFW_EVENT } from 'lib/analytics'
 
 const MobileMenuNav = Stitches.styled(Nav, {
   background: '$gray300',
@@ -26,6 +27,11 @@ interface Props {
 
 export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
   const router = useRouter()
+  const analytics = useAnalytics()
+  const handleTrackingActionClick = (event: NSFW_EVENT) => {
+    analytics.track(event)
+    handleAction()
+  }
   return (
     <MobileMenuNav css={{ display: visible ? 'block' : 'none' }}>
       <Flex
@@ -64,7 +70,7 @@ export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
         </Flex>
         <LaunchButton
           css={{ margin: `${spaces[2]} 0` }}
-          onLaunch={handleAction}
+          onLaunch={() => handleTrackingActionClick(NSFW_EVENT.LAUNCH_APP)}
         />
       </Flex>
     </MobileMenuNav>

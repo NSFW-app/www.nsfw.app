@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { Squash as Hamburger } from 'hamburger-react'
 import { useRouter } from 'next/router'
@@ -11,6 +11,7 @@ import { spaces, sizes, APP_ROUTES } from 'config'
 import { MobileMenu } from 'components/MobileMenu'
 import { LaunchButton } from 'components/LaunchButton'
 import { Link } from 'components/Link'
+import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
 
 const TopbarNav = Stitches.styled(Nav, {
   display: 'grid',
@@ -63,6 +64,7 @@ export const Navigation = () => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const analytics = useAnalytics()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -125,6 +127,7 @@ export const Navigation = () => {
               display: 'none',
               '@lg': { display: 'inline-flex' },
             }}
+            onClick={() => analytics.track(NSFW_EVENT.LAUNCH_APP)}
           />
           <ToggleContainer onClick={toggleMenu}>
             <Hamburger

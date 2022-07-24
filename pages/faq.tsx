@@ -1,11 +1,13 @@
-import { Layout } from 'components/Layout'
+import { useEffect } from 'react'
 import { OperationResult } from 'urql'
 import { serialize } from 'next-mdx-remote/serialize'
 import { Flex, Heading, Text } from '@nsfw-app/ui'
 
+import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
 import { sizes, spaces } from 'config'
 import { SerializedFAQ, FAQs, FAQsResponse } from 'lib/cms/queries/faqs'
 import { getCMSClient } from 'lib/cms/client'
+import { Layout } from 'components/Layout'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Accordion } from 'components/Accordion'
 
@@ -14,6 +16,10 @@ interface FAQProps {
   filterValues: string[]
 }
 const FAQPage = ({ data, filterValues }: FAQProps) => {
+  const analytics = useAnalytics()
+  useEffect(() => {
+    analytics.track(NSFW_EVENT.VIEW_FAQ)
+  }, [analytics])
   return (
     <Layout>
       <GridSection>
