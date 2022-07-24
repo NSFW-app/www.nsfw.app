@@ -23,7 +23,7 @@ const INCREMENT_DIVISOR = 20
 const EarningsGrid = Stitches.styled(Grid, {
   backgroundColor: 'transparent',
   width: '100%',
-  maxWidth: '1280px',
+  maxWidth: '1024px',
   margin: 'auto',
   gridTemplateColumns: 'repeat(4, auto)',
   columnGap: '0',
@@ -36,7 +36,7 @@ const EarningsGrid = Stitches.styled(Grid, {
 })
 
 const EarningsCell = Stitches.styled(Flex, {
-  height: '42px',
+  height: '48px',
   position: 'relative',
   borderBottom: `1px solid $gray400`,
   alignItems: 'center',
@@ -57,7 +57,7 @@ const EarningsCell = Stitches.styled(Flex, {
 
 const EarningsHeaderRow = Stitches.styled(EarningsCell, {
   border: 'none',
-  backgroundColor: '$gray400',
+  backgroundColor: '$gray300',
 })
 
 export const CreatorEarningsTable = () => {
@@ -68,7 +68,7 @@ export const CreatorEarningsTable = () => {
   if (!isMounted) return null
 
   return (
-    <EarningsGrid css={{ marginTop: '24px' }}>
+    <EarningsGrid>
       <EarningsHeaderRow css={{ gridColumn: '2/-1' }}>
         <Text type='caption3'>Platform Fees</Text>
       </EarningsHeaderRow>
