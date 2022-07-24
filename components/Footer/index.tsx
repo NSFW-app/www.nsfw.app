@@ -67,7 +67,6 @@ export const Footer: React.FC<FooterProps> = ({ css }) => {
       }}
     >
       <FooterInnerContainer>
-        {' '}
         <CopyRightText>
           &copy; {new Date().getFullYear()} NSFW.app
         </CopyRightText>
