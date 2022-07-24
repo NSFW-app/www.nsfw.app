@@ -10,19 +10,15 @@ export const CreatorFeesSection = () => {
     <GridSection
       id='fees'
       css={{
-        padding: '128px 16px 64px',
         position: 'relative',
         backgroundColor: '$gray500',
-        '@lg': {
-          padding: '368px 0px 128px 0',
-        },
       }}
     >
       <DiagonalBgBreak />
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '3 / 11',
+          desktop: '1 / 13',
         }}
         css={{
           zIndex: 1,
