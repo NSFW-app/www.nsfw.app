@@ -21,7 +21,6 @@ const BASE_HIGHLIGHT_COLOR = '#220e4c'
 const INCREMENT_DIVISOR = 20
 
 const EarningsGrid = Stitches.styled(Grid, {
-  backgroundColor: 'transparent',
   width: '100%',
   maxWidth: '1024px',
   margin: 'auto',

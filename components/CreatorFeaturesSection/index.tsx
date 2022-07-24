@@ -6,7 +6,6 @@ import { data } from './data'
 
 const InnerGrid = Stitches.styled(Grid, {
   gridGap: '16px',
-  backgroundColor: 'transparent',
   '@md': {
     gridTemplateColumns: 'repeat(2, 1fr)',
   },
@@ -30,7 +29,6 @@ export const CreatorFeaturesSection: React.FC = () => {
           tablet: '1 / 9',
           desktop: '1 / 13',
         }}
-        css={{ backgroundColor: 'transparent' }}
       >
         <InnerGrid>
           {data.map((card, i) => (

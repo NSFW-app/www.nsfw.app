@@ -5,7 +5,6 @@ export const SectionHeading = Stitches.styled(Flex, {
   justifyContent: 'center',
   alignItems: 'flex-start',
   width: '100%',
-  backgroundColor: 'transparent',
   margin: '36px 68px',
 
   [`${Heading}`]: {

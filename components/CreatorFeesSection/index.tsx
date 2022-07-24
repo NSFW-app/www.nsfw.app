@@ -27,7 +27,6 @@ export const CreatorFeesSection = () => {
         css={{
           zIndex: 1,
           height: 'auto',
-          backgroundColor: 'transparent',
           marginTop: '-8vw',
         }}
       >

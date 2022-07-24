@@ -37,12 +37,11 @@ export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
         column
         css={{
           justifyContent: 'space-between',
-          background: 'transparent',
           height: '100%',
           paddingTop: sizes.navigationHeight,
         }}
       >
-        <Flex column transparent>
+        <Flex column>
           {isCreatorPage && (
             <Link
               nounderline

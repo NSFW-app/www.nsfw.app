@@ -20,11 +20,10 @@ export const HeroImageSection = () => {
         css={{
           zIndex: 1,
           height: 'auto',
-          backgroundColor: 'transparent',
           marginTop: '-8vw',
         }}
       >
-        <Flex center fullWidth transparent>
+        <Flex center fullWidth>
           <NextImage
             src='/static/images/landing-hero.png'
             alt='NSFW landing hero'

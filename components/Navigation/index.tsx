@@ -33,13 +33,11 @@ const Container = Stitches.styled(Nav, {
 })
 
 const LeftSection = Stitches.styled(Box, {
-  backgroundColor: 'transparent',
   justifySelf: 'start',
 })
 
 const MiddleSection = Stitches.styled(Flex, {
   display: 'none',
-  backgroundColor: 'transparent',
   '@lg': {
     display: 'flex',
   },
@@ -48,13 +46,11 @@ const MiddleSection = Stitches.styled(Flex, {
 const RightSection = Stitches.styled(Flex, {
   justifySelf: 'end',
   alignItems: 'center',
-  backgroundColor: 'transparent',
 })
 
 const ToggleContainer = Stitches.styled(Box, {
   cursor: 'pointer',
   display: 'block',
-  backgroundColor: 'transparent',
   '@lg': {
     display: 'none',
   },
@@ -107,12 +103,12 @@ export const Navigation = () => {
   return (
     <>
       <Container css={containerStyles}>
-        <LeftSection transparent>
+        <LeftSection>
           <Link href={APP_ROUTES.HOME}>
             <Icons.LogoGradient css={{ width: 150, height: 90 }} />
           </Link>
         </LeftSection>
-        <MiddleSection center transparent>
+        <MiddleSection center>
           {isCreatorPage && (
             <Link nounderline href={`${router.pathname}#fees`}>
               <NavLinkText type='body2'>Fees</NavLinkText>
@@ -130,7 +126,7 @@ export const Navigation = () => {
             <NavLinkText type='body2'>FAQs</NavLinkText>
           </Link>
         </MiddleSection>
-        <RightSection transparent>
+        <RightSection>
           <LaunchButton
             css={{
               marginLeft: sizes.navigationItemMargin,
@@ -138,7 +134,7 @@ export const Navigation = () => {
               '@lg': { display: 'inline-flex' },
             }}
           />
-          <ToggleContainer onClick={toggleMenu} transparent>
+          <ToggleContainer onClick={toggleMenu}>
             <Hamburger
               toggled={isOpen}
               toggle={setIsOpen}
