@@ -21,6 +21,7 @@ const BASE_HIGHLIGHT_COLOR = '#220e4c'
 const INCREMENT_DIVISOR = 20
 
 const EarningsGrid = Stitches.styled(Grid, {
+  backgroundColor: 'transparent',
   width: '100%',
   margin: 'auto',
   gridTemplateColumns: 'repeat(4, auto)',
@@ -55,7 +56,7 @@ const EarningsCell = Stitches.styled(Flex, {
 
 const EarningsHeaderRow = Stitches.styled(EarningsCell, {
   border: 'none',
-  backgroundColor: '$gray300',
+  backgroundColor: '$gray4  00',
 })
 
 export const CreatorEarningsTable = () => {

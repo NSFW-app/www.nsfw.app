@@ -113,9 +113,11 @@ export const Navigation = () => {
           </Link>
         </LeftSection>
         <MiddleSection center transparent>
-          <Link nounderline href={`${router.pathname}#fees`}>
-            <NavLinkText type='body2'>Fees</NavLinkText>
-          </Link>
+          {isCreatorPage && (
+            <Link nounderline href={`${router.pathname}#fees`}>
+              <NavLinkText type='body2'>Fees</NavLinkText>
+            </Link>
+          )}
           <Link nounderline href={`${router.pathname}#features`}>
             <NavLinkText type='body2'>Features</NavLinkText>
           </Link>

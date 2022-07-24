@@ -17,7 +17,7 @@ const buttonCss = {
   },
 }
 
-export const HeroSection = () => {
+export const FansHeroSection = () => {
   const handleFeatures = () => {
     console.log('handleFeatures')
   }
