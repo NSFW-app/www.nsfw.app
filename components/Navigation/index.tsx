@@ -107,7 +107,7 @@ export const Navigation = () => {
   return (
     <>
       <Container css={containerStyles}>
-        <LeftSection>
+        <LeftSection transparent>
           <Link href={APP_ROUTES.HOME}>
             <Icons.LogoGradient css={{ width: 150, height: 90 }} />
           </Link>
@@ -130,7 +130,7 @@ export const Navigation = () => {
             <NavLinkText type='body2'>FAQs</NavLinkText>
           </Link>
         </MiddleSection>
-        <RightSection>
+        <RightSection transparent>
           <LaunchButton
             css={{
               marginLeft: sizes.navigationItemMargin,
@@ -138,7 +138,7 @@ export const Navigation = () => {
               '@lg': { display: 'inline-flex' },
             }}
           />
-          <ToggleContainer onClick={toggleMenu}>
+          <ToggleContainer onClick={toggleMenu} transparent>
             <Hamburger
               toggled={isOpen}
               toggle={setIsOpen}

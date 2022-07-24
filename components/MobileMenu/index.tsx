@@ -6,13 +6,13 @@ import { LaunchButton } from 'components/LaunchButton'
 import { Link } from 'components/Link'
 
 const Container = Stitches.styled(Nav, {
-  background: Stitches.theme.colors.gray300,
+  background: '$gray300',
   position: 'fixed',
   top: 0,
   left: 0,
   width: '100%',
   height: '100%',
-  zIndex: Stitches.theme.zIndices.layerOne,
+  zIndex: '$layerOne',
   padding: `0 ${spaces[2]}`,
   '@md': {
     padding: '0 40px',
@@ -30,6 +30,7 @@ interface Props {
 
 export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
   const router = useRouter()
+  const isCreatorPage = router.pathname === APP_ROUTES.CREATORS
   return (
     <Container css={{ display: visible ? 'block' : 'none' }}>
       <Flex
@@ -42,6 +43,15 @@ export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
         }}
       >
         <Flex column transparent>
+          {isCreatorPage && (
+            <Link
+              nounderline
+              href={`${router.pathname}#fees`}
+              onClick={handleAction}
+            >
+              <NavLinkText type='body2'>Fees</NavLinkText>
+            </Link>
+          )}
           <Link
             nounderline
             href={`${router.pathname}#features`}
@@ -49,9 +59,11 @@ export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
           >
             <NavLinkText type='body1'>Features</NavLinkText>
           </Link>
-          <Link nounderline href={APP_ROUTES.CREATORS} onClick={handleAction}>
-            <NavLinkText type='body1'>Creators</NavLinkText>
-          </Link>
+          {!isCreatorPage && (
+            <Link nounderline href={APP_ROUTES.CREATORS} onClick={handleAction}>
+              <NavLinkText type='body1'>Creators</NavLinkText>
+            </Link>
+          )}
           <Link nounderline href={APP_ROUTES.FAQ} onClick={handleAction}>
             <NavLinkText type='body1'>FAQs</NavLinkText>
           </Link>
