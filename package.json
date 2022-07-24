@@ -17,7 +17,7 @@
     "@mdx-js/react": "^2.1.2",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@next/mdx": "^12.2.2",
-    "@nsfw-app/ui": "file:.yalc/@nsfw-app/ui",
+    "@nsfw-app/ui": "^1.0.1",
     "@react-spring/web": "^9.5.0",
     "@stitches/react": "^1.2.8",
     "graphql": "^16.5.0",
