@@ -26,9 +26,6 @@ const SocialsList = Stitches.styled(List, {
 })
 
 const CopyRightText = Stitches.styled(Text, {
-  fontSize: '11px',
-  lineHeight: '16px',
-  color: '$gray800',
   display: 'none',
   '@lg': {
     display: 'block',
@@ -59,6 +56,7 @@ const MarketingFooter = Stitches.styled(FooterPrimitive, {
 export interface FooterProps
   extends Stitches.ComponentProps<typeof FooterPrimitive> {}
 
+// TODO: refactor this to be composable instead of configurable, and move into @nfsw-app/ui
 export const Footer: React.FC<FooterProps> = ({ css }) => {
   return (
     <MarketingFooter
@@ -67,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({ css }) => {
       }}
     >
       <FooterInnerContainer>
-        <CopyRightText>
+        <CopyRightText type='body4'>
           &copy; {new Date().getFullYear()} NSFW.app
         </CopyRightText>
         <SocialsList horizontal>
@@ -86,15 +84,8 @@ export const Footer: React.FC<FooterProps> = ({ css }) => {
           <List horizontal css={{ gap: '15px' }}>
             {FOOTER_LINKS.map(({ name, href }) => (
               <ListItem key={href}>
-                <Link
-                  href={href}
-                  theme='text'
-                  css={{
-                    fontSize: '11px',
-                    lineHeight: '16px',
-                  }}
-                >
-                  {name}
+                <Link href={href} theme='text'>
+                  <Text type='body4'>{name}</Text>
                 </Link>
               </ListItem>
             ))}

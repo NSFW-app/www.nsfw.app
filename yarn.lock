@@ -808,8 +808,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nsfw-app/ui@file:.yalc/@nsfw-app/ui":
-  version "1.0.0"
+"@nsfw-app/ui@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.pkg.github.com/download/@nsfw-app/ui/1.0.1/a666987276dbb3ea9d1bc92868cc5fdc6392f14802fa7c25bce2aee6c7394b62#4b890995c3853ed247b8d114528b0eb0a37839ac"
+  integrity sha512-EXsNLW6fPgJbG2O9rZAmv8L1cQ98G5NMWRFCVruSz7YHyCEv1z1oWX+AW01RkdAzDbULtFYUEmLMO5GJ9qXHpw==
   dependencies:
     "@mantine/core" "^4.2.6"
     "@mantine/dates" "^4.2.6"
