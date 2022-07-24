@@ -1,21 +1,21 @@
 import { Grid, Stitches } from '@nsfw-app/ui'
 import { GridContent, GridSection } from 'components/GridLayout'
 
-import { Card, CardProps } from 'components/Card'
+import { Card } from 'components/Card'
+import { data } from './data'
 
 const InnerGrid = Stitches.styled(Grid, {
   gridGap: '16px',
   backgroundColor: 'transparent',
-  '@lg': {
-    gridTemplateColumns: 'repeat(3, 1fr)',
+  '@md': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
+  '@xl': {
+    gridTemplateColumns: 'repeat(4, 1fr)',
   },
 })
 
-interface CardSectionProps {
-  features: CardProps[]
-}
-
-export const CardSection: React.FC<CardSectionProps> = ({ features }) => {
+export const CreatorFeaturesSection: React.FC = () => {
   return (
     <GridSection
       id='features'
@@ -33,7 +33,7 @@ export const CardSection: React.FC<CardSectionProps> = ({ features }) => {
         css={{ backgroundColor: 'transparent' }}
       >
         <InnerGrid>
-          {features.map((card, i) => (
+          {data.map((card, i) => (
             <Card
               key={`${i}-${card.primaryLink}`}
               icon={card.icon}
