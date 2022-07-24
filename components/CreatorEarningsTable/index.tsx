@@ -56,7 +56,7 @@ const EarningsCell = Stitches.styled(Flex, {
 
 const EarningsHeaderRow = Stitches.styled(EarningsCell, {
   border: 'none',
-  backgroundColor: '$gray4  00',
+  backgroundColor: '$gray400',
 })
 
 export const CreatorEarningsTable = () => {
