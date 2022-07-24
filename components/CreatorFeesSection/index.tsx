@@ -12,6 +12,9 @@ export const CreatorFeesSection = () => {
       css={{
         position: 'relative',
         backgroundColor: '$gray500',
+        '@lg': {
+          paddingTop: '280px',
+        },
       }}
     >
       <DiagonalBgBreak />
