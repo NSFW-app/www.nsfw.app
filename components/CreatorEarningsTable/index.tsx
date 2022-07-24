@@ -23,6 +23,7 @@ const INCREMENT_DIVISOR = 20
 const EarningsGrid = Stitches.styled(Grid, {
   backgroundColor: 'transparent',
   width: '100%',
+  maxWidth: '1280px',
   margin: 'auto',
   gridTemplateColumns: 'repeat(4, auto)',
   columnGap: '0',
