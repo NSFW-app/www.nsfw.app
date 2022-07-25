@@ -40,14 +40,14 @@ export const FeatureCard: React.FC<Stitches.CSSProp & FeatureCardProps> = ({
       <Icon icon={icon} css={{ width: '30px', height: '30px' }} />
       <div>
         <Heading
-          as='h6'
+          as='h5'
           css={{
             marginBottom: '20px',
           }}
         >
           {heading}
         </Heading>
-        <Text type='body3' subText css={{ marginBottom: '20px' }}>
+        <Text type='body2' subText css={{ marginBottom: '20px' }}>
           {body}
         </Text>
         <Flex css={{ backgroundColor: '$gray400' }}>

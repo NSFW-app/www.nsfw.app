@@ -30,8 +30,8 @@ export const CreatorFeesSection = () => {
         }}
       >
         <SectionHeading>
-          <Heading as='h2'>Fees</Heading>
-          <Text subText>
+          <Heading>Fees</Heading>
+          <Text type='subhead1' subText>
             Keep 100% of your earnings with <strong>0% fees.</strong>
           </Text>
         </SectionHeading>

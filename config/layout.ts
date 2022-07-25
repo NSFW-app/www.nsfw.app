@@ -6,4 +6,7 @@ export const sizes = {
   navigationHeightExpanded: '100px',
   navigationItemMargin: '30px',
   verticalSectionPadding: '100px',
+  // Horizontal padding measured from design file:
+  // 2p + 1328 = 100vw
+  sectionPadding: '0 calc(50vw - 664px)',
 }

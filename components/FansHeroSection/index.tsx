@@ -27,7 +27,7 @@ export const FansHeroSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '3 / 11',
+          desktop: '2 / 12',
         }}
       >
         <HeroFlex center column>
@@ -35,7 +35,7 @@ export const FansHeroSection = () => {
             Goodbye censored content. Hello privacy.
           </Heading>
           <Text
-            type='body1'
+            type='subhead1'
             subText
             css={{ marginBottom: spaces[1], '@md': { width: '80%' } }}
           >
@@ -44,7 +44,7 @@ export const FansHeroSection = () => {
             payments.
           </Text>
           <Text
-            type='body1'
+            type='subhead1'
             subText
             css={{ margin: `12px 0 ${spaces[4]} 0`, '@md': { width: '80%' } }}
           >

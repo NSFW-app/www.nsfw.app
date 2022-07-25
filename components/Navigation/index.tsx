@@ -28,7 +28,7 @@ const TopbarNav = Stitches.styled(Nav, {
     gridTemplateColumns: '1fr auto 1fr',
   },
   '@xxl': {
-    padding: '0 calc(50vw - 664px)',
+    padding: sizes.sectionPadding,
   },
   zIndex: '$layerThree',
 })

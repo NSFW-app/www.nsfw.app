@@ -20,7 +20,7 @@ const FAQPage = ({ data, filterValues }: FAQProps) => {
         <GridContent
           columns={{
             tablet: '2 / 8',
-            desktop: '3 / 11',
+            desktop: '2 / 12',
           }}
         >
           <Flex

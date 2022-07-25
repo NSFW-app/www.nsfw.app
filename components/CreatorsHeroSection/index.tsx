@@ -23,7 +23,7 @@ export const CreatorsHeroSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '3 / 11',
+          desktop: '2 / 12',
         }}
       >
         <HeroFlex center column>
@@ -31,7 +31,7 @@ export const CreatorsHeroSection = () => {
             Goodbye censored content. Hello privacy.
           </Heading>
           <Text
-            type='body1'
+            type='subhead1'
             subText
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
