@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { Squash as Hamburger } from 'hamburger-react'
+import { useRouter } from 'next/router'
+import NextJsLink from 'next/link'
 
-import { Stitches, Text, Icons, Nav, Box, Flex } from '@nsfw-app/ui'
+import { Stitches, Icons, Nav, Box, Flex, NavLink } from '@nsfw-app/ui'
 
 import { spaces, sizes, APP_ROUTES } from 'config'
 
 import { MobileMenu } from 'components/MobileMenu'
 import { LaunchButton } from 'components/LaunchButton'
 import { Link } from 'components/Link'
-import { useRouter } from 'next/router'
 
-const Container = Stitches.styled(Nav, {
+const TopbarNav = Stitches.styled(Nav, {
   display: 'grid',
   gridTemplateColumns: 'auto auto',
   alignItems: 'center',
@@ -29,7 +30,7 @@ const Container = Stitches.styled(Nav, {
   '@xxl': {
     padding: '0 calc(50vw - 664px)',
   },
-  zIndex: Stitches.theme.zIndices.layerThree,
+  zIndex: '$layerThree',
 })
 
 const LeftSection = Stitches.styled(Box, {
@@ -38,6 +39,8 @@ const LeftSection = Stitches.styled(Box, {
 
 const MiddleSection = Stitches.styled(Flex, {
   display: 'none',
+  height: '100%',
+  width: '460px',
   '@lg': {
     display: 'flex',
   },
@@ -56,16 +59,10 @@ const ToggleContainer = Stitches.styled(Box, {
   },
 })
 
-const NavLinkText = Stitches.styled(Text, {
-  margin: `0 ${sizes.navigationItemMargin}`,
-})
-
 export const Navigation = () => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-
-  const isCreatorPage = router.pathname === APP_ROUTES.CREATORS
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -102,29 +99,24 @@ export const Navigation = () => {
 
   return (
     <>
-      <Container css={containerStyles}>
+      <TopbarNav css={containerStyles}>
         <LeftSection>
           <Link href={APP_ROUTES.HOME}>
-            <Icons.LogoGradient css={{ width: 150, height: 90 }} />
+            <Icons.LogoGradient />
           </Link>
         </LeftSection>
-        <MiddleSection center>
-          {isCreatorPage && (
-            <Link nounderline href={`${router.pathname}#fees`}>
-              <NavLinkText type='body2'>Fees</NavLinkText>
-            </Link>
-          )}
-          <Link nounderline href={`${router.pathname}#features`}>
-            <NavLinkText type='body2'>Features</NavLinkText>
-          </Link>
-          {!isCreatorPage && (
-            <Link nounderline href={APP_ROUTES.CREATORS}>
-              <NavLinkText type='body2'>Creators</NavLinkText>
-            </Link>
-          )}
-          <Link nounderline href={APP_ROUTES.FAQ}>
-            <NavLinkText type='body2'>FAQs</NavLinkText>
-          </Link>
+        <MiddleSection>
+          <NextJsLink passHref href={APP_ROUTES.HOME}>
+            <NavLink active={router.pathname === APP_ROUTES.HOME}>Fans</NavLink>
+          </NextJsLink>
+          <NextJsLink passHref href={APP_ROUTES.CREATORS}>
+            <NavLink active={router.pathname === APP_ROUTES.CREATORS}>
+              Creators
+            </NavLink>
+          </NextJsLink>
+          <NextJsLink passHref href={APP_ROUTES.FAQ}>
+            <NavLink active={router.pathname === APP_ROUTES.FAQ}>FAQs</NavLink>
+          </NextJsLink>
         </MiddleSection>
         <RightSection>
           <LaunchButton
@@ -145,7 +137,7 @@ export const Navigation = () => {
             />
           </ToggleContainer>
         </RightSection>
-      </Container>
+      </TopbarNav>
       <MobileMenu visible={isOpen} handleAction={() => setIsOpen(false)} />
     </>
   )

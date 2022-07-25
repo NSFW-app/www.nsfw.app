@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
-import { Stitches, Flex, Text, Nav } from '@nsfw-app/ui'
+import { Stitches, Flex, Nav, NavLink } from '@nsfw-app/ui'
 
 import { APP_ROUTES, sizes, spaces } from 'config'
 import { LaunchButton } from 'components/LaunchButton'
-import { Link } from 'components/Link'
+import NextJsLink from 'next/link'
 
-const Container = Stitches.styled(Nav, {
+const MobileMenuNav = Stitches.styled(Nav, {
   background: '$gray300',
   position: 'fixed',
   top: 0,
@@ -19,10 +19,6 @@ const Container = Stitches.styled(Nav, {
   },
 })
 
-const NavLinkText = Stitches.styled(Text, {
-  margin: `${spaces[2]} 0`,
-})
-
 interface Props {
   visible: boolean
   handleAction: () => void
@@ -30,9 +26,8 @@ interface Props {
 
 export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
   const router = useRouter()
-  const isCreatorPage = router.pathname === APP_ROUTES.CREATORS
   return (
-    <Container css={{ display: visible ? 'block' : 'none' }}>
+    <MobileMenuNav css={{ display: visible ? 'block' : 'none' }}>
       <Flex
         column
         css={{
@@ -41,37 +36,37 @@ export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
           paddingTop: sizes.navigationHeight,
         }}
       >
-        <Flex column>
-          {isCreatorPage && (
-            <Link
-              nounderline
-              href={`${router.pathname}#fees`}
-              onClick={handleAction}
+        <Flex column css={{ height: '150px' }}>
+          <NextJsLink passHref href={APP_ROUTES.HOME}>
+            <NavLink
+              highlightPosition='vertical'
+              active={router.pathname === APP_ROUTES.HOME}
             >
-              <NavLinkText type='body2'>Fees</NavLinkText>
-            </Link>
-          )}
-          <Link
-            nounderline
-            href={`${router.pathname}#features`}
-            onClick={handleAction}
-          >
-            <NavLinkText type='body1'>Features</NavLinkText>
-          </Link>
-          {!isCreatorPage && (
-            <Link nounderline href={APP_ROUTES.CREATORS} onClick={handleAction}>
-              <NavLinkText type='body1'>Creators</NavLinkText>
-            </Link>
-          )}
-          <Link nounderline href={APP_ROUTES.FAQ} onClick={handleAction}>
-            <NavLinkText type='body1'>FAQs</NavLinkText>
-          </Link>
+              Fans
+            </NavLink>
+          </NextJsLink>
+          <NextJsLink passHref href={APP_ROUTES.CREATORS}>
+            <NavLink
+              highlightPosition='vertical'
+              active={router.pathname === APP_ROUTES.CREATORS}
+            >
+              Creators
+            </NavLink>
+          </NextJsLink>
+          <NextJsLink passHref href={APP_ROUTES.FAQ}>
+            <NavLink
+              highlightPosition='vertical'
+              active={router.pathname === APP_ROUTES.FAQ}
+            >
+              FAQs
+            </NavLink>
+          </NextJsLink>
         </Flex>
         <LaunchButton
           css={{ margin: `${spaces[2]} 0` }}
           onLaunch={handleAction}
         />
       </Flex>
-    </Container>
+    </MobileMenuNav>
   )
 }
