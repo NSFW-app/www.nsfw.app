@@ -7,5 +7,5 @@ export const DiagonalBgBreak = Stitches.styled(Box, {
   borderStyle: 'solid',
   borderWidth: '0 100vw 12vw 0',
   borderColor: '$gray500 $gray100 $gray500 $gray500',
-  marginLeft: '-14px', // account for webkit scrollbar width
+  marginLeft: '-4px', // account for webkit scrollbar width
 })

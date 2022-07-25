@@ -8,8 +8,8 @@ const CreatorsLanding: NextPage = () => {
   return (
     <Layout>
       <CreatorsHeroSection />
-      <CreatorFeesSection />
       <CreatorFeaturesSection />
+      <CreatorFeesSection />
     </Layout>
   )
 }

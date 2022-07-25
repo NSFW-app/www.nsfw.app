@@ -5,6 +5,7 @@ export const Card = Stitches.styled(Box, {
   borderRadius: '16px',
   padding: '16px',
   backgroundColor: '$gray400',
+  overflow: 'auto',
   '@md': {
     padding: '36px',
   },

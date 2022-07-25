@@ -1,6 +1,5 @@
 import { Stitches, Section } from '@nsfw-app/ui'
 import { sizes } from 'config'
-import { size } from 'polished'
 
 /**
  * GridSection

@@ -3,6 +3,7 @@ import { GridContent, GridSection } from 'components/GridLayout'
 
 import { FeatureCard } from 'components/FeatureCard'
 import { data } from './data'
+import { DiagonalBgBreak } from 'components/DiagonalBgBreak'
 
 const InnerGrid = Stitches.styled(Grid, {
   gridGap: '16px',
@@ -19,15 +20,22 @@ export const CreatorFeaturesSection: React.FC = () => {
     <GridSection
       id='features'
       css={{
+        position: 'relative',
         backgroundColor: '$gray500',
         paddingTop: '100px',
         paddingBottom: '100px',
       }}
     >
+      <DiagonalBgBreak />
       <GridContent
         columns={{
           tablet: '1 / 9',
           desktop: '1 / 13',
+        }}
+        css={{
+          zIndex: 1,
+          height: 'auto',
+          marginTop: '-8vw',
         }}
       >
         <InnerGrid>

@@ -1,7 +1,6 @@
-import { Flex, Heading, Text } from '@nsfw-app/ui'
+import { Heading, Text } from '@nsfw-app/ui'
 import { Card } from 'components/ Card'
-import { CreatorEarningsTable } from 'components/CreatorEarningsTable'
-import { DiagonalBgBreak } from 'components/DiagonalBgBreak'
+import { CreatorEarningsTable } from 'components/CreatorFeesTable'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { SectionHeading } from 'components/SectionHeading'
 
@@ -12,15 +11,13 @@ export const CreatorFeesSection = () => {
       css={{
         position: 'relative',
         backgroundColor: '$gray500',
-        '@lg': {
-          paddingTop: '280px',
-        },
+        paddingTop: '10%',
+        paddingBottom: '10%',
       }}
     >
-      <DiagonalBgBreak />
       <GridContent
         columns={{
-          tablet: '2 / 8',
+          tablet: '1 / 13',
           desktop: '1 / 13',
         }}
         css={{
@@ -35,9 +32,16 @@ export const CreatorFeesSection = () => {
             Keep 100% of your earnings with <strong>0% fees.</strong>
           </Text>
         </SectionHeading>
-        <Card>
+        <Card
+          css={{
+            // allow horizontal scrollable
+            '@xs': { width: 'calc(100vw - 32px)' },
+            '@md': { width: '100%' },
+          }}
+        >
           <CreatorEarningsTable />
         </Card>
+        {/* </Box> */}
       </GridContent>
     </GridSection>
   )
