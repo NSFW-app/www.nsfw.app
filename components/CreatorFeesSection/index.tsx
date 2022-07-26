@@ -1,6 +1,6 @@
 import { Heading, Text } from '@nsfw-app/ui'
 import { Card } from 'components/ Card'
-import { CreatorEarningsTable } from 'components/CreatorFeesTable'
+import { CreatorFeesTable } from 'components/CreatorFeesTable'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { SectionHeading } from 'components/SectionHeading'
 
@@ -39,7 +39,7 @@ export const CreatorFeesSection = () => {
             '@md': { width: '100%' },
           }}
         >
-          <CreatorEarningsTable />
+          <CreatorFeesTable />
         </Card>
         {/* </Box> */}
       </GridContent>
