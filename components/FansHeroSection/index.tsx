@@ -18,10 +18,6 @@ const buttonCss = {
 }
 
 export const FansHeroSection = () => {
-  const handleFeatures = () => {
-    console.log('handleFeatures')
-  }
-
   return (
     <GridSection>
       <GridContent

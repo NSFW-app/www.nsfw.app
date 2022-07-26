@@ -96,7 +96,6 @@ export const CreatorFeesTable = () => {
             </RowCell>
           ))
         )
-        console.log(groupCells)
 
         return [...groupCells, ...rowCells]
       })}
