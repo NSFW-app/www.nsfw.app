@@ -41,7 +41,14 @@ export const CreatorFeesTable = () => {
           selected={isSelected(headerIndex)}
         >
           <Heading as='h3'>{header.title}</Heading>
-          <Flex center css={{ padding: '16px 0' }} column>
+          <Flex
+            center
+            css={{
+              padding: '16px 0',
+              flexDirection: 'column',
+              '@md': { flexDirection: 'row' },
+            }}
+          >
             <Heading as='h4'>{header.cost}</Heading>
             <Text subText type='caption1' css={{ paddingLeft: '12px' }}>
               {header.costLabel}
