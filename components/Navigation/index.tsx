@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { Squash as Hamburger } from 'hamburger-react'
 import { useRouter } from 'next/router'

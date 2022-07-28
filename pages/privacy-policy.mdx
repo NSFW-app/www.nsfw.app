@@ -2,8 +2,6 @@ import { MDXProvider } from '@mdx-js/react'
 import { Stitches, Button, Text, Heading } from '@nsfw-app/ui'
 import { META_TITLE_SUFFIX } from 'config'
 import { Layout } from 'components/Layout'
-import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
-import { useEffect } from 'react'
 
 # nsfw.app Privacy Policy - Effective from 1st May 2022.
 
@@ -660,10 +658,6 @@ may have further questions about this Privacy Policy, you can contact us
 at support\@nsfw.app
 
 export default ({ children }) => {
-  const analytics = useAnalytics()
-  useEffect(() => {
-    analytics.track(NSFW_EVENT.VIEW_PRIVACY_POLICY)
-  }, [analytics])
   return (
     <Layout
       metaTitle={`Terms and Conditions${META_TITLE_SUFFIX}`}
