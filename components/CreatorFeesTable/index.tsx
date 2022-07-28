@@ -41,7 +41,7 @@ export const CreatorFeesTable = () => {
           selected={isSelected(headerIndex)}
         >
           <Heading as='h3'>{header.title}</Heading>
-          <Flex center css={{ padding: '16px 0' }}>
+          <Flex center css={{ padding: '16px 0' }} column>
             <Heading as='h4'>{header.cost}</Heading>
             <Text subText type='caption1' css={{ paddingLeft: '12px' }}>
               {header.costLabel}
@@ -73,7 +73,10 @@ export const CreatorFeesTable = () => {
           ? DATA.headers.map((_, groupCellIndex) => {
               if (groupCellIndex === 0) {
                 return (
-                  <RowHeaderCell selected={isSelected(groupCellIndex)}>
+                  <RowHeaderCell
+                    key={`row-header-${group.label}-${groupCellIndex}`}
+                    selected={isSelected(groupCellIndex)}
+                  >
                     {group.label}
                   </RowHeaderCell>
                 )
@@ -89,10 +92,31 @@ export const CreatorFeesTable = () => {
 
         const rowCells = group.rows.map((row, rowIndex) =>
           row.map((cell, cellIndex) => (
-            <RowCell key={`cell-${cellIndex}`} selected={isSelected(cellIndex)}>
-              {/* @ts-ignore TODO */}
-              {cell.icon && <Icon icon={cell.icon} />}
-              <Text type='caption3'>{cell.label}</Text>
+            <RowCell
+              key={`cell-${cellIndex}`}
+              selected={isSelected(cellIndex)}
+              css={{ minWidth: 'max-content' }}
+            >
+              {cell.icon && (
+                <Icon
+                  icon={cell.icon}
+                  css={{
+                    path: {
+                      stroke: cell.iconColor
+                        ? cell.iconColor
+                        : cell.icon === 'Cross'
+                        ? '$red100'
+                        : undefined,
+                    },
+                  }}
+                />
+              )}
+              <Text
+                type='caption3'
+                css={{ color: cell.labelColor ?? undefined }}
+              >
+                {cell.label}
+              </Text>
             </RowCell>
           ))
         )

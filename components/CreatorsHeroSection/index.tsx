@@ -28,16 +28,14 @@ export const CreatorsHeroSection = () => {
       >
         <HeroFlex center column>
           <Heading css={{ marginBottom: spaces[3] }}>
-            Goodbye censored content. Hello privacy.
+            Get creative. Get paid.
           </Heading>
           <Text
             type='subhead1'
             subText
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
-            Empowering creators with 0% fees, freedom of expression, instant
-            withdrawals, privacy with Crypto payments, mental health support &
-            adult marketing.
+            NSFW.app offers 0% commission on content and pays out instantly.
           </Text>
           <Flex
             fullWidth

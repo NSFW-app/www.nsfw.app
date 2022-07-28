@@ -3,31 +3,36 @@ import { FeatureCardProps } from 'components/FeatureCard'
 export const data: FeatureCardProps[] = [
   {
     // icon: 'Blockchain',
-    heading: 'Enjoy Instant withdrawals',
+    heading: 'Fast withdrawals',
     body:
-      'Access your earnings when you want it. You shouldn’t have to wait 7 days or more',
+      'Unlike other platforms, there is no wait required to withdraw your funds.',
     // primaryLink: 'Learn More',
     // secondaryLink: 'About Us',
   },
   {
-    // icon: 'Tags',
-    heading: 'Have privacy via Crypto payments',
-    body:
-      'Sleep easy without banks restricting your personal finances or limiting your creative expression. Earnings are in USDC stable coin to protect you from volatile Crypto prices',
-    // primaryLink: 'Become a creator',
-    // secondaryLink: 'View Creators',
-  },
-  {
     // icon: 'Coins',
-    heading: 'Be listened to by an understanding & caring community',
+    heading: 'Support network',
     body:
-      'Dedicated support from a team with decades of adult industry experience. We also work closely with mental health organisations Pineapple Support & Snap to listen to your needs',
+      'Join an exclusive network of verified creators and grow your audience.',
     // primaryLink: 'About Currency',
     // secondaryLink: 'Buy Coins',
   },
   {
-    heading: 'Benefit from NSFW.app adult marketing',
+    heading: 'Industry professionals',
     body:
-      'Gain exposure to new fans & traffic brought in by on-going project marketing',
+      'Our team has decades of recognised adult industry experience. Be an ambassador.',
+  },
+  {
+    heading: 'Have a voice',
+    body: 'Have your say in how the product direction.',
+  },
+  {
+    heading: 'Mobile friendly',
+    body:
+      "We've redesigned our app from the ground up, so you can use it from any device.",
+  },
+  {
+    heading: 'Content freedom',
+    body: 'Express yourself freely with no restrictions or censored content.',
   },
 ]

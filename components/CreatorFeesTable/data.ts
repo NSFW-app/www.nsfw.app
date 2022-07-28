@@ -1,81 +1,100 @@
+import { KnownIcon } from '@nsfw-app/ui/dist/components/Icon'
 import { APP_ROUTES } from 'config'
 
-export const DATA = {
+interface Header {
+  title?: string
+  cost?: string
+  costLabel?: string
+  action?: {
+    label: string
+    link: string
+  }
+  selected?: true
+  subText?: string
+}
+
+interface Row {
+  label?: string
+  labelColor?: string
+  icon?: KnownIcon
+  iconColor?: string
+}
+
+interface Group {
+  label?: string
+  rows: Row[][]
+}
+
+interface Data {
+  headers: Header[]
+  groups: Group[]
+}
+
+export const DATA: Data = {
   headers: [
+    {}, // empty first header column
     {
       title: 'NSFW.app',
       cost: '0%',
-      costLabel: 'Commission',
+      costLabel: 'Commissions',
       action: {
         label: 'sign up',
         link: APP_ROUTES.CREATOR_SIGNUP,
       },
       selected: true,
-      subText: 'Some subtext..',
     },
     {
-      title: 'OnlyFans',
-      cost: '35%',
+      title: 'Other platforms',
+      cost: '15-35%',
       costLabel: 'Commission',
-      // action: 'sign up',
-      // subText: 'Billed annually',
-    },
-    {
-      title: 'WetSpace',
-      cost: '15%',
-      costLabel: 'Commission',
-      // action: 'sign up',
-      // subText: 'Billed annually',
     },
   ],
   groups: [
     {
-      label: 'Usage',
+      label: 'Fees',
       rows: [
         [
-          { label: 'Users' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
+          { label: 'Minimum withdrawal' },
+          { label: '$30' },
+          { label: '$20 - $100' },
         ],
         [
-          { label: 'File upload size' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
+          { label: 'Settlement Period' },
+          { label: 'Minutes' },
+          { label: 'Days' },
         ],
-        [
-          { label: 'File upload volume' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
-        ],
-        [
-          { label: 'Issues' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
-        ],
+        [{ label: 'Chargebacks' }, { label: 'No' }, { label: 'Yes' }],
       ],
     },
     {
       label: 'Features',
       rows: [
         [
-          { label: 'Users' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
+          { label: 'Unlock Exclusive Posts' },
+          { icon: 'Tick' },
+          { icon: 'Tick' },
+        ],
+        [{ label: 'Tip Profiles' }, { icon: 'Tick' }, { icon: 'Tick' }],
+        [{ label: 'Subscribe To Content' }, { icon: 'Tick' }, { icon: 'Tick' }],
+        [
+          { label: 'Direct Messaging' },
+          { label: 'Soon', labelColor: '$gold100' },
+          { icon: 'Tick' },
         ],
         [
-          { label: 'File upload size' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
+          { label: 'Secret 1' },
+          { label: 'Soon', labelColor: '$gold100' },
+          { icon: 'Cross' },
         ],
         [
-          { label: 'File upload volume' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
+          { label: 'Secret 2' },
+          { label: 'Soon', labelColor: '$gold100' },
+          { icon: 'Cross' },
         ],
         [
-          { label: 'Issues' },
-          { label: 'unlimited', icon: 'Tick' },
-          { label: 'unlimited', icon: 'Tick' },
+          { label: 'Secret 3' },
+          { label: 'Soon', labelColor: '$gold100' },
+          { icon: 'Cross' },
         ],
       ],
     },

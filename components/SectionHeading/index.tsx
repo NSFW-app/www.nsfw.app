@@ -4,7 +4,6 @@ export const SectionHeading = Stitches.styled(Flex, {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'flex-start',
-  width: '100%',
   margin: '16px',
   '@md': {
     margin: '36px',

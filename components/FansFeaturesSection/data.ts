@@ -2,26 +2,26 @@ import { FeatureCardProps } from 'components/FeatureCard'
 
 export const data: FeatureCardProps[] = [
   {
-    // icon: 'Blockchain',
-    heading: 'Feed your kink with global content',
+    // icon: 'Tick', // todo: thicker
+    heading: 'Verified creators',
     body:
-      'We welcome global sex positive creators of all kinks. Everyone is welcome to express themselves in a natural legally uncensored way without restrictions seen on other platforms',
+      'All our creators are verified using banking grade KYC/AML. You can be sure that content is authentic.',
     // primaryLink: 'Learn More',
     // secondaryLink: 'About Us',
   },
   {
-    // icon: 'Tags',
-    heading: 'Enjoy content discretely',
+    // icon: 'Cash',
+    heading: 'Pay discretely with crypto',
     body:
-      'Privacy is assured using Card to Crypto payments - no worries about NSFW payments on your bank statements',
+      'No more awkward bank statements, pay directly using crypto. We support most standard wallets.',
     // primaryLink: 'Become a creator',
     // secondaryLink: 'View Creators',
   },
   {
-    // icon: 'Coins',
-    heading: 'Enjoy our creator focussed platform',
+    // icon: 'Compass',
+    heading: 'Mobile Friendly',
     body:
-      'Built by adult industry experts alongside creators working as one team',
+      'Enjoy an experience that is focused on the content, on any device, and free of advertising.',
     // primaryLink: 'About Currency',
     // secondaryLink: 'Buy Coins',
   },

@@ -28,23 +28,15 @@ export const FansHeroSection = () => {
       >
         <HeroFlex center column>
           <Heading css={{ marginBottom: spaces[3] }}>
-            Goodbye censored content. Hello privacy.
+            Goodbye censorship. Hello freedom.
           </Heading>
           <Text
             type='subhead1'
             subText
-            css={{ marginBottom: spaces[1], '@md': { width: '80%' } }}
+            css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
-            Explore & enjoy your favourite uncensored kinks & fetishes from
-            global creators with the added bonus of total privacy with Crypto
+            Discover & unlock your favourite Adult content using crypto
             payments.
-          </Text>
-          <Text
-            type='subhead1'
-            subText
-            css={{ margin: `12px 0 ${spaces[4]} 0`, '@md': { width: '80%' } }}
-          >
-            Show your love by following, tipping, subscribing & PPVs.
           </Text>
           <Flex
             fullWidth
