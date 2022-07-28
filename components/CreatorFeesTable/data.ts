@@ -1,5 +1,6 @@
 import { KnownIcon } from '@nsfw-app/ui/dist/components/Icon'
 import { APP_ROUTES } from 'config'
+import { NSFW_EVENT } from 'lib/analytics'
 
 interface Header {
   title?: string
@@ -8,6 +9,7 @@ interface Header {
   action?: {
     label: string
     link: string
+    track?: NSFW_EVENT
   }
   selected?: true
   subText?: string
@@ -40,6 +42,7 @@ export const DATA: Data = {
       action: {
         label: 'sign up',
         link: APP_ROUTES.CREATOR_SIGNUP,
+        track: NSFW_EVENT.FEES_SIGNUP,
       },
       selected: true,
     },

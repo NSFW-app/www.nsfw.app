@@ -10,9 +10,11 @@ import {
   RowHeaderCell,
 } from '@nsfw-app/ui'
 import { Link } from 'components/Link'
+import { useAnalytics } from 'lib/analytics'
 import { DATA } from './data'
 
 export const CreatorFeesTable = () => {
+  const analytics = useAnalytics()
   const selectedCol = Math.max(
     DATA.headers.findIndex((h) => h.selected === true),
     0
@@ -60,6 +62,9 @@ export const CreatorFeesTable = () => {
               theme='primary'
               css={{ maxHeight: '36px', marginBottom: '16px' }}
               href={header.action.link}
+              onClick={() =>
+                header.action?.track && analytics.track(header.action?.track)
+              }
             >
               {header.action.label}
             </Link>
