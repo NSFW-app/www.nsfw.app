@@ -141,7 +141,11 @@ export const Navigation = () => {
           </ToggleContainer>
         </RightSection>
       </TopbarNav>
-      <MobileMenu visible={isOpen} handleAction={() => setIsOpen(false)} />
+      <MobileMenu
+        visible={isOpen}
+        onClose={() => setIsOpen(false)}
+        onOpen={() => setIsOpen(true)}
+      />
     </>
   )
 }
