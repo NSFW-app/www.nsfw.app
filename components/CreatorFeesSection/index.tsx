@@ -1,5 +1,5 @@
 import { Heading, Text } from '@nsfw-app/ui'
-import { Card } from 'components/ Card'
+import { Card } from 'components/Card'
 import { CreatorFeesTable } from 'components/CreatorFeesTable'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { SectionHeading } from 'components/SectionHeading'
