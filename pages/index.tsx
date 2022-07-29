@@ -1,17 +1,24 @@
 import type { NextPage } from 'next'
+import { useEffect } from 'react'
 import { Layout } from 'components/Layout'
-import { HeroSection } from 'components/HeroSection'
+import { FansHeroSection } from 'components/FansHeroSection'
 import { HeroImageSection } from 'components/HeroImageSection'
-import { CardSection } from 'components/CardSection'
+import { FansFeaturesSection } from 'components/FansFeaturesSection'
+import { useAnalytics, NSFW_EVENT } from 'lib/analytics'
 
-const Home: NextPage = () => {
+const FansLanding: NextPage = () => {
+  const analytics = useAnalytics()
+  useEffect(() => {
+    analytics.track(NSFW_EVENT.VIEW_LANDING)
+  }, [analytics])
+  
   return (
     <Layout>
-      <HeroSection />
+      <FansHeroSection />
       <HeroImageSection />
-      <CardSection />
+      <FansFeaturesSection />
     </Layout>
   )
 }
 
-export default Home
+export default FansLanding

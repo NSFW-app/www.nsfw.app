@@ -1,4 +1,5 @@
 import { Stitches, Section } from '@nsfw-app/ui'
+import { sizes } from 'config'
 
 /**
  * GridSection
@@ -18,8 +19,6 @@ export const GridSection = Stitches.styled(Section, {
   },
   '@xxl': {
     gridTemplateColumns: 'repeat(12, 1fr)',
-    // Horizontal padding measured from design file:
-    // 2p + 1328 = 100vw
-    padding: '0 calc(50vw - 664px)',
+    padding: sizes.sectionPadding,
   },
 })

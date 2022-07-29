@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { Stitches, Box } from '@nsfw-app/ui'
 import Nexthead from 'next/head'
-import { SITE_DOMAIN } from 'config'
+import { SITE_DOMAIN, sizes } from 'config'
 import { Navigation } from 'components/Navigation'
 import { Footer } from 'components/Footer'
 
@@ -69,7 +69,9 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta content='summary_large_image' name='twitter:card' />
       </Nexthead>
       <Navigation />
-      <Box css={{ minHeight: '100vh', ...css }}>{children}</Box>
+      <Box css={{ ...css, minHeight: `calc(100vh - ${sizes.footerHeight})` }}>
+        {children}
+      </Box>
       <Footer />
     </Box>
   )

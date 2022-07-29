@@ -1,0 +1,21 @@
+import { Flex, Heading, Text, Stitches } from '@nsfw-app/ui'
+
+export const SectionHeading = Stitches.styled(Flex, {
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'flex-start',
+  margin: '16px',
+  '@md': {
+    margin: '36px',
+  },
+  '@lg': {
+    margin: '36px 68px',
+  },
+
+  [`${Heading}`]: {
+    marginBottom: '22px',
+  },
+  [`${Text}`]: {
+    marginBottom: '16px',
+  },
+})

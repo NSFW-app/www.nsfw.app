@@ -1,7 +1,9 @@
 import { Stitches, Text, Icon, Button, Flex, Heading } from '@nsfw-app/ui'
-import { spaces } from 'config'
+import { APP_ROUTES, spaces } from 'config'
 
 import { GridContent, GridSection } from 'components/GridLayout'
+import { Link } from 'components/Link'
+import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
 
 const HeroFlex = Stitches.styled(Flex, {
   height: '100vh',
@@ -16,36 +18,26 @@ const buttonCss = {
   },
 }
 
-export const HeroSection = () => {
-  const handleFeatures = () => {
-    console.log('handleFeatures')
-  }
-
-  const handleGetStarted = () => {
-    console.log('handleGetStarted')
-  }
-
+export const CreatorsHeroSection = () => {
+  const analytics = useAnalytics()
   return (
     <GridSection>
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '3 / 11',
+          desktop: '2 / 12',
         }}
       >
         <HeroFlex center column>
-          {/* <Text type='body2' css={{ marginBottom: spaces[4] }}>
-            Open Public Beta
-          </Text> */}
           <Heading css={{ marginBottom: spaces[3] }}>
-            Goodbye censorship. Hello freedom.
+            Get creative. Get paid.
           </Heading>
           <Text
-            type='body1'
+            type='subhead1'
             subText
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
-            We empower creators and their communities using Web3 technology.
+            NSFW.app offers 0% commission on content and pays out instantly.
           </Text>
           <Flex
             fullWidth
@@ -57,17 +49,19 @@ export const HeroSection = () => {
               },
             }}
           >
-            <Button theme='primary' css={buttonCss} onClick={handleFeatures}>
+            <Link button theme='primary' css={buttonCss} href='#features'>
               Features
-            </Button>
-            <Button
+            </Link>
+            <Link
+              button
               theme='secondary'
               css={buttonCss}
-              onClick={handleGetStarted}
+              href={APP_ROUTES.CREATOR_SIGNUP}
+              onClick={() => analytics.track(NSFW_EVENT.GET_STARTED_CLICK)}
             >
-              <p style={{ margin: 0 }}>Get started</p>
-              <Icon icon='Arrow' css={{ paddingLeft: spaces[1] }} />
-            </Button>
+              Get started
+              <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />
+            </Link>
           </Flex>
         </HeroFlex>
       </GridContent>

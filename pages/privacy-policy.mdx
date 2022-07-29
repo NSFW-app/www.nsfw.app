@@ -657,40 +657,42 @@ Whilst we try to keep our privacy policy up to date at all times, you
 may have further questions about this Privacy Policy, you can contact us
 at support\@nsfw.app
 
-export default ({ children }) => (
-  <Layout
-    metaTitle={`Terms and Conditions${META_TITLE_SUFFIX}`}
-    metaDesc='The more you know the less you know'
-    css={{
-      maxWidth: Stitches.theme.container.maxWidth,
-      margin: '0 auto',
-      padding: '200px 16px 24px 16px',
-    }}
-  >
-    <MDXProvider
-      components={{
-        h1: (props) => (
-          <Heading
-            {...props}
-            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
-          />
-        ),
-        h2: (props) => (
-          <Heading
-            {...props}
-            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
-          />
-        ),
-        h3: (props) => (
-          <Heading
-            {...props}
-            css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
-          />
-        ),
-        p: (props) => <Text {...props} subText css={{ fontSize: '14px' }} />,
+export default ({ children }) => {
+  return (
+    <Layout
+      metaTitle={`Terms and Conditions${META_TITLE_SUFFIX}`}
+      metaDesc='The more you know the less you know'
+      css={{
+        maxWidth: Stitches.theme.container.maxWidth,
+        margin: '0 auto',
+        padding: '200px 16px 24px 16px',
       }}
     >
-      {children}
-    </MDXProvider>
-  </Layout>
-)
+      <MDXProvider
+        components={{
+          h1: (props) => (
+            <Heading
+              {...props}
+              css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+            />
+          ),
+          h2: (props) => (
+            <Heading
+              {...props}
+              css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+            />
+          ),
+          h3: (props) => (
+            <Heading
+              {...props}
+              css={{ margin: '25px 0 5px 0', fontSize: '18px' }}
+            />
+          ),
+          p: (props) => <Text {...props} subText css={{ fontSize: '14px' }} />,
+        }}
+      >
+        {children}
+      </MDXProvider>
+    </Layout>
+  )
+}

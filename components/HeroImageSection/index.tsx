@@ -1,6 +1,7 @@
 import NextImage from 'next/image'
-import { Box, Flex } from '@nsfw-app/ui'
+import { Flex } from '@nsfw-app/ui'
 import { GridContent, GridSection } from 'components/GridLayout'
+import { DiagonalBgBreak } from 'components/DiagonalBgBreak'
 
 export const HeroImageSection = () => {
   return (
@@ -10,17 +11,7 @@ export const HeroImageSection = () => {
         position: 'relative',
       }}
     >
-      <Box
-        css={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          borderStyle: 'solid',
-          borderWidth: '0 100vw 12vw 0',
-          borderColor: '$gray500 $gray100 $gray500 $gray500',
-          marginLeft: '-14px', // account for webkit scrollbar width
-        }}
-      />
+      <DiagonalBgBreak />
       <GridContent
         columns={{
           tablet: '2 / 8',
@@ -29,11 +20,10 @@ export const HeroImageSection = () => {
         css={{
           zIndex: 1,
           height: 'auto',
-          backgroundColor: 'transparent',
           marginTop: '-8vw',
         }}
       >
-        <Flex center fullWidth css={{ backgroundColor: 'transparent' }}>
+        <Flex center fullWidth>
           <NextImage
             src='/static/images/landing-hero.png'
             alt='NSFW landing hero'

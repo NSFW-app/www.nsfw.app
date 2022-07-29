@@ -1,16 +1,19 @@
-import { Stitches, Flex, Text } from '@nsfw-app/ui'
+import { useRouter } from 'next/router'
+import { Stitches, Flex, Nav, NavLink } from '@nsfw-app/ui'
 
-import { links, sizes, spaces } from 'config'
+import { APP_ROUTES, sizes, spaces } from 'config'
 import { LaunchButton } from 'components/LaunchButton'
+import NextJsLink from 'next/link'
+import { useAnalytics, NSFW_EVENT } from 'lib/analytics'
 
-const Container = Stitches.styled('div', {
-  background: Stitches.theme.colors.gray300,
+const MobileMenuNav = Stitches.styled(Nav, {
+  background: '$gray300',
   position: 'fixed',
   top: 0,
   left: 0,
   width: '100%',
   height: '100%',
-  zIndex: Stitches.theme.zIndices.layerOne,
+  zIndex: '$layerOne',
   padding: `0 ${spaces[2]}`,
   '@md': {
     padding: '0 40px',
@@ -23,39 +26,53 @@ interface Props {
 }
 
 export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
+  const router = useRouter()
+  const analytics = useAnalytics()
+  const handleTrackingActionClick = (event: NSFW_EVENT) => {
+    analytics.track(event)
+    handleAction()
+  }
   return (
-    <Container css={{ display: visible ? 'block' : 'none' }}>
+    <MobileMenuNav css={{ display: visible ? 'block' : 'none' }}>
       <Flex
         column
         css={{
           justifyContent: 'space-between',
-          background: 'transparent',
           height: '100%',
           paddingTop: sizes.navigationHeight,
         }}
       >
-        <div>
-          {links.map((link) => (
-            <a
-              key={link.title}
-              href={link.href}
-              style={{ textDecoration: 'none' }}
-              onClick={handleAction}
+        <Flex column css={{ height: '150px' }}>
+          <NextJsLink passHref href={APP_ROUTES.HOME}>
+            <NavLink
+              highlightPosition='vertical'
+              active={router.pathname === APP_ROUTES.HOME}
             >
-              <Text
-                type='body1'
-                css={{ margin: `${sizes.navigationItemMargin} 0` }}
-              >
-                {link.title}
-              </Text>
-            </a>
-          ))}
-        </div>
+              Fans
+            </NavLink>
+          </NextJsLink>
+          <NextJsLink passHref href={APP_ROUTES.CREATORS}>
+            <NavLink
+              highlightPosition='vertical'
+              active={router.pathname === APP_ROUTES.CREATORS}
+            >
+              Creators
+            </NavLink>
+          </NextJsLink>
+          <NextJsLink passHref href={APP_ROUTES.FAQ}>
+            <NavLink
+              highlightPosition='vertical'
+              active={router.pathname === APP_ROUTES.FAQ}
+            >
+              FAQs
+            </NavLink>
+          </NextJsLink>
+        </Flex>
         <LaunchButton
           css={{ margin: `${spaces[2]} 0` }}
-          onLaunch={handleAction}
+          onLaunch={() => handleTrackingActionClick(NSFW_EVENT.LAUNCH_APP)}
         />
       </Flex>
-    </Container>
+    </MobileMenuNav>
   )
 }

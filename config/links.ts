@@ -1,30 +1,10 @@
-import { AppRoutes } from 'config/routes'
 import { IconProps } from '@nsfw-app/ui'
-
-interface NavigationLink {
-  title: string
-  href: string
-}
-
-export const links: NavigationLink[] = [
-  {
-    title: 'Features',
-    href: '#',
-  },
-
-  {
-    title: 'Creators',
-    href:
-      'https://docs.google.com/forms/d/e/1FAIpQLSdDneYo-3R552Q_mCRwIZ6xpZMtZVQbrjLbODQOruELeSoswA/viewform',
-  },
-  {
-    title: 'FAQs',
-    href: AppRoutes.FAQ,
-  },
-]
+import { APP_ROUTES } from 'config/routes'
 
 export const FOOTER_LINKS = [
-  { name: 'Privacy Policy', href: '/privacy-policy' },
+  { name: 'About', href: APP_ROUTES.ABOUT },
+  { name: 'Contact', href: 'mailto:support@nsfw.app' },
+  { name: 'Privacy Policy', href: APP_ROUTES.PRIVACY_POLICY },
 ]
 
 interface FooterSocialLink {

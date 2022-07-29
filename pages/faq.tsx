@@ -1,4 +1,3 @@
-import { Layout } from 'components/Layout'
 import { OperationResult } from 'urql'
 import { serialize } from 'next-mdx-remote/serialize'
 import { Flex, Heading, Text } from '@nsfw-app/ui'
@@ -6,6 +5,7 @@ import { Flex, Heading, Text } from '@nsfw-app/ui'
 import { sizes, spaces } from 'config'
 import { SerializedFAQ, FAQs, FAQsResponse } from 'lib/cms/queries/faqs'
 import { getCMSClient } from 'lib/cms/client'
+import { Layout } from 'components/Layout'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Accordion } from 'components/Accordion'
 
@@ -20,9 +20,8 @@ const FAQPage = ({ data, filterValues }: FAQProps) => {
         <GridContent
           columns={{
             tablet: '2 / 8',
-            desktop: '3 / 11',
+            desktop: '2 / 12',
           }}
-          css={{ minHeight: `calc(100vh - ${sizes.footerHeight})` }}
         >
           <Flex
             center

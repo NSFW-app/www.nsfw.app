@@ -42,11 +42,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         shallow={shallow}
       >
         <Anchor
-          css={{
-            lineHeight: '24px',
-            fontSize: '14px',
-            ...css,
-          }}
+          css={css}
           theme={theme}
           button={button}
           round={round}
