@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <AnalyticsProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </AnalyticsProvider>
   )
 }

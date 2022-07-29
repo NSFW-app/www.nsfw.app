@@ -1,78 +1,80 @@
 import { useRouter } from 'next/router'
-import { Stitches, Flex, Nav, NavLink } from '@nsfw-app/ui'
-
-import { APP_ROUTES, sizes, spaces } from 'config'
-import { LaunchButton } from 'components/LaunchButton'
+import {
+  NavLink,
+  BurgerMenu,
+  BurgerLeftMenu,
+  BurgerRightMenuItems,
+} from '@nsfw-app/ui'
+import { APP_ROUTES, SOCIAL_LINKS } from 'config'
 import NextJsLink from 'next/link'
 import { useAnalytics, NSFW_EVENT } from 'lib/analytics'
+import { useEffect, useRef } from 'react'
 
-const MobileMenuNav = Stitches.styled(Nav, {
-  background: '$gray300',
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  zIndex: '$layerOne',
-  padding: `0 ${spaces[2]}`,
-  '@md': {
-    padding: '0 40px',
-  },
-})
-
+const MOBILE_NAV_GESTURE_EDGE = 25
 interface Props {
   visible: boolean
-  handleAction: () => void
+  onClose: () => void
+  onOpen: () => void
 }
 
-export const MobileMenu: React.FC<Props> = ({ visible, handleAction }) => {
+export const MobileMenu: React.FC<Props> = ({ visible, onClose, onOpen }) => {
   const router = useRouter()
   const analytics = useAnalytics()
   const handleTrackingActionClick = (event: NSFW_EVENT) => {
     analytics.track(event)
-    handleAction()
+    onClose()
   }
+  const appContainerRef = useRef<HTMLElement | undefined>()
+  useEffect(() => {
+    if (!appContainerRef.current) {
+      appContainerRef.current = window.document.querySelector('#__next') as
+        | HTMLElement
+        | undefined
+    }
+  }, [appContainerRef])
+
   return (
-    <MobileMenuNav css={{ display: visible ? 'block' : 'none' }}>
-      <Flex
-        column
-        css={{
-          justifyContent: 'space-between',
-          height: '100%',
-          paddingTop: sizes.navigationHeight,
-        }}
-      >
-        <Flex column css={{ height: '150px' }}>
-          <NextJsLink passHref href={APP_ROUTES.HOME}>
-            <NavLink
-              highlightPosition='vertical'
-              active={router.pathname === APP_ROUTES.HOME}
-            >
-              Fans
-            </NavLink>
-          </NextJsLink>
-          <NextJsLink passHref href={APP_ROUTES.CREATORS}>
-            <NavLink
-              highlightPosition='vertical'
-              active={router.pathname === APP_ROUTES.CREATORS}
-            >
-              Creators
-            </NavLink>
-          </NextJsLink>
-          <NextJsLink passHref href={APP_ROUTES.FAQ}>
-            <NavLink
-              highlightPosition='vertical'
-              active={router.pathname === APP_ROUTES.FAQ}
-            >
-              FAQs
-            </NavLink>
-          </NextJsLink>
-        </Flex>
-        <LaunchButton
-          css={{ margin: `${spaces[2]} 0` }}
-          onLaunch={() => handleTrackingActionClick(NSFW_EVENT.LAUNCH_APP)}
-        />
-      </Flex>
-    </MobileMenuNav>
+    <BurgerMenu
+      opened={visible}
+      onClose={onClose}
+      onOpen={onOpen}
+      appContainerRef={appContainerRef}
+      css={{ a: { justifyContent: 'end !important' } }}
+    >
+      <BurgerLeftMenu socialLinks={SOCIAL_LINKS} />
+      <BurgerRightMenuItems>
+        <NextJsLink passHref href={APP_ROUTES.HOME}>
+          <NavLink
+            highlightPosition='vertical'
+            active={router.pathname === APP_ROUTES.HOME}
+          >
+            Fans
+          </NavLink>
+        </NextJsLink>
+        <NextJsLink passHref href={APP_ROUTES.CREATORS}>
+          <NavLink
+            highlightPosition='vertical'
+            active={router.pathname === APP_ROUTES.CREATORS}
+          >
+            Creators
+          </NavLink>
+        </NextJsLink>
+        <NextJsLink passHref href={APP_ROUTES.FAQ}>
+          <NavLink
+            highlightPosition='vertical'
+            active={router.pathname === APP_ROUTES.FAQ}
+          >
+            FAQs
+          </NavLink>
+        </NextJsLink>
+        <NextJsLink
+          passHref
+          href={APP_ROUTES.APP}
+          onClick={() => handleTrackingActionClick(NSFW_EVENT.LAUNCH_APP)}
+        >
+          <NavLink highlightPosition='vertical'>Launch App</NavLink>
+        </NextJsLink>
+      </BurgerRightMenuItems>
+    </BurgerMenu>
   )
 }
