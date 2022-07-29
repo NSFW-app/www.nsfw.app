@@ -10,7 +10,7 @@ import {
   Anchor,
 } from '@nsfw-app/ui'
 
-import { FOOTER_LINKS, FOOTER_SOCIAL_LINKS, sizes } from 'config'
+import { FOOTER_LINKS, SOCIAL_LINKS, sizes } from 'config'
 import { Link } from 'components/Link'
 
 const SocialsList = Stitches.styled(List, {
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ css }) => {
           &copy; {new Date().getFullYear()} NSFW.app
         </CopyRightText>
         <SocialsList horizontal>
-          {FOOTER_SOCIAL_LINKS.map(({ icon, href }) => (
+          {SOCIAL_LINKS.map(({ icon, href }) => (
             <Anchor
               key={href}
               rel='noopener noreferrer'
