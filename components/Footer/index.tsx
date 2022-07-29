@@ -8,6 +8,7 @@ import {
   Flex,
   Icon,
   Anchor,
+  useIsDesktopSize,
 } from '@nsfw-app/ui'
 
 import { FOOTER_LINKS, SOCIAL_LINKS, sizes } from 'config'
@@ -38,7 +39,7 @@ const FooterInnerContainer = Stitches.styled(Flex, {
   alignItems: 'center',
   width: '100%',
   transition: 'all 200ms ease',
-  justifyContent: 'space-between',
+
   '@md': {
     padding: '0 40px',
   },
@@ -58,28 +59,33 @@ export interface FooterProps
 
 // TODO: refactor this to be composable instead of configurable, and move into @nfsw-app/ui
 export const Footer: React.FC<FooterProps> = ({ css }) => {
+  const isDesktop = useIsDesktopSize()
   return (
     <MarketingFooter
       css={{
         ...css,
       }}
     >
-      <FooterInnerContainer>
+      <FooterInnerContainer
+        css={{ justifyContent: isDesktop ? 'space-between' : 'center' }}
+      >
         <CopyRightText type='body4'>
           &copy; {new Date().getFullYear()} NSFW.app
         </CopyRightText>
-        <SocialsList horizontal>
-          {SOCIAL_LINKS.map(({ icon, href }) => (
-            <Anchor
-              key={href}
-              rel='noopener noreferrer'
-              target='_blank'
-              href={href}
-            >
-              <Icon icon={icon} css={{ height: '22px', width: '22px' }} />
-            </Anchor>
-          ))}
-        </SocialsList>
+        {isDesktop && (
+          <SocialsList horizontal>
+            {SOCIAL_LINKS.map(({ icon, href }) => (
+              <Anchor
+                key={href}
+                rel='noopener noreferrer'
+                target='_blank'
+                href={href}
+              >
+                <Icon icon={icon} css={{ height: '22px', width: '22px' }} />
+              </Anchor>
+            ))}
+          </SocialsList>
+        )}
         <Nav>
           <List horizontal css={{ gap: '15px' }}>
             {FOOTER_LINKS.map(({ name, href }) => (
