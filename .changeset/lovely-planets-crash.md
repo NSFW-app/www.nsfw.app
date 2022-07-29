@@ -10,3 +10,4 @@ Update content, Creator Earnings table & UI updates
 - Add /creator landing page with "Fees" section
 - Adds fees & features comparison table
 - Update navigation and hook up all page anchors & links to application pages
+- Update SEO title & meta
