@@ -8,8 +8,9 @@ import {
 import { APP_ROUTES, SOCIAL_LINKS } from 'config'
 import NextJsLink from 'next/link'
 import { useAnalytics, NSFW_EVENT } from 'lib/analytics'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
+const MOBILE_NAV_GESTURE_EDGE = 25
 interface Props {
   visible: boolean
   onClose: () => void
@@ -24,6 +25,13 @@ export const MobileMenu: React.FC<Props> = ({ visible, onClose, onOpen }) => {
     onClose()
   }
   const appContainerRef = useRef<HTMLElement | undefined>()
+  useEffect(() => {
+    if (!appContainerRef.current) {
+      appContainerRef.current = window.document.querySelector('#__next') as
+        | HTMLElement
+        | undefined
+    }
+  }, [appContainerRef])
 
   return (
     <BurgerMenu
@@ -59,7 +67,11 @@ export const MobileMenu: React.FC<Props> = ({ visible, onClose, onOpen }) => {
             FAQs
           </NavLink>
         </NextJsLink>
-        <NextJsLink passHref href={APP_ROUTES.APP}>
+        <NextJsLink
+          passHref
+          href={APP_ROUTES.APP}
+          onClick={() => handleTrackingActionClick(NSFW_EVENT.LAUNCH_APP)}
+        >
           <NavLink highlightPosition='vertical'>Launch App</NavLink>
         </NextJsLink>
       </BurgerRightMenuItems>
