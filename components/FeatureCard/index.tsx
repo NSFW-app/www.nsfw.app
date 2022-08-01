@@ -47,7 +47,11 @@ export const FeatureCard: React.FC<Stitches.CSSProp & FeatureCardProps> = ({
         >
           {heading}
         </Heading>
-        <Text type='body2' subText css={{ marginBottom: '20px' }}>
+        <Text
+          type='body2'
+          subText
+          css={{ marginBottom: '20px', wordSpacing: 0 }}
+        >
           {body}
         </Text>
         <Flex css={{ backgroundColor: '$gray400' }}>
