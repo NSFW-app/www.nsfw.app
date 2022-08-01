@@ -11,6 +11,6 @@ export const APP_ROUTES = {
   ABOUT: '/about-us',
   PRIVACY_POLICY: '/privacy-policy',
   APP: APP_SITE_DOMAIN,
-  ADMIRER_SIGNUP: `${APP_SITE_DOMAIN}/signup`,
-  CREATOR_SIGNUP: `${APP_SITE_DOMAIN}/signup?accountType=creator`,
+  ADMIRER_SIGNUP: `${APP_SITE_DOMAIN}/signup?utm_source=cta&utm_medium=website&utm_campaign=fan-cta`,
+  CREATOR_SIGNUP: `${APP_SITE_DOMAIN}/signup?accountType=creator&utm_source=cta&utm_medium=website&utm_campaign=creator-cta`,
 }

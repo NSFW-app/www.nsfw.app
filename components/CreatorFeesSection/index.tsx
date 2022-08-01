@@ -29,7 +29,8 @@ export const CreatorFeesSection = () => {
         <SectionHeading>
           <Heading>How we compare</Heading>
           <Text type='subhead1' subText>
-            Keep 100% of your earnings with <strong>0% fees.</strong>
+            Retain 100% of your earnings with <strong>0% comission</strong> on
+            your content.
           </Text>
         </SectionHeading>
         <Card

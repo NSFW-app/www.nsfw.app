@@ -4,8 +4,7 @@ export const data: FeatureCardProps[] = [
   {
     // icon: 'Blockchain',
     heading: 'Fast withdrawals',
-    body:
-      'Unlike other platforms, there is no wait required to withdraw your funds.',
+    body: 'Unlike other platforms, there are no delays when withdrawing funds.',
     // primaryLink: 'Learn More',
     // secondaryLink: 'About Us',
   },
@@ -13,26 +12,25 @@ export const data: FeatureCardProps[] = [
     // icon: 'Coins',
     heading: 'Support network',
     body:
-      'Join an exclusive network of verified creators and grow your audience.',
+      'Join an invite-only community of verified creators and share your experiences.',
     // primaryLink: 'About Currency',
     // secondaryLink: 'Buy Coins',
   },
   {
     heading: 'Industry professionals',
     body:
-      'Our team has decades of recognised adult industry experience. Be an ambassador.',
+      'A team with decades of recognised adult industry experience. Work with professionals.',
   },
   {
     heading: 'Have a voice',
-    body: 'Have your say in how the product direction.',
+    body: 'Have your say in the product direction. Become an ambassador',
   },
   {
-    heading: 'Mobile friendly',
-    body:
-      "We've redesigned our app from the ground up, so you can use it from any device.",
+    heading: 'Mobile first',
+    body: 'A modern app built from the ground up, expand your audience.',
   },
   {
-    heading: 'Content freedom',
-    body: 'Express yourself freely with no restrictions or censored content.',
+    heading: 'Content censorship',
+    body: 'Express yourself freely with inclusive content guidelines.',
   },
 ]

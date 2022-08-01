@@ -40,7 +40,7 @@ export const CreatorFeaturesSection: React.FC = () => {
       >
         <Flex css={{ padding: 32 }} center fullWidth>
           <Heading as='h4'>
-            We built the best crypto-powered creator platform
+            We have built the best crypto-powered creator platform
           </Heading>
         </Flex>
         <InnerGrid>

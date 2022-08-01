@@ -38,7 +38,7 @@ export const DATA: Data = {
     {
       title: 'NSFW.app',
       cost: '0%',
-      costLabel: 'Commissions',
+      costLabel: 'commission',
       action: {
         label: 'sign up',
         link: APP_ROUTES.CREATOR_SIGNUP,
@@ -49,7 +49,7 @@ export const DATA: Data = {
     {
       title: 'Other platforms',
       cost: '15-35%',
-      costLabel: 'Commission',
+      costLabel: 'commission',
     },
   ],
   groups: [
@@ -57,47 +57,51 @@ export const DATA: Data = {
       label: 'Fees',
       rows: [
         [
-          { label: 'Minimum Withdrawal' },
+          { label: 'Minimum withdrawal' },
           { label: '$30' },
           { label: '$20 - $100' },
         ],
         [
-          { label: 'Settlement Period' },
+          { label: 'Settlement period' },
           { label: 'Minutes' },
           { label: 'Days' },
         ],
         [{ label: 'Chargebacks' }, { label: 'No' }, { label: 'Yes' }],
-        [{ label: 'Pro Features' }, { label: 'Coming soon' }, { label: 'No' }],
+        [
+          { label: 'Pro features' },
+          { label: 'Soon™', labelColor: '$gold100' },
+          { label: 'No' },
+        ],
       ],
     },
     {
       label: 'Features',
       rows: [
         [
-          { label: 'Unlock Exclusive Posts' },
+          { label: 'Unlock exclusive posts' },
           { icon: 'Tick' },
           { icon: 'Tick' },
         ],
-        [{ label: 'Tip Profiles' }, { icon: 'Tick' }, { icon: 'Tick' }],
-        [{ label: 'Subscribe To Content' }, { icon: 'Tick' }, { icon: 'Tick' }],
+        [{ label: 'Receive tips' }, { icon: 'Tick' }, { icon: 'Tick' }],
+        [{ label: 'Create subscriptions' }, { icon: 'Tick' }, { icon: 'Tick' }],
         [
-          { label: 'Direct Messaging' },
-          { label: 'Soon', labelColor: '$gold100' },
+          { label: 'Direct messaging' },
+          { label: 'Soon™', labelColor: '$gold100' },
           { icon: 'Tick' },
         ],
         [
           { label: 'Secret 1' },
-          { label: 'Soon', labelColor: '$gold100' },
+          { label: 'Soon™', labelColor: '$gold100' },
           { icon: 'Cross' },
         ],
         [
           { label: 'Secret 2' },
-          { label: 'Soon', labelColor: '$gold100' },
+          { label: 'Soon™', labelColor: '$gold100' },
           { icon: 'Cross' },
         ],
         [
           { label: 'Secret 3' },
-          { label: 'Soon', labelColor: '$gold100' },
+          { label: 'Soon™', labelColor: '$gold100' },
           { icon: 'Cross' },
         ],
       ],

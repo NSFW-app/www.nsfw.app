@@ -37,8 +37,7 @@ export const FansHeroSection = () => {
             subText
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
-            Discover & unlock your favourite Adult content using crypto
-            payments.
+            Discover and unlock your favourite adult content with crypto.
           </Text>
           <Flex
             fullWidth

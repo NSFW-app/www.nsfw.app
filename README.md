@@ -5,8 +5,13 @@
 First, run the development server:
 
 ```bash
-npm run dev
-# or
+# Use correct node version
+nvm use
+
+# Install deps
+yarn dev
+
+# Run local dev environment
 yarn dev
 ```
 
