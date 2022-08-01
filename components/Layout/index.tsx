@@ -1,11 +1,15 @@
 import { useRouter } from 'next/router'
 import { Stitches, Box } from '@nsfw-app/ui'
 import Nexthead from 'next/head'
-import { SITE_DOMAIN, sizes } from 'config'
+import {
+  DEFAULT_META_IMG,
+  SITE_DOMAIN,
+  DEFAULT_META_DESC,
+  DEFAULT_META_TITLE,
+  sizes,
+} from 'config'
 import { Navigation } from 'components/Navigation'
 import { Footer } from 'components/Footer'
-
-import { DEFAULT_META_DESC, DEFAULT_META_TITLE } from 'config'
 
 export interface SeoProps {
   metaTitle?: string
@@ -31,7 +35,7 @@ export interface LayoutProps
 export const Layout: React.FC<LayoutProps> = ({
   metaTitle = DEFAULT_META_TITLE,
   metaDesc = DEFAULT_META_DESC,
-  metaImg,
+  metaImg = DEFAULT_META_IMG,
   canonicalUrl,
   og,
   children,
@@ -60,12 +64,8 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta property='twitter:title' content={og?.title || metaTitle} />
         <meta property='og:description' content={og?.desc || metaDesc} />
         <meta property='twitter:description' content={og?.desc || metaDesc} />
-        {(og?.image || metaImg) && (
-          <>
-            <meta property='og:image' content={og?.image || metaImg} />
-            <meta property='twitter:image' content={og?.image || metaImg} />
-          </>
-        )}
+        <meta property='og:image' content={og?.image || metaImg} />
+        <meta property='twitter:image' content={og?.image || metaImg} />
         <meta content='summary_large_image' name='twitter:card' />
       </Nexthead>
       <Navigation />
