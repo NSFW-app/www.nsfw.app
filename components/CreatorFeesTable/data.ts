@@ -57,7 +57,7 @@ export const DATA: Data = {
       label: 'Fees',
       rows: [
         [
-          { label: 'Minimum withdrawal' },
+          { label: 'Minimum Withdrawal' },
           { label: '$30' },
           { label: '$20 - $100' },
         ],
@@ -67,6 +67,7 @@ export const DATA: Data = {
           { label: 'Days' },
         ],
         [{ label: 'Chargebacks' }, { label: 'No' }, { label: 'Yes' }],
+        [{ label: 'Pro Features' }, { label: 'Coming soon' }, { label: 'No' }],
       ],
     },
     {
