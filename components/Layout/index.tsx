@@ -52,8 +52,6 @@ export const Layout: React.FC<LayoutProps> = ({
           name='viewport'
           content='width=device-width, initial-scale=1.0, maximum-scale=1.0'
         ></meta>
-        {/* TODO: REMOVE - TEMP while site is in development */}
-        <meta name='robots' content='noindex,nofollow' />
         {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
         {metaDesc && <meta name='description' content={metaDesc} />}
         <meta
