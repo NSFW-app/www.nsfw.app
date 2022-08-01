@@ -1,5 +1,11 @@
 # @nsfw-app/marketing
 
+## 1.1.2
+
+### Patch Changes
+
+- Remove nofollow / noindex
+
 ## 1.1.1
 
 ### Patch Changes
