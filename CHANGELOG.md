@@ -1,5 +1,11 @@
 # @nsfw-app/marketing
 
+## 1.1.3
+
+### Patch Changes
+
+- Update community links
+
 ## 1.1.2
 
 ### Patch Changes
