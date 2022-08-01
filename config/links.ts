@@ -2,9 +2,9 @@ import { IconProps } from '@nsfw-app/ui'
 import { APP_ROUTES } from 'config/routes'
 
 export const FOOTER_LINKS = [
-  { name: 'About', href: APP_ROUTES.ABOUT },
-  { name: 'Contact', href: 'mailto:support@nsfw.app' },
+  // { name: 'About', href: APP_ROUTES.ABOUT },
   { name: 'Privacy Policy', href: APP_ROUTES.PRIVACY_POLICY },
+  { name: 'Contact', href: 'mailto:support@nsfw.app' },
 ]
 
 interface SocialLinkProps {
