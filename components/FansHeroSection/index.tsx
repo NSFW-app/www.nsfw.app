@@ -50,11 +50,18 @@ export const FansHeroSection = () => {
               },
             }}
           >
-            <Link button theme='primary' css={buttonCss} href='#features'>
+            <Link
+              button
+              uppercase
+              theme='primary'
+              css={buttonCss}
+              href='#features'
+            >
               Features
             </Link>
             <Link
               button
+              uppercase
               theme='secondary'
               css={buttonCss}
               href={APP_ROUTES.ADMIRER_SIGNUP}

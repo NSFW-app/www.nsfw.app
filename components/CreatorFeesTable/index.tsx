@@ -59,6 +59,7 @@ export const CreatorFeesTable = () => {
           {header.action && (
             <Link
               button
+              uppercase
               theme='primary'
               css={{ maxHeight: '36px', marginBottom: '16px' }}
               href={header.action.link}
