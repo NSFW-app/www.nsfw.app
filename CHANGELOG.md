@@ -1,5 +1,11 @@
 # @nsfw-app/marketing
 
+## 1.1.1
+
+### Patch Changes
+
+- f8d55cf: Update meta and add missing OG image
+
 ## 1.1.0
 
 ### Minor Changes
