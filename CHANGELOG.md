@@ -1,5 +1,11 @@
 # @nsfw-app/marketing
 
+## 1.1.5
+
+### Patch Changes
+
+- 2d462f8: Remove hardcoded fallback stage env Segment key
+
 ## 1.1.4
 
 ### Patch Changes
