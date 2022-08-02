@@ -1,5 +1,11 @@
 # @nsfw-app/marketing
 
+## 1.1.4
+
+### Patch Changes
+
+- eedf9f7: Add Sitemap
+
 ## 1.1.3
 
 ### Patch Changes
