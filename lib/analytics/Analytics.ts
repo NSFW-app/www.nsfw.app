@@ -2,18 +2,24 @@ import { AnalyticsBrowser } from '@segment/analytics-next'
 import { EventPropsUnion, NSFW_EVENT } from './types'
 // import appVersion from 'lib/nextjs/appVersion'
 
-const DEFAULT_WRITE_KEY = 'QAnBlldOLgjESpuvH2J0HZyPyvBvHJIq'
-const WRITE_KEY =
-  process.env.NEXT_PUBLIC_ANALYTICS_WRITE_KEY || DEFAULT_WRITE_KEY
+const WRITE_KEY = process.env.NEXT_PUBLIC_ANALYTICS_WRITE_KEY ?? ''
 
 export class Analytics {
-  api: AnalyticsBrowser
+  api?: AnalyticsBrowser
 
   constructor() {
-    this.api = AnalyticsBrowser.load({ writeKey: WRITE_KEY })
+    if (!WRITE_KEY) {
+      console.debug('No Analytics Segment API key configured')
+    }
+
+    this.api = WRITE_KEY
+      ? AnalyticsBrowser.load({ writeKey: WRITE_KEY })
+      : undefined
   }
 
   track(event: NSFW_EVENT, props: Partial<EventPropsUnion> = {}): void {
+    if (!this.api) return
+
     if (typeof window === 'undefined') {
       return console.error(
         'Warning: Tracking events server-side not supported; use reactions/effects/user-events to run tracking scripts'
