@@ -8,8 +8,11 @@ First, run the development server:
 # Use correct node version
 nvm use
 
+# Create local .env
+cp .env.sample .env
+
 # Install deps
-yarn dev
+yarn
 
 # Run local dev environment
 yarn dev
