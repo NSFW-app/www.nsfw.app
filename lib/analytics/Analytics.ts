@@ -1,4 +1,4 @@
-import { AnalyticsBrowser } from '@segment/analytics-next'
+import { AnalyticsBrowser, EventProperties } from '@segment/analytics-next'
 import { EventPropsUnion, NSFW_EVENT } from './types'
 // import appVersion from 'lib/nextjs/appVersion'
 
@@ -34,12 +34,12 @@ export class Analytics {
     const properties = {
       ...universal,
       ...props,
-      url: window.document.location.href || undefined,
-      path: window.document.location.pathname || undefined,
-      referrer: window.document.referrer || undefined,
-      host: window.document.location.host || undefined,
-      hostname: window.document.location.hostname || undefined,
-      search: window.document.location.search || undefined,
+      url: window.document.location.href || null,
+      path: window.document.location.pathname || null,
+      referrer: window.document.referrer || null,
+      host: window.document.location.host || null,
+      hostname: window.document.location.hostname || null,
+      search: window.document.location.search || null,
     }
 
     // Normalise userType if passed in explicity (not derived from user store)
