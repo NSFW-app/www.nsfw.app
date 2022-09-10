@@ -30,7 +30,7 @@ export const CreatorsHeroSection = () => {
       >
         <HeroFlex center column>
           <Heading css={{ marginBottom: spaces[3] }}>
-            Are you a creative? Get paid.
+          Are you a creative professional?
           </Heading>
           <Text
             type='subhead1'
@@ -38,8 +38,6 @@ export const CreatorsHeroSection = () => {
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
             We charge 0% commission on your content and pay out instantly.
-            {/* NSFW.app is builing offers 0% commission on your content and pays out
-            instantly. */}
           </Text>
           <Flex
             fullWidth
