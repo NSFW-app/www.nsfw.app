@@ -6,9 +6,9 @@ export const APP_SITE_DOMAIN =
 
 export const APP_ROUTES = {
   HOME: '/',
+  ABOUT: '/about',
   CREATORS: '/creators',
   FAQ: '/faq',
-  ABOUT: '/about-us',
   PRIVACY_POLICY: '/privacy-policy',
   APP: APP_SITE_DOMAIN,
   ADMIRER_SIGNUP: `${APP_SITE_DOMAIN}/signup?utm_source=cta&utm_medium=website&utm_campaign=fan-cta`,
