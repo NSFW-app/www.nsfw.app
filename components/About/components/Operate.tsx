@@ -1,13 +1,14 @@
-import { Flex, Heading, Text, Span } from '@nsfw-app/ui'
+import { Flex, Heading, Text, Span, Anchor, Icon } from '@nsfw-app/ui'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
-import Image from 'next/image'
+import { BlopOrange } from '../Icons/Blops/BlopOrange'
+import { BlopGreen } from '../Icons/Blops/BlopGreen'
+import { BlopViolet } from '../Icons/Blops/BlopViolet'
 
 export const Operate = () => {
   return (
     <InnerGrid css={{ marginTop: '10vw' }}>
       <Flex
-        column
         css={{
           backgroundColor: '$gray300',
           gap: '40px',
@@ -17,14 +18,11 @@ export const Operate = () => {
           justifyContent: 'center',
           marginBottom: '30px',
           height: '100%',
+          '@sm': { flexDirection: 'row' },
+          '@lg': { flexDirection: 'column' },
         }}
       >
-        <Image
-          src='/svg/toroid-circle.svg'
-          height={240}
-          width={240}
-          alt='img'
-        />
+        <BlopViolet css={{ width: '100%' }} />
         <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
           <Span>
             <Text
@@ -40,13 +38,13 @@ export const Operate = () => {
               OPEN SOURCE
             </Text>
           </Span>
-          <Heading as='h4' css={{ lineHeight: 1.2 }}>
+          <Heading as='h4' css={{ lineHeight: 1.2, color: '$voilet100' }}>
             Community Portal
           </Heading>
         </Flex>
       </Flex>
 
-      <Flex column css={{ gap: '50px' }}>
+      <Flex column css={{ gap: '35px' }}>
         <Flex
           row
           css={{
@@ -54,7 +52,7 @@ export const Operate = () => {
             gap: '30px',
             borderRadius: '8px',
             minWidth: '280px',
-            padding: '30px ',
+            padding: '20px',
             height: '100%',
             justifyContent: 'space-around',
             '@lg': {
@@ -62,7 +60,7 @@ export const Operate = () => {
             },
           }}
         >
-          <Image src='/svg/cone.svg' height={105} width={95} alt='img' />
+          <BlopOrange css={{}} />
           <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
             <Span>
               <Text
@@ -99,7 +97,7 @@ export const Operate = () => {
             },
           }}
         >
-          <Image src='/svg/playbook.svg' height={105} width={95} alt='img' />
+          <BlopGreen />
           <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
             <Span>
               <Text
@@ -128,9 +126,10 @@ export const Operate = () => {
           minWidth: '300px',
           textAlign: 'right',
           justifyContent: 'center',
+          alignItems: 'end',
         }}
       >
-        <Heading as='h4' css={{ marginBottom: spaces[3] }}>
+        <Heading as='h3' css={{ marginBottom: spaces[3] }}>
           How we operate
         </Heading>
 
@@ -139,6 +138,38 @@ export const Operate = () => {
           commited to creating an inclusive and transparent DAO which pioneers a
           new type of modern workplace.
         </Text>
+        <Anchor
+          href='#'
+          css={{
+            color: '$voilet100',
+            marginTop: '20px',
+            svg: {
+              transform: 'translateX(0)',
+              transition: '0.2s',
+            },
+            ':hover': {
+              svg: {
+                transform: 'translateX(4px)',
+                transition: '0.3s',
+              },
+            },
+          }}
+        >
+          <Flex row css={{ justifySelf: 'end' }}>
+            <Text type='body2' css={{ color: '$voilet100' }}>
+              More info
+            </Text>
+            <Icon
+              icon='Arrow'
+              css={{
+                paddingLeft: spaces[1],
+                '.primary': {
+                  stroke: '$voilet100',
+                },
+              }}
+            />
+          </Flex>
+        </Anchor>
       </Flex>
     </InnerGrid>
   )

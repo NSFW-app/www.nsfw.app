@@ -1,19 +1,67 @@
 import { Flex, Heading, Icon, Text, Button, Box, Anchor } from '@nsfw-app/ui'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
-import { Link } from 'components/Link'
-import Image from 'next/image'
+
+const BackgroundBlurIcons: React.FC = () => {
+  return (
+    <>
+      <Flex
+        css={{
+          position: 'absolute',
+          top: -20,
+          left: -150,
+          filter: 'blur(25px) opacity(0.33)',
+          zIndex: 1,
+        }}
+      >
+        <Icon icon='Asterisk' css={{ width: '400px', height: '400px' }} />
+      </Flex>
+      <Flex
+        css={{
+          position: 'absolute',
+          top: 130,
+          left: 330,
+          filter: 'blur(25px) opacity(0.35)',
+          zIndex: 1,
+        }}
+      >
+        <Icon
+          icon='Asterisk'
+          css={{
+            width: '300px',
+            height: '300px',
+            '@sm': { display: 'none' },
+            '@lg': { display: 'block' },
+          }}
+        />
+      </Flex>
+      <Flex
+        css={{
+          position: 'absolute',
+          top: 330,
+          left: 130,
+          filter: 'blur(30px) opacity(0.45)',
+          zIndex: 1,
+        }}
+      >
+        <Icon icon='Asterisk' css={{ width: '200px', height: '200px' }} />
+      </Flex>
+    </>
+  )
+}
 
 export const DAO = () => {
   return (
     <InnerGrid>
+      <BackgroundBlurIcons />
       <Flex
         column
         css={{
-          '@lg': { minWidth: '350px' },
+          zIndex: 2,
+          '@lg': { minWidth: '300px' },
         }}
       >
-        <Heading as='h4' css={{ marginBottom: spaces[3] }}>
+        <Heading as='h3' css={{ marginBottom: spaces[3] }}>
           Participate in the DAO
         </Heading>
 
@@ -29,28 +77,35 @@ export const DAO = () => {
         css={{
           backgroundColor: '$gray300',
           gap: '10px',
-          padding: '40px 30px',
+          padding: '40px',
           borderRadius: '8px',
-          minWidth: '280px',
+          minWidth: '290px',
           justifyContent: 'center',
+          zIndex: 3,
           marginBottom: '30px',
           '@sm': {
             marginTop: '20px',
             marginBottom: '50px',
           },
           '@lg': {
-            maxWidth: '310px',
+            maxWidth: '320px',
             margin: '-5vw 0 0 2vw',
           },
         }}
       >
-        <Image
-          src='/svg/diamond.svg'
-          height='54px'
-          width='54px'
-          layout='fixed'
-          alt='diamond'
-        />
+        <Flex
+          center
+          css={{
+            padding: '10px',
+            backgroundColor: '$gray100',
+            borderRadius: '100%',
+            border: '1px solid $gray600',
+            width: '50px',
+            height: '50px',
+          }}
+        >
+          <Text css={{ fontSize: '30px' }}>💎</Text>
+        </Flex>
         <Heading as='h4' css={{ marginTop: '10px' }}>
           Proposals
         </Heading>
@@ -67,23 +122,33 @@ export const DAO = () => {
           css={{
             color: '$voilet100',
             marginTop: '10px',
+            svg: {
+              transform: 'translateX(0)',
+              transition: '0.2s',
+            },
             ':hover': {
+              color: '$voilet200',
               svg: {
-                transform: 'translateX(2px)',
+                transform: 'translateX(4px)',
+                transition: '0.3s',
               },
             },
           }}
         >
-          <Text css={{ color: '$voilet100' }}>View past proposals</Text>
-          <Icon
-            icon='Arrow'
-            css={{
-              paddingLeft: spaces[1],
-              '.primary': {
-                stroke: '$voilet100',
-              },
-            }}
-          />
+          <Flex row>
+            <Text type='body2' css={{ color: '$voilet100' }}>
+              View past proposals
+            </Text>
+            <Icon
+              icon='Arrow'
+              css={{
+                paddingLeft: spaces[1],
+                '.primary': {
+                  stroke: '$voilet100',
+                },
+              }}
+            />
+          </Flex>
         </Anchor>
       </Flex>
 
@@ -92,24 +157,30 @@ export const DAO = () => {
         css={{
           backgroundColor: '$gray300',
           gap: '11px',
-          padding: '40px 30px',
+          padding: '40px ',
           marginTop: '-5vw',
           borderRadius: '8px',
-          minWidth: '280px',
+          minWidth: '290px',
           justifyContent: 'space-between',
           '@lg': {
-            maxWidth: '310px',
+            maxWidth: '320px',
           },
         }}
       >
         <Box>
-          <Image
-            src='/svg/hand-shake.svg'
-            height='54px'
-            width='54px'
-            layout='fixed'
-            alt='diamond'
-          />
+          <Flex
+            center
+            css={{
+              padding: '10px',
+              backgroundColor: '$gray100',
+              borderRadius: '100%',
+              border: '1px solid $gray600',
+              width: '50px',
+              height: '50px',
+            }}
+          >
+            <Text css={{ fontSize: '30px' }}>🤝</Text>
+          </Flex>
           <Heading as='h4' css={{ marginTop: '16px' }}>
             Delegates
           </Heading>

@@ -1,6 +1,5 @@
 import { Grid, Stitches } from '@nsfw-app/ui'
-import { serviceData, structureData } from '../../data/data'
-import { BlockCard } from './BlockCard'
+import { structureData } from '../../data/data'
 import { StructureBlock } from './StructureBlockCard'
 
 export const InnerGrid = Stitches.styled(Grid, {
@@ -17,14 +16,14 @@ export const StructureBlocks: React.FC = () => {
     <InnerGrid>
       {structureData.map((card, i) => (
         <StructureBlock
-          key={`${i}-${card.imagePath}`}
+          key={`${i}-${card.emoji}`}
           body={card.body}
           heading={card.heading}
           subheading={card.subheading}
           bullets={card.bullets}
           gradient={card.gradient}
-          imagePath={card.imagePath}
           href={card.href}
+          emoji={card.emoji}
         />
       ))}
     </InnerGrid>

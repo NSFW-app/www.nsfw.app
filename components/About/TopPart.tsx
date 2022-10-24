@@ -1,6 +1,5 @@
-import { Stitches, Text, Icon, Flex, Heading, Button, Box } from '@nsfw-app/ui'
+import { Stitches, Text, Icon, Flex, Heading, Box } from '@nsfw-app/ui'
 import { spaces } from 'config'
-
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
 import { Blocks } from './components/Block/Blocks'
@@ -14,7 +13,7 @@ const FlexLayout = Stitches.styled(Flex, {
     marginTop: '18vw',
   },
   '@lg': {
-    marginTop: '3vw',
+    marginTop: '2vw',
   },
 })
 
@@ -44,11 +43,21 @@ export const TopPart = () => {
               '@sm': { width: '80%' },
               '@lg': { width: '50%' },
               alignSelf: 'center',
+              alignItems: 'center',
+              svg: {
+                transform: 'translateX(0)',
+                transition: '0.2s',
+              },
+              ':hover': {
+                svg: {
+                  transform: 'translateX(4px)',
+                  transition: '0.3s',
+                },
+              },
             }}
           >
             <Link
               button
-              uppercase
               theme='primary'
               href='#'
               css={{

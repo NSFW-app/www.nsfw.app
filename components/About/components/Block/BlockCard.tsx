@@ -1,16 +1,15 @@
 import { Stitches, Flex, Text } from '@nsfw-app/ui'
-import Image from 'next/image'
 
 export interface BlockCardProps {
   body: string
   gradient?: string
-  imagePath: string
+  blopIcon: any
 }
 
 export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
   body,
   gradient,
-  imagePath,
+  blopIcon,
   css,
 }) => {
   return (
@@ -19,21 +18,23 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
         backgroundImage: gradient ?? '$gray500',
         flexDirection: 'column',
         borderRadius: '8px',
+        justifyContent: 'space-between',
+        '@sm': {
+          padding: '20px 50px',
+        },
         '@md': {
-          minWidth: '315px',
+          minWidth: '325px',
         },
         '@xl': {
-          minWidth: '400px',
+          minWidth: '27vw',
+          padding: '16px 95px 36px 95px',
         },
-        padding: '16px 58px 36px 58px',
         alignItems: 'center',
         textAlign: 'center',
         ...css,
       }}
     >
-      {/* <Icon icon={icon} css={{ width: '30px', height: '30px' }} /> */}
-      <Image alt='img' src={imagePath} width={150} height={120} />
-
+      {blopIcon}
       <Text type='body2' css={{ wordSpacing: 0 }}>
         {body}
       </Text>

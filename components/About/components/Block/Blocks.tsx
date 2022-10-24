@@ -16,10 +16,10 @@ export const Blocks: React.FC = () => {
     <InnerGrid>
       {serviceData.map((card, i) => (
         <BlockCard
-          key={`${i}-${card.imagePath}`}
+          key={`${i}-${card.gradient}`}
           body={card.body}
           gradient={card.gradient}
-          imagePath={card.imagePath}
+          blopIcon={card.blopIcon}
         />
       ))}
     </InnerGrid>

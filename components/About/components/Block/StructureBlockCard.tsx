@@ -1,15 +1,14 @@
-import { Stitches, Flex, Text, Heading, Icon, Anchor } from '@nsfw-app/ui'
+import { Stitches, Flex, Text, Heading, Icon, Anchor, Box } from '@nsfw-app/ui'
 import { spaces } from 'config'
-import Image from 'next/image'
 
 export interface StructureBlockProps {
   heading: string
   subheading: string
-  body: string
+  body?: string
   bullets: string[]
   gradient?: string
-  imagePath: string
   href: string
+  emoji: string
 }
 
 export const StructureBlock: React.FC<Stitches.CSSProp &
@@ -19,8 +18,8 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
   subheading,
   bullets,
   gradient,
-  imagePath,
   href,
+  emoji,
   css,
 }) => {
   return (
@@ -28,60 +27,104 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
       css={{
         backgroundImage: gradient ?? '$gray500',
         flexDirection: 'column',
-        gap: '25px',
-        borderRadius: '8px',
+        a: {
+          marginTop: 'auto',
+        },
+        gap: '30px',
+
         '@xs': {
           padding: '30px',
         },
         '@lg': {
-          padding: '80px 60px',
+          padding: '40px 50px',
           minWidth: '465px',
         },
-
+        '@xl': {
+          minWidth: '555px',
+        },
         textAlign: 'left',
+        borderRadius: '8px',
         ...css,
       }}
     >
       {/* <Icon icon={icon} css={{ width: '30px', height: '30px' }} /> */}
       <Flex row css={{ gap: '10px', alignItems: 'center' }}>
-        <Image alt='img' src={imagePath} width={54} height={54} />
+        <Flex
+          center
+          css={{
+            padding: '10px',
+            backgroundColor: '$gray100',
+            borderRadius: '100%',
+            border: '1px solid $gray600',
+          }}
+        >
+          <Text css={{ fontSize: '25px', width: '25px', height: '25px' }}>
+            {emoji}
+          </Text>
+        </Flex>
         <Heading as='h4'>{heading}</Heading>
       </Flex>
 
-      <Text type='body3' subText>
-        {subheading}
-      </Text>
-      <Flex column css={{ gap: '10px' }}>
-        {bullets.map((bullet, i) => (
-          <Flex
-            key={`${i}-${bullet}`}
-            css={{ alignItems: 'center', gap: '12px' }}
-          >
-            <Icon icon='Asterisk' />
-            <Text type='body4' css={{ color: '$gray900' }}>
-              {bullet}
-            </Text>
-          </Flex>
-        ))}
+      <Flex column css={{ gap: '25px' }}>
+        <Text type='body2' subText>
+          {subheading}
+        </Text>
+        <Flex column css={{ gap: '10px' }}>
+          {bullets.map((bullet, i) => (
+            <Flex
+              key={`${i}-${bullet}`}
+              css={{ alignItems: 'center', gap: '12px' }}
+            >
+              {/* TODO (after merging the tokenomics page): Change to CheckIcon (I created the icon component on a new branch: feat/tokenomics) */}
+              <Icon icon='Asterisk' />
+              <Text type='body3' css={{ color: '$gray900' }}>
+                {bullet}
+              </Text>
+            </Flex>
+          ))}
+        </Flex>
+
+        {body && (
+          <Text type='body2' subText>
+            {body}
+          </Text>
+        )}
       </Flex>
 
       <Anchor
         href={href}
         css={{
           color: '$voilet100',
-          marginTop: '30px',
+          justifySelf: 'flex-end',
+          position: 'relative',
+          bottom: 0,
+          svg: {
+            transform: 'translateX(0)',
+            transition: '0.2s',
+          },
+          ':hover': {
+            color: '$voilet200',
+            svg: {
+              transform: 'translateX(4px)',
+              transition: '0.3s',
+            },
+          },
         }}
       >
-        <Text css={{ color: '$voilet100' }}>More info</Text>
-        <Icon
-          icon='Arrow'
-          css={{
-            paddingLeft: spaces[1],
-            '.primary': {
-              stroke: '$voilet100',
-            },
-          }}
-        />
+        <Flex row>
+          <Text type='body2' css={{ color: '$voilet100' }}>
+            More info
+          </Text>
+          <Icon
+            icon='Arrow'
+            css={{
+              paddingLeft: spaces[1],
+              '.primary': {
+                stroke: '$voilet100',
+              },
+            }}
+          />
+        </Flex>
       </Anchor>
     </Flex>
   )
