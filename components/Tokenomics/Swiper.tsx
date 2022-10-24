@@ -21,10 +21,6 @@ const CreatorCard = styled(Flex, {
     lineHeight: 1.4,
     fontWeight: 300,
   },
-  ':after': {
-    display: 'none',
-    clear: 'both',
-  },
 })
 
 const PreviousIcon = () => {
@@ -61,7 +57,7 @@ export const SwiperComponent = () => {
       // withIndicators
       slideSize='33.33%'
       styles={{
-        slide: { overflow: 'hidden !imporant' },
+        slide: { overflowX: 'hidden' },
         control: {
           backgroundColor: `${Stitches.theme.colors.gray400}`,
           border: 0,
@@ -72,9 +68,7 @@ export const SwiperComponent = () => {
       // dragFree
       slideGap={50}
       sx={{
-        overflow: 'hidden',
         padding: '50px 35px',
-
         backgroundColor: `${Stitches.theme.colors.gray400}`,
       }}
       breakpoints={[
@@ -89,25 +83,19 @@ export const SwiperComponent = () => {
       loop={true}
       align='start'
     >
-      {CreatorsData.map((cc) => (
-        <Carousel.Slide key={cc.href + cc.name}>
-          <CreatorCard css={{ overflow: 'hidden !important' }}>
+      {CreatorsData.map((cc, i) => (
+        <Carousel.Slide key={cc.href + i}>
+          <CreatorCard>
             <Flex
               css={{
                 position: 'absolute',
                 overflowX: 'hidden !important',
                 right: 10,
                 top: -60,
-                filter: 'blur(5px)',
+                filter: 'blur(8px) opacity(0.5)',
               }}
             >
-              <Image
-                src={cc.backgroundImg}
-                layout='fixed'
-                height={190}
-                width={190}
-                alt='avatar'
-              />
+              {cc.backgroundImg}
             </Flex>
             <Grid css={{ gridTemplateColumns: '90px 2fr' }}>
               <Image

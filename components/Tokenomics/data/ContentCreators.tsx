@@ -1,16 +1,19 @@
-import { Flex, Text } from '@nsfw-app/ui'
-import React from 'react'
+import { BlopGreen } from 'components/About/Icons/Blops/BlopGreen'
+import { BlopOrange } from 'components/About/Icons/Blops/BlopOrange'
+import { BlopPink } from 'components/About/Icons/Blops/BlopPink'
+import { BlopPurple } from 'components/About/Icons/Blops/BlopPurple'
+import { BlopYellow } from 'components/About/Icons/Blops/BlopYellow'
 
-interface CCprops {
+interface CreatorFeedbackProps {
   name: string
   avatar: string
   lastSeen: string
   href: string
   bio: string
-  backgroundImg: string
+  backgroundImg: React.ReactNode
 }
 
-export const CreatorsData: CCprops[] = [
+export const CreatorsData: CreatorFeedbackProps[] = [
   {
     name: 'GoddessGrey',
     avatar: '/svg/avatar.svg',
@@ -18,46 +21,46 @@ export const CreatorsData: CCprops[] = [
     href: '#',
     bio:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing. Montes nasceturridiculus mus mauris vitae ultricies.',
-    backgroundImg: '/svg/vec-yellow.svg',
+    backgroundImg: <BlopYellow css={{ height: '100%' }} />,
   },
 
   {
     name: 'GoddessGrey',
-    avatar: '/svg/cone.svg',
+    avatar: '/svg/avatar.svg',
     lastSeen: '3 months',
     href: '#',
     bio:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing. Montes nasceturridiculus mus mauris vitae ultricies.',
-    backgroundImg: '/svg/vec-purple.svg',
+    backgroundImg: <BlopOrange css={{ height: '100%' }} />,
   },
 
   {
     name: 'GoddessGrey',
-    avatar: '/svg/diamond.svg',
+    avatar: '/svg/avatar.svg',
     lastSeen: '3 months',
     href: '#',
     bio:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing. Montes nasceturridiculus mus mauris vitae ultricies.',
-    backgroundImg: '/svg/vec-pink.svg',
+    backgroundImg: <BlopGreen css={{ height: '100%' }} />,
   },
 
   {
     name: 'GoddessGrey',
-    avatar: '/svg/playbook.svg',
+    avatar: '/svg/avatar.svg',
     lastSeen: '3 months',
     href: '#',
     bio:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing. Montes nasceturridiculus mus mauris vitae ultricies.',
-    backgroundImg: '/svg/vec-yellow.svg',
+    backgroundImg: <BlopPurple css={{ height: '100%' }} />,
   },
 
   {
     name: 'GoddessGrey',
-    avatar: '/svg/toroid-circle.svg',
+    avatar: '/svg/avatar.svg',
     lastSeen: '3 months',
     href: '#',
     bio:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing. Montes nasceturridiculus mus mauris vitae ultricies.',
-    backgroundImg: '/svg/vec-pink.svg',
+    backgroundImg: <BlopPink css={{ height: '100%' }} />,
   },
 ]

@@ -7,7 +7,6 @@ import { TokenUtilityGraph } from 'components/Icons/TokenUtilityGraph'
 import { CheckIcon } from 'components/Icons/Check'
 import { LockStake } from './components/LockStake'
 import { Features } from './components/Features'
-import { SwiperComponent } from './Swiper'
 
 export const TokenUtility: React.FC = ({}) => {
   return (
