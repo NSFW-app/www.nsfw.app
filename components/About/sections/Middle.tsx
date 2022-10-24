@@ -1,9 +1,9 @@
 import { GridContent, GridSection } from 'components/GridLayout'
 import { DiagonalBgBreak } from 'components/DiagonalBgBreak'
-import { DAO } from './components/Dao'
-import { Operate } from './components/Operate'
+import { DAO } from '../components/Dao'
+import { Operate } from '../components/Operate'
 
-export const Blurred = () => {
+export const MiddleSection = () => {
   return (
     <GridSection
       css={{
@@ -26,6 +26,7 @@ export const Blurred = () => {
       >
         <DAO />
         <Operate />
+        
       </GridContent>
     </GridSection>
   )

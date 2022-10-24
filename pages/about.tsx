@@ -1,14 +1,15 @@
+import { BottomSection } from 'components/About/sections/Bottom'
+import { MiddleSection } from 'components/About/sections/Middle'
+import { TopSection } from 'components/About/sections/Top'
 import { Layout } from 'components/Layout'
-import { TopPart } from 'components/About/TopPart'
-import { Blurred } from 'components/About/Blurred'
-import { Structure } from 'components/About/Structure'
+import { NextPage } from 'next'
 
-const AboutPage = () => {
+const AboutPage: NextPage = () => {
   return (
     <Layout>
-      <TopPart />
-      <Blurred />
-      <Structure />
+      <TopSection />
+      <MiddleSection />
+      <BottomSection />
     </Layout>
   )
 }

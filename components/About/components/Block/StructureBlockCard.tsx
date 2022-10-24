@@ -27,20 +27,16 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
       css={{
         backgroundImage: gradient ?? '$gray500',
         flexDirection: 'column',
-        a: {
-          marginTop: 'auto',
-        },
-        gap: '30px',
-
+        gap: '25px',
         '@xs': {
-          padding: '30px',
+          padding: '40px 60px',
         },
         '@lg': {
-          padding: '40px 50px',
+          padding: '4vw',
           minWidth: '465px',
         },
         '@xl': {
-          minWidth: '555px',
+          minWidth: '35vw',
         },
         textAlign: 'left',
         borderRadius: '8px',
@@ -95,9 +91,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         href={href}
         css={{
           color: '$voilet100',
-          justifySelf: 'flex-end',
-          position: 'relative',
-          bottom: 0,
+          marginTop: '15px',
           svg: {
             transform: 'translateX(0)',
             transition: '0.2s',

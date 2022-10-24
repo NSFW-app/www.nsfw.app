@@ -2,7 +2,7 @@ import { Stitches, Text, Icon, Flex, Heading, Box } from '@nsfw-app/ui'
 import { spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
-import { Blocks } from './components/Block/Blocks'
+import { Blocks } from '../components/Block/Blocks'
 
 const FlexLayout = Stitches.styled(Flex, {
   minHeight: '100vh',
@@ -17,7 +17,7 @@ const FlexLayout = Stitches.styled(Flex, {
   },
 })
 
-export const TopPart = () => {
+export const TopSection = () => {
   return (
     <GridSection>
       <GridContent
@@ -35,6 +35,7 @@ export const TopPart = () => {
             NSFW focusses to provide stable services to content creators and
             rewarding long-term participants through the use of Web3 technology.
           </Text>
+
           <Blocks />
 
           <Box
