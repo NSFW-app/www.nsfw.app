@@ -4,6 +4,8 @@ import {
   BurgerMenu,
   BurgerLeftMenu,
   BurgerRightMenuItems,
+  Icon,
+  Flex,
 } from '@nsfw-app/ui'
 import { APP_ROUTES, SOCIAL_LINKS } from 'config'
 import NextJsLink from 'next/link'
@@ -51,12 +53,29 @@ export const MobileMenu: React.FC<Props> = ({ visible, onClose, onOpen }) => {
             Fans
           </NavLink>
         </NextJsLink>
+
         <NextJsLink passHref href={APP_ROUTES.CREATORS}>
           <NavLink
             highlightPosition='vertical'
             active={router.pathname === APP_ROUTES.CREATORS}
           >
             Creators
+          </NavLink>
+        </NextJsLink>
+        <NextJsLink passHref href={APP_ROUTES.DAO}>
+          <NavLink
+            highlightPosition='vertical'
+            active={router.pathname === APP_ROUTES.DAO}
+          >
+            DAO
+          </NavLink>
+        </NextJsLink>
+        <NextJsLink passHref href={APP_ROUTES.TOKENOMICS}>
+          <NavLink
+            highlightPosition='vertical'
+            active={router.pathname === APP_ROUTES.TOKENOMICS}
+          >
+            Tokenomics
           </NavLink>
         </NextJsLink>
         <NextJsLink passHref href={APP_ROUTES.FAQ}>
@@ -72,7 +91,25 @@ export const MobileMenu: React.FC<Props> = ({ visible, onClose, onOpen }) => {
           href={APP_ROUTES.APP}
           onClick={() => handleTrackingActionClick(NSFW_EVENT.LAUNCH_APP)}
         >
-          <NavLink highlightPosition='vertical'>Launch App</NavLink>
+          <NavLink
+            highlightPosition='vertical'
+            css={{
+              '.primary': {
+                transition: '0.1s',
+                stroke: '$gray800',
+              },
+              ':hover': {
+                '.primary': {
+                  stroke: '$gray900',
+                },
+              },
+            }}
+          >
+            <Flex row css={{ gap: '5px' }}>
+              Launch App
+              <Icon icon='ExternalLink' />
+            </Flex>
+          </NavLink>
         </NextJsLink>
       </BurgerRightMenuItems>
     </BurgerMenu>

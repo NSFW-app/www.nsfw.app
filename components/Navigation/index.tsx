@@ -119,6 +119,11 @@ export const Navigation = () => {
           <NextJsLink passHref href={APP_ROUTES.DAO}>
             <NavLink active={router.pathname === APP_ROUTES.DAO}>DAO</NavLink>
           </NextJsLink>
+          <NextJsLink passHref href={APP_ROUTES.TOKENOMICS}>
+            <NavLink active={router.pathname === APP_ROUTES.TOKENOMICS}>
+              Tokenomics
+            </NavLink>
+          </NextJsLink>
           <NextJsLink passHref href={APP_ROUTES.FAQ}>
             <NavLink active={router.pathname === APP_ROUTES.FAQ}>FAQs</NavLink>
           </NextJsLink>
