@@ -116,10 +116,8 @@ export const Navigation = () => {
               Creators
             </NavLink>
           </NextJsLink>
-          <NextJsLink passHref href={APP_ROUTES.ABOUT}>
-            <NavLink active={router.pathname === APP_ROUTES.ABOUT}>
-              About
-            </NavLink>
+          <NextJsLink passHref href={APP_ROUTES.DAO}>
+            <NavLink active={router.pathname === APP_ROUTES.DAO}>DAO</NavLink>
           </NextJsLink>
           <NextJsLink passHref href={APP_ROUTES.FAQ}>
             <NavLink active={router.pathname === APP_ROUTES.FAQ}>FAQs</NavLink>
