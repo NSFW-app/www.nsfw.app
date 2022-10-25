@@ -23,65 +23,27 @@ const CreatorCard = styled(Flex, {
   },
 })
 
-const PreviousIcon = () => {
-  return (
-    <Icon
-      icon='Arrow'
-      css={{
-        backgroundColor: '$voilet100',
-        borderRadius: '100%',
-        padding: '10px',
-        margin: '8px',
-        transform: 'rotate(180deg)',
-      }}
-    />
-  )
-}
-const NextIcon = () => {
-  return (
-    <Icon
-      icon='Arrow'
-      css={{
-        backgroundColor: '$voilet100',
-        borderRadius: '100%',
-        padding: '10px',
-        margin: '8px',
-      }}
-    />
-  )
-}
 
 export const SwiperComponent = () => {
   return (
     <Carousel
-      // withIndicators
-      slideSize='33.33%'
-      styles={{
-        slide: { overflowX: 'hidden' },
-        control: {
-          backgroundColor: `${Stitches.theme.colors.gray400}`,
-          border: 0,
-          opacity: 1,
-          boxShadow: 'none',
-        },
-      }}
-      // dragFree
+      slideSize='27.33%'
+      dragFree
+      withControls={false}
       slideGap={50}
       sx={{
-        padding: '50px 35px',
+        padding: '50px 0',
         backgroundColor: `${Stitches.theme.colors.gray400}`,
       }}
       breakpoints={[
-        { maxWidth: 'xs', slideSize: '100%' },
-        { maxWidth: 'sm', slideSize: '50%' },
-        { maxWidth: 'md', slideSize: '50%' },
-        { maxWidth: 'lg', slideSize: '50%' },
+        { maxWidth: 'xs', slideSize: '80%', slideGap: 10 },
+        { maxWidth: 'sm', slideSize: '70%', slideGap: 10 },
+        { maxWidth: 'md', slideSize: '55%' },
+        { maxWidth: 'lg', slideSize: '55%' },
         { maxWidth: 'xl', slideSize: '33.33%' },
       ]}
-      nextControlIcon={<NextIcon />}
-      previousControlIcon={<PreviousIcon />}
       loop={true}
-      align='start'
+      align='center'
     >
       {CreatorsData.map((cc, i) => (
         <Carousel.Slide key={cc.href + i}>
