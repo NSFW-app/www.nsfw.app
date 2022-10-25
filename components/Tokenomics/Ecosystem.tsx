@@ -4,7 +4,7 @@ import { GridContent, GridSection } from 'components/GridLayout'
 
 export const Ecosystem: React.FC = ({}) => {
   return (
-    <GridSection css={{ backgroundColor: '$gray400', paddingTop: '100px' }}>
+    <GridSection css={{ backgroundColor: '$gray400', paddingTop: '50px' }}>
       <GridContent
         columns={{
           tablet: '1 / 12',
@@ -22,8 +22,10 @@ export const Ecosystem: React.FC = ({}) => {
               borderRadius: '8px',
               minWidth: '280px',
               justifyContent: 'space-between',
+              '@xs': { order: 2 },
               '@lg': {
                 maxWidth: '310px',
+                order: 2,
               },
             }}
           >
@@ -66,8 +68,10 @@ export const Ecosystem: React.FC = ({}) => {
               borderRadius: '8px',
               minWidth: '280px',
               justifyContent: 'space-between',
+              '@xs': { order: 3 },
               '@lg': {
                 maxWidth: '310px',
+                order: 2,
               },
             }}
           >
@@ -104,7 +108,9 @@ export const Ecosystem: React.FC = ({}) => {
             css={{
               gap: '40px',
               marginTop: '-1vw',
-              '@lg': { minWidth: '450px' },
+              '@xs': { order: 1, textAlign: 'center' },
+              '@md': { textAlign: 'left' },
+              '@lg': { minWidth: '450px', order: 3 },
               '@xl': { minWidth: '550px' },
             }}
           >
@@ -129,8 +135,8 @@ export const Ecosystem: React.FC = ({}) => {
           </Flex>
         </InnerGrid>
 
-        <Flex center css={{ marginTop: '10vw' }}>
-          <Heading as='h4'>Voices from the community</Heading>
+        <Flex center css={{ marginTop: '8vw' }}>
+          <Heading as='h3'>Voices from the community</Heading>
         </Flex>
       </GridContent>
     </GridSection>

@@ -3,16 +3,15 @@ import {
   Flex,
   Grid,
   Heading,
-  Icon,
   Stitches,
   Anchor,
-  useIsDesktopSize,
-  useIsMobileSize,
+  Icon,
 } from '@nsfw-app/ui'
 import Image from 'next/image'
 import { styled } from '@stitches/react'
 import { Carousel } from '@mantine/carousel'
 import { CreatorsData } from './data/ContentCreators'
+import { useEffect, useState } from 'react'
 
 const CreatorCard = styled(Flex, {
   minHeight: '325px',
@@ -33,9 +32,41 @@ const CreatorCard = styled(Flex, {
   },
 })
 
+const PreviousIcon = () => {
+  return (
+    <Icon
+      icon='Arrow'
+      css={{
+        backgroundColor: '$voilet100',
+        borderRadius: '100%',
+        padding: '10px',
+        margin: '8px',
+        transform: 'rotate(180deg)',
+      }}
+    />
+  )
+}
+const NextIcon = () => {
+  return (
+    <Icon
+      icon='Arrow'
+      css={{
+        backgroundColor: '$voilet100',
+        borderRadius: '100%',
+        padding: '10px',
+        margin: '8px',
+      }}
+    />
+  )
+}
 
 export const SwiperComponent = () => {
-  const isMobile = useIsMobileSize()
+  const [isDesktop, setIsDesktop] = useState(false)
+  useEffect(() => {
+    if (localStorage.getItem('deviceType') == 'desktop') {
+      setIsDesktop(true)
+    }
+  }, [isDesktop])
 
   return (
     <Carousel
@@ -51,14 +82,14 @@ export const SwiperComponent = () => {
         },
       }}
       dragFree
-      withControls={isMobile ? false : true}
-      slideGap={isMobile ? 15 : 50}
+      withControls={isDesktop ? true : false}
+      slideGap={isDesktop ? 50 : 10}
       sx={{
-        padding: isMobile ? '20px 10px' : '50px 35px',
+        padding: isDesktop ? '50px 35px' : '20px 0px',
         backgroundColor: `${Stitches.theme.colors.gray400}`,
       }}
       breakpoints={[
-        { maxWidth: 'xs', slideSize: '88%' },
+        { maxWidth: 'xs', slideSize: '85%' },
         { maxWidth: 'sm', slideSize: '88%' },
         { maxWidth: 'md', slideSize: '60%' },
         { maxWidth: 'lg', slideSize: '50%' },
@@ -66,6 +97,8 @@ export const SwiperComponent = () => {
       ]}
       loop={true}
       align='center'
+      nextControlIcon={<NextIcon />}
+      previousControlIcon={<PreviousIcon />}
     >
       {CreatorsData.map((cc, i) => (
         <Carousel.Slide key={cc.href + i}>

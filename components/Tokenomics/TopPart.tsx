@@ -9,16 +9,16 @@ import { VectorYellow } from 'components/Icons/VectorYellow'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 
 const FlexLayout = Stitches.styled(Flex, {
-  justifyContent: 'center',
   gap: '40px',
+  justifyContent: 'center',
+  alignItems: 'center',
   '@xs': {
-    minHeight: '35vh',
-    marginTop: '13vw',
+    minHeight: '40vh',
+    marginTop: '15vw',
   },
   '@lg': {
     minHeight: '100vh',
     marginTop: '1vw',
-    alignItems: 'center',
   },
 })
 
@@ -36,6 +36,9 @@ export const TopPart: React.FC = ({}) => {
             <Flex
               column
               css={{
+                '@xs': {
+                  textAlign: 'center',
+                },
                 '@md': {
                   textAlign: 'left',
                   paddingRight: '100px',
@@ -59,12 +62,13 @@ export const TopPart: React.FC = ({}) => {
               <Box
                 css={{
                   marginTop: '1vw',
-                  alignSelf: 'start',
                   width: '80%',
                   whiteSpace: 'nowrap',
+                  '@xs': { alignSelf: 'center' },
+                  '@md': { alignSelf: 'start' },
                 }}
               >
-                <Link button uppercase theme='primary' href='#'>
+                <Link button theme='primary' href='#'>
                   Join the discussion
                   <Icon
                     icon='Arrow'

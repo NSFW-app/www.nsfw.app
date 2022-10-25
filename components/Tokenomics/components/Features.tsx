@@ -15,11 +15,21 @@ export const Features: React.FC = ({}) => {
   ]
   return (
     <InnerGrid css={{ margin: '7vw 0' }}>
-      <Flex column css={{ gap: '30px', '@lg': { padding: '0 90px' } }}>
-        <Heading as='h2'>
+      <Flex
+        column
+        css={{ gap: '30px', marginTop: '20px', '@lg': { padding: '0 90px' } }}
+      >
+        <Heading
+          as='h2'
+          css={{ '@xs': { textAlign: 'center' }, '@md': { textAlign: 'left' } }}
+        >
           Lockers are also bestowed a non-transferable token
         </Heading>
-        <Text subText type='body1'>
+        <Text
+          subText
+          type='body1'
+          css={{ '@xs': { textAlign: 'center' }, '@md': { textAlign: 'left' } }}
+        >
           These tokens can boost their voting weights and have the opportunity
           to “consume” their boosted voting power to participate in NFT
           purchases that are only accessible to veNSFW holders that confer
@@ -28,12 +38,13 @@ export const Features: React.FC = ({}) => {
         <Box
           css={{
             marginTop: '1vw',
-            alignSelf: 'start',
             width: '80%',
             whiteSpace: 'nowrap',
+            '@xs': { alignSelf: 'center' },
+            '@md': { alignSelf: 'start' },
           }}
         >
-          <Link button uppercase theme='primary' href='#'>
+          <Link button theme='primary' href='#'>
             Join the discussion
             <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />
           </Link>
@@ -41,11 +52,17 @@ export const Features: React.FC = ({}) => {
       </Flex>
 
       <Flex column css={{ gap: '15px', marginTop: '1.5vw' }}>
-        <Heading as='h3' css={{  color: '$gray800' }}>
+        <Heading as='h3' css={{ color: '$gray800' }}>
           Proposed features
         </Heading>
 
-        <Grid css={{ gridTemplateColumns: 'repeat(2,1fr)', gridGap: '15px' }}>
+        <Grid
+          css={{
+            '@xs': { gridTemplateColumns: 'repeat(1,1fr)' },
+            '@sm': { gridTemplateColumns: 'repeat(2,1fr)' },
+            gridGap: '15px',
+          }}
+        >
           {features.map((text) => (
             <Flex
               row

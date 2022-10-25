@@ -8,6 +8,43 @@ import { CheckIcon } from 'components/Icons/Check'
 import { LockStake } from './components/LockStake'
 import { Features } from './components/Features'
 
+const UtilityHeading: React.FC = () => {
+  return (
+    <Flex column css={{ gap: '25px', marginTop: '1vw' }}>
+      <Heading as='h2' css={{ marginBottom: spaces[3] }}>
+        Token Utility
+      </Heading>
+      <Text subText type='body1'>
+        Protocol revenue is generated from the business models from projects
+        within the NSFW ecosystem.
+      </Text>
+      <Text subText type='body1'>
+        We have opted for a symbiotic growth model where revenue is directed to
+        participants. As the ecosystem evolves we aim to delight our users with.
+      </Text>
+      <Flex column css={{ gap: '15px' }}>
+        <Flex row css={{ gap: '10px', alignItems: 'center' }}>
+          <CheckIcon />
+          <Text>novel projects</Text>
+        </Flex>
+        <Flex row css={{ gap: '10px', alignItems: 'center' }}>
+          <CheckIcon />
+          <Text>unique incentives</Text>
+        </Flex>
+        <Flex row css={{ gap: '10px', alignItems: 'center' }}>
+          <CheckIcon />
+          <Text>distinct design</Text>
+        </Flex>
+      </Flex>
+
+      <Text subText type='body1'>
+        We have opted for a symbiotic growth model where revenue is directed to
+        participants. As the ecosystem evolves we aim to delight our users with.
+      </Text>
+    </Flex>
+  )
+}
+
 export const TokenUtility: React.FC = ({}) => {
   return (
     <GridSection
@@ -31,50 +68,16 @@ export const TokenUtility: React.FC = ({}) => {
             '@lg': { gridTemplateColumns: 'repeat(2,2fr)' },
           }}
         >
-          <Flex column css={{ gap: '25px', marginTop: '1vw' }}>
-            <Heading as='h2' css={{ marginBottom: spaces[3] }}>
-              Token Utility
-            </Heading>
-            <Text subText type='body1'>
-              Protocol revenue is generated from the business models from
-              projects within the NSFW ecosystem.
-            </Text>
-            <Text subText type='body1'>
-              We have opted for a symbiotic growth model where revenue is
-              directed to participants. As the ecosystem evolves we aim to
-              delight our users with.
-            </Text>
-            <Flex column css={{ gap: '15px' }}>
-              <Flex row css={{ gap: '10px', alignItems: 'center' }}>
-                <CheckIcon />
-                <Text>novel projects</Text>
-              </Flex>
-              <Flex row css={{ gap: '10px', alignItems: 'center' }}>
-                <CheckIcon />
-                <Text>unique incentives</Text>
-              </Flex>
-              <Flex row css={{ gap: '10px', alignItems: 'center' }}>
-                <CheckIcon />
-                <Text>distinct design</Text>
-              </Flex>
-            </Flex>
-
-            <Text subText type='body1'>
-              We have opted for a symbiotic growth model where revenue is
-              directed to participants. As the ecosystem evolves we aim to
-              delight our users with.
-            </Text>
-          </Flex>
-
-          <Flex center>
+          <UtilityHeading />
+          <Flex
+            center
+            css={{ '@xs': { marginTop: '-14vw' }, '@sm': { marginTop: 0 } }}
+          >
             <TokenUtilityGraph css={{ width: '100%' }} />
           </Flex>
         </InnerGrid>
-
         <LockStake />
         <Features />
-
-        {/* <StructureBlocks /> */}
       </GridContent>
     </GridSection>
   )

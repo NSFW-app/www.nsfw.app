@@ -4,12 +4,16 @@ import { CheckIcon } from 'components/Icons/Check'
 
 export const LockStake: React.FC = ({}) => {
   return (
-    <InnerGrid css={{ marginTop: '8vw' }}>
+    <InnerGrid css={{ '@lg': { marginTop: '8vw' } }}>
       <Flex
         column
         css={{
-          padding: '50px',
-
+          '@xs': {
+            padding: '20px',
+          },
+          '@md': {
+            padding: '45px',
+          },
           justifyContent: 'space-between',
           borderRadius: '8px',
           gap: '30px',
@@ -58,7 +62,12 @@ export const LockStake: React.FC = ({}) => {
       <Flex
         column
         css={{
-          padding: '50px',
+          '@xs': {
+            padding: '20px',
+          },
+          '@md': {
+            padding: '45px',
+          },
           borderRadius: '8px',
           background:
             'linear-gradient(248.77deg, rgba(251, 194, 47, 0.1) 1.24%, rgba(251, 194, 47, 0.0885417) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
@@ -81,7 +90,7 @@ export const LockStake: React.FC = ({}) => {
           Proposed features:
         </Text>
         <Flex row css={{ alignItems: 'center', gap: '15px' }}>
-          <CheckIcon />
+          <CheckIcon css={{ height: 25, width: 25 }} />
           <Text type='body2'>
             Receive % of protocol revenue from all ecosystem projects
           </Text>
