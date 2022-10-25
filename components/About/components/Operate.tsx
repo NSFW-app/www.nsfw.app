@@ -18,11 +18,16 @@ export const Operate = () => {
           justifyContent: 'center',
           marginBottom: '30px',
           height: '100%',
-          '@sm': { flexDirection: 'row' },
-          '@lg': { flexDirection: 'column' },
+          '@sm': { flexDirection: 'row', justifyContent: 'space-around' },
+          '@lg': { flexDirection: 'column', justifyContent: 'center' },
         }}
       >
-        <BlopViolet css={{ width: '100%' }} />
+        <BlopViolet
+          css={{
+            '@sm': { height: '110px', width: '190px' },
+            '@lg': { width: '100%', height: '100%' },
+          }}
+        />
         <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
           <Span>
             <Text

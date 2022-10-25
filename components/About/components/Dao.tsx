@@ -79,7 +79,7 @@ export const DAO = () => {
           gap: '10px',
           padding: '40px',
           borderRadius: '8px',
-          minWidth: '290px',
+          minWidth: '300px',
           justifyContent: 'center',
           zIndex: 3,
           marginBottom: '30px',
@@ -159,7 +159,7 @@ export const DAO = () => {
           padding: '40px ',
           marginTop: '-5vw',
           borderRadius: '8px',
-          minWidth: '290px',
+          minWidth: '300px',
           justifyContent: 'space-between',
           '@lg': {
             maxWidth: '320px',
