@@ -1,4 +1,14 @@
-import { Text, Flex, Grid, Heading, Icon, Stitches, Anchor } from '@nsfw-app/ui'
+import {
+  Text,
+  Flex,
+  Grid,
+  Heading,
+  Icon,
+  Stitches,
+  Anchor,
+  useIsDesktopSize,
+  useIsMobileSize,
+} from '@nsfw-app/ui'
 import Image from 'next/image'
 import { styled } from '@stitches/react'
 import { Carousel } from '@mantine/carousel'
@@ -25,21 +35,33 @@ const CreatorCard = styled(Flex, {
 
 
 export const SwiperComponent = () => {
+  const isMobile = useIsMobileSize()
+
   return (
     <Carousel
-      slideSize='27.33%'
+      // withIndicators
+      slideSize='33.33%'
+      styles={{
+        slide: { overflowX: 'hidden' },
+        control: {
+          backgroundColor: `${Stitches.theme.colors.gray400}`,
+          border: 0,
+          opacity: 1,
+          boxShadow: 'none',
+        },
+      }}
       dragFree
-      withControls={false}
-      slideGap={50}
+      withControls={isMobile ? false : true}
+      slideGap={isMobile ? 15 : 50}
       sx={{
-        padding: '50px 0',
+        padding: isMobile ? '20px 10px' : '50px 35px',
         backgroundColor: `${Stitches.theme.colors.gray400}`,
       }}
       breakpoints={[
-        { maxWidth: 'xs', slideSize: '80%', slideGap: 10 },
-        { maxWidth: 'sm', slideSize: '70%', slideGap: 10 },
-        { maxWidth: 'md', slideSize: '55%' },
-        { maxWidth: 'lg', slideSize: '55%' },
+        { maxWidth: 'xs', slideSize: '88%' },
+        { maxWidth: 'sm', slideSize: '88%' },
+        { maxWidth: 'md', slideSize: '60%' },
+        { maxWidth: 'lg', slideSize: '50%' },
         { maxWidth: 'xl', slideSize: '33.33%' },
       ]}
       loop={true}
