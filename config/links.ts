@@ -15,7 +15,7 @@ interface SocialLinkProps {
 export const SOCIAL_LINKS: SocialLinkProps[] = [
   { icon: 'Discord', href: 'https://discord.gg/XR8Ek4v7EM' },
   { icon: 'Twitter', href: 'https://twitter.com/OfficialNSFWapp' },
-  { icon: 'Telegram', href: 'https://t.me/OfficialNSFWApp' },
+  { icon: 'Telegram', href: 'https://t.me/OfficialNSFWDAO' },
   {
     icon: 'Notion',
     href:
