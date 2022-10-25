@@ -14,7 +14,7 @@ export const Operate = () => {
           gap: '40px',
           padding: '20px 30px',
           borderRadius: '8px',
-          minWidth: '250px',
+          minWidth: '330px',
           justifyContent: 'center',
           marginBottom: '30px',
           height: '100%',
@@ -28,8 +28,7 @@ export const Operate = () => {
             <Text
               type='body4'
               css={{
-                backgroundColor: '$voilet100',
-                color: '$gray900',
+                backgroundColor: '$gray500',
                 display: 'inline',
                 padding: '2px 6px',
                 borderRadius: '4px',
@@ -38,7 +37,7 @@ export const Operate = () => {
               OPEN SOURCE
             </Text>
           </Span>
-          <Heading as='h4' css={{ lineHeight: 1.2, color: '$voilet100' }}>
+          <Heading as='h4' css={{ lineHeight: 1.2, whiteSpace: 'nowrap' }}>
             Community Portal
           </Heading>
         </Flex>
@@ -60,7 +59,7 @@ export const Operate = () => {
             },
           }}
         >
-          <BlopOrange css={{}} />
+          <BlopOrange css={{ height: '100%' }} />
           <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
             <Span>
               <Text
@@ -97,7 +96,7 @@ export const Operate = () => {
             },
           }}
         >
-          <BlopGreen />
+          <BlopGreen css={{ height: '100%' }} />
           <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
             <Span>
               <Text
@@ -141,7 +140,7 @@ export const Operate = () => {
         <Anchor
           href='#'
           css={{
-            color: '$voilet100',
+            color: '$violet800',
             marginTop: '20px',
             svg: {
               transform: 'translateX(0)',
@@ -156,7 +155,7 @@ export const Operate = () => {
           }}
         >
           <Flex row css={{ justifySelf: 'end' }}>
-            <Text type='body2' css={{ color: '$voilet100' }}>
+            <Text type='body2' css={{ color: '$violet800' }}>
               More info
             </Text>
             <Icon
@@ -164,7 +163,7 @@ export const Operate = () => {
               css={{
                 paddingLeft: spaces[1],
                 '.primary': {
-                  stroke: '$voilet100',
+                  stroke: '$violet800',
                 },
               }}
             />

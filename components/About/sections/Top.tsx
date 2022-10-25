@@ -27,7 +27,7 @@ export const TopSection = () => {
         }}
       >
         <FlexLayout column>
-          <Heading as='h2' css={{ marginBottom: spaces[3], color: '$special' }}>
+          <Heading as='h2' css={{ marginBottom: spaces[3] }}>
             Not Safe for Work (NSFW) is an Impact DAO
           </Heading>
 
