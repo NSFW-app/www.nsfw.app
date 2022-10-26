@@ -1,6 +1,57 @@
-import { Flex, Heading, Icon, Text, Button, Box, Anchor } from '@nsfw-app/ui'
+import {
+  Flex,
+  Heading,
+  Icon,
+  Text,
+  Button,
+  Box,
+  Anchor,
+  Stitches,
+} from '@nsfw-app/ui'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
+
+const ProposalCard = Stitches.styled(Flex, {
+  flexDirection: 'column',
+  backgroundColor: '$gray300',
+  gap: '10px',
+  padding: '40px',
+  borderRadius: '8px',
+  minWidth: '300px',
+  justifyContent: 'center',
+  zIndex: 3,
+  marginBottom: '30px',
+  '@sm': {
+    marginTop: '20px',
+    marginBottom: '50px',
+  },
+  '@lg': {
+    maxWidth: '320px',
+    margin: '-5vw 0 0 2vw',
+  },
+})
+
+const DelegatesCard = Stitches.styled(Flex, {
+  flexDirection: 'column',
+  backgroundColor: '$gray300',
+  gap: '11px',
+  padding: '40px ',
+  marginTop: '-5vw',
+  borderRadius: '8px',
+  minWidth: '300px',
+  '@lg': {
+    maxWidth: '320px',
+  },
+})
+
+const DoaCardIcon = Stitches.styled(Flex, {
+  padding: '10px',
+  backgroundColor: '$gray100',
+  borderRadius: '100%',
+  border: '1px solid $gray600',
+  width: '50px',
+  height: '50px',
+})
 
 const BackgroundBlurIcons: React.FC = () => {
   return (
@@ -72,44 +123,14 @@ export const DAO = () => {
         </Text>
       </Flex>
 
-      <Flex
-        column
-        css={{
-          backgroundColor: '$gray300',
-          gap: '10px',
-          padding: '40px',
-          borderRadius: '8px',
-          minWidth: '300px',
-          justifyContent: 'center',
-          zIndex: 3,
-          marginBottom: '30px',
-          '@sm': {
-            marginTop: '20px',
-            marginBottom: '50px',
-          },
-          '@lg': {
-            maxWidth: '320px',
-            margin: '-5vw 0 0 2vw',
-          },
-        }}
-      >
-        <Flex
-          center
-          css={{
-            padding: '10px',
-            backgroundColor: '$gray100',
-            borderRadius: '100%',
-            border: '1px solid $gray600',
-            width: '50px',
-            height: '50px',
-          }}
-        >
+      <ProposalCard>
+        <DoaCardIcon center>
           <Text css={{ fontSize: '30px' }}>💎</Text>
-        </Flex>
+        </DoaCardIcon>
         <Heading as='h4' css={{ marginTop: '10px' }}>
           Proposals
         </Heading>
-        <Text type='body2' subText css={{ margin: '15px 0 35px 0' }}>
+        <Text type='body2' subText css={{ margin: '15px 0 22px 0' }}>
           We support the right of (legal) freedom of expression, without
           corporate and federal oversight.
         </Text>
@@ -149,37 +170,13 @@ export const DAO = () => {
             />
           </Flex>
         </Anchor>
-      </Flex>
+      </ProposalCard>
 
-      <Flex
-        column
-        css={{
-          backgroundColor: '$gray300',
-          gap: '11px',
-          padding: '40px ',
-          marginTop: '-5vw',
-          borderRadius: '8px',
-          minWidth: '300px',
-          justifyContent: 'space-between',
-          '@lg': {
-            maxWidth: '320px',
-          },
-        }}
-      >
+      <DelegatesCard>
         <Box>
-          <Flex
-            center
-            css={{
-              padding: '10px',
-              backgroundColor: '$gray100',
-              borderRadius: '100%',
-              border: '1px solid $gray600',
-              width: '50px',
-              height: '50px',
-            }}
-          >
+          <DoaCardIcon center>
             <Text css={{ fontSize: '30px' }}>🤝</Text>
-          </Flex>
+          </DoaCardIcon>
           <Heading as='h4' css={{ marginTop: '16px' }}>
             Delegates
           </Heading>
@@ -192,7 +189,7 @@ export const DAO = () => {
         <Button theme='primary' css={{ padding: '10px', fontWeight: 400 }}>
           View delegate proposals
         </Button>
-      </Flex>
+      </DelegatesCard>
     </InnerGrid>
   )
 }
