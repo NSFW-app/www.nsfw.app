@@ -42,7 +42,7 @@ const DoaCardIcon = Stitches.styled(Flex, {
   padding: '10px',
   backgroundColor: '$gray100',
   borderRadius: '100%',
-  border: '1px solid $gray600',
+  border: '1px solid $gray500',
   width: '50px',
   height: '50px',
 })
@@ -106,7 +106,7 @@ const BackgroundBlurIcons: React.FC = () => {
 export const DAO = () => {
   return (
     <InnerGrid>
-      {/* <BackgroundBlurIcons /> */}
+      <BackgroundBlurIcons />
       <Flex
         column
         css={{

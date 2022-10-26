@@ -1,7 +1,17 @@
-import { Flex, Icon } from '@nsfw-app/ui'
+import { Flex, Icon, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { InnerGrid } from 'components/About/components/Block/Blocks'
+
+const FeatureIcon = Stitches.styled(Flex, {
+  justifyContent: 'center',
+  padding: '10px',
+  backgroundColor: '$gray100',
+  borderRadius: '100%',
+  border: '1px solid $gray500',
+  width: '50px',
+  height: '50px',
+})
 
 export const Operate: React.FC = ({}) => {
   return (
@@ -17,7 +27,7 @@ export const Operate: React.FC = ({}) => {
             column
             css={{
               backgroundColor: '$gray300',
-              gap: '20px',
+              gap: '15px',
               borderRadius: '8px',
               width: '50%',
               '@xs': {
@@ -25,12 +35,15 @@ export const Operate: React.FC = ({}) => {
                 minWidth: '150px',
               },
               '@md': {
-                padding: '50px 30px',
+                padding: '30px 35px 60px 35px',
                 minWidth: '250px',
               },
             }}
           >
-            <Icon icon='MetamaskOutline' css={{ alignSelf: 'start' }} />
+            <FeatureIcon>
+              <Text css={{ fontSize: '28px' }}>💸</Text>
+            </FeatureIcon>
+
             <Heading type='h2'>Share the platform fees</Heading>
             <Text type='body2' subText>
               XX% of platform fees are earned by NSFW stakers and lockers.
@@ -41,7 +54,7 @@ export const Operate: React.FC = ({}) => {
             column
             css={{
               backgroundColor: '$gray300',
-              gap: '20px',
+              gap: '15px',
               borderRadius: '8px',
               width: '50%',
               '@xs': {
@@ -49,12 +62,14 @@ export const Operate: React.FC = ({}) => {
                 minWidth: '150px',
               },
               '@md': {
-                padding: '50px 30px',
+                padding: '30px 35px 60px 35px',
                 minWidth: '250px',
               },
             }}
           >
-            <Icon icon='Asterisk' css={{ alignSelf: 'start' }} />
+            <FeatureIcon>
+              <Text css={{ fontSize: '28px' }}>⚡</Text>
+            </FeatureIcon>
             <Heading type='h2'>Fast creator withdrawals</Heading>
             <Text type='body2' subText>
               Creators are able to cash out.
@@ -71,7 +86,9 @@ export const Operate: React.FC = ({}) => {
             padding: '45px 30px ',
           }}
         >
-          <Icon icon='BadgePolygon' />
+          <FeatureIcon center css={{ minHeight: '50px', minWidth: '50px' }}>
+            <Icon icon='BadgePolygon' css={{ height: 22, width: 22 }} />
+          </FeatureIcon>
           <Heading as='h4' css={{ lineHeight: 1.2 }}>
             We will be operating on the Polygon to enjoy low-cost fee
             environment.
@@ -84,7 +101,7 @@ export const Operate: React.FC = ({}) => {
         css={{
           textAlign: 'left',
           justifyContent: 'center',
-          gap: '25px',
+          gap: '30px',
         }}
       >
         <Heading type='h1' css={{ marginBottom: spaces[3] }}>

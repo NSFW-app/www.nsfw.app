@@ -3,6 +3,20 @@ import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/Blocks'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { ArrowLink } from 'components/ArrowLink'
+import { CheckIcon } from 'components/Icons/Check'
+import { spaces } from 'config'
+
+const PlatformFeesBullets = ['DMs', 'PetrificationTotalus', 'Wingman Blopster']
+const CreatorFeatures = ['DMs', 'PetrificationTotalus', 'Wingman Blopster']
+
+const BulletPoint: React.FC<{ title: string }> = ({ title }) => {
+  return (
+    <Flex row css={{ gap: '15px', alignItems: 'center' }}>
+      <CheckIcon css={{ height: '18px' }} />
+      <Text type='body2'>{title}</Text>
+    </Flex>
+  )
+}
 
 export const Ecosystem: React.FC = ({}) => {
   return (
@@ -21,13 +35,13 @@ export const Ecosystem: React.FC = ({}) => {
               gap: '11px',
               padding: '50px',
               borderRadius: '8px',
-              minWidth: '300px',
+              minWidth: '330px',
               justifyContent: 'space-between',
               '@xs': { order: 2 },
               '@lg': {
                 maxWidth: '310px',
                 order: 2,
-                height: '90%',
+                maxHeight: '450px',
               },
             }}
           >
@@ -49,10 +63,11 @@ export const Ecosystem: React.FC = ({}) => {
               <Heading type='h2' css={{ marginTop: '16px' }}>
                 Platform Fees
               </Heading>
-              <Text type='body2' subText css={{ margin: '25px 0' }}>
-                Work in the industrsy and can condribute your skills? Become a
-                delegate.
-              </Text>
+              <Flex column css={{ gap: '15px', marginTop: spaces[3] }}>
+                {PlatformFeesBullets.map((bullet, i) => (
+                  <BulletPoint key={bullet + i} title={bullet} />
+                ))}
+              </Flex>
             </Box>
 
             <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
@@ -64,14 +79,13 @@ export const Ecosystem: React.FC = ({}) => {
               backgroundColor: '$gray300',
               gap: '11px',
               padding: '50px',
-              height: '90%',
               borderRadius: '8px',
-              minWidth: '300px',
+              minWidth: '330px',
               justifyContent: 'space-between',
               '@xs': { order: 3 },
               '@lg': {
                 maxWidth: '310px',
-                height: '90%',
+                maxHeight: '450px',
                 order: 2,
               },
             }}
@@ -93,10 +107,12 @@ export const Ecosystem: React.FC = ({}) => {
               <Heading type='h2' css={{ marginTop: '16px' }}>
                 Creator ‘Pro’ Features
               </Heading>
-              <Text type='body2' subText css={{ margin: '25px 0' }}>
-                Work in the industrsy and can condribute your skills? Become a
-                delegate.
-              </Text>
+
+              <Flex column css={{ gap: '15px', marginTop: spaces[3] }}>
+                {CreatorFeatures.map((bullet, i) => (
+                  <BulletPoint key={bullet + i} title={bullet} />
+                ))}
+              </Flex>
             </Box>
 
             <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
@@ -109,7 +125,7 @@ export const Ecosystem: React.FC = ({}) => {
               marginTop: '-3vw',
               '@xs': { order: 1, textAlign: 'center' },
               '@md': { textAlign: 'left' },
-              '@lg': { minWidth: '450px', order: 3 },
+              '@lg': { minWidth: '330px', order: 3 },
               '@xl': { minWidth: '550px' },
             }}
           >

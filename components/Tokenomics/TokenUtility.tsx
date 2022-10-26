@@ -23,7 +23,7 @@ const UtilityHeading: React.FC = () => {
         We have opted for a symbiotic growth model where revenue is directed to
         participants. As the ecosystem evolves we aim to delight our users with.
       </Text>
-      <Flex column css={{ gap: '15px' }}>
+      <Flex column css={{ gap: '25px' }}>
         <Flex row css={{ gap: '10px', alignItems: 'center' }}>
           <CheckIcon />
           <Text type='subhead1'>novel projects</Text>
