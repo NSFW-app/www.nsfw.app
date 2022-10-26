@@ -1,10 +1,24 @@
-import { Stitches, Flex, Text } from '@nsfw-app/ui'
+import { Stitches, Flex, Text as UIText } from '@nsfw-app/ui'
 
 export interface BlockCardProps {
   body: string
   gradient?: string
   blopIcon: any
 }
+
+// TODO: move into own component
+const Text = Stitches.styled(UIText, {
+  variants: {
+    // When extending a variant, we need to define all of them here for the types to work.
+    type: {
+      // This is an example, go through the designs and create types for Text and Heading that
+      // match so we can easily roll out the design without worrying about font size and line height.
+      body2: {
+        // fontSize: '...',
+      },
+    },
+  },
+})
 
 export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
   body,
@@ -27,7 +41,7 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
         },
         '@xl': {
           minWidth: '27vw',
-          padding: '16px 85px 36px 85px',
+          padding: '16px 42px 36px',
         },
         alignItems: 'center',
         textAlign: 'center',
@@ -35,7 +49,10 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
       }}
     >
       {blopIcon}
-      <Text type='body2' css={{ wordSpacing: 0 }}>
+      <Text
+        type='body2'
+        // css={{ wo  rdSpacing: 0, lineHeight: '20px', letterSpacing: '1.5%' }}
+      >
         {body}
       </Text>
     </Flex>
