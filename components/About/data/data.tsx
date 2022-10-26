@@ -1,8 +1,8 @@
 import { BlockCardProps } from '../components/Block/BlockCard'
 import { StructureBlockProps } from '../components/Block/StructureBlockCard'
-import { BlopPink } from '../Icons/Blops/BlopPink'
-import { BlopPurple } from '../Icons/Blops/BlopPurple'
-import { BlopYellow } from '../Icons/Blops/BlopYellow'
+import { BlopPink } from '../../Icons/Blops/BlopPink'
+import { BlopPurple } from '../../Icons/Blops/BlopPurple'
+import { BlopYellow } from '../../Icons/Blops/BlopYellow'
 
 export const serviceData: BlockCardProps[] = [
   {

@@ -1,9 +1,9 @@
 import { Flex, Heading, Text, Span, Stitches } from '@nsfw-app/ui'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
-import { BlopOrange } from '../Icons/Blops/BlopOrange'
-import { BlopGreen } from '../Icons/Blops/BlopGreen'
-import { BlopViolet } from '../Icons/Blops/BlopViolet'
+import { BlopOrange } from '../../Icons/Blops/BlopOrange'
+import { BlopGreen } from '../../Icons/Blops/BlopGreen'
+import { BlopViolet } from '../../Icons/Blops/BlopViolet'
 import { Link } from 'components/Link'
 import { ArrowLink } from 'components/ArrowLink'
 

@@ -1,8 +1,8 @@
-import { BlopGreen } from 'components/About/Icons/Blops/BlopGreen'
-import { BlopOrange } from 'components/About/Icons/Blops/BlopOrange'
-import { BlopPink } from 'components/About/Icons/Blops/BlopPink'
-import { BlopPurple } from 'components/About/Icons/Blops/BlopPurple'
-import { BlopYellow } from 'components/About/Icons/Blops/BlopYellow'
+import { BlopGreen } from 'components/Icons/Blops/BlopGreen'
+import { BlopOrange } from 'components/Icons/Blops/BlopOrange'
+import { BlopPink } from 'components/Icons/Blops/BlopPink'
+import { BlopPurple } from 'components/Icons/Blops/BlopPurple'
+import { BlopYellow } from 'components/Icons/Blops/BlopYellow'
 
 interface CreatorFeedbackProps {
   name: string
