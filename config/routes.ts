@@ -7,6 +7,7 @@ export const APP_SITE_DOMAIN =
 export const APP_ROUTES = {
   HOME: '/',
   DAO: '/dao',
+  TOKENOMICS: '/tokenomics',
   CREATORS: '/creators',
   FAQ: '/faq',
   PRIVACY_POLICY: '/privacy-policy',
