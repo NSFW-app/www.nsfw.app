@@ -20,8 +20,8 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
         flexDirection: 'column',
         borderRadius: '8px',
         justifyContent: 'space-between',
-        '@sm': {
-          padding: '20px 50px',
+        '@xs': {
+          padding: '30px 20px',
         },
         '@md': {
           minWidth: '325px',

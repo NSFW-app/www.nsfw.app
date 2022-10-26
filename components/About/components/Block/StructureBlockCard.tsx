@@ -31,7 +31,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         flexDirection: 'column',
         gap: '25px',
         '@xs': {
-          padding: '40px 60px',
+          padding: '40px 20px',
         },
         '@lg': {
           padding: '4vw',
