@@ -90,7 +90,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
       <Anchor
         href={href}
         css={{
-          color: '$violet800',
+          color: '$violet300',
           marginTop: '15px',
           svg: {
             transform: 'translateX(0)',
@@ -105,7 +105,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         }}
       >
         <Flex row>
-          <Text type='body2' css={{ color: '$violet800' }}>
+          <Text type='body2' css={{ color: '$violet300' }}>
             More info
           </Text>
           <Icon
@@ -113,7 +113,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
             css={{
               paddingLeft: spaces[1],
               '.primary': {
-                stroke: '$violet800',
+                stroke: '$violet300',
               },
             }}
           />

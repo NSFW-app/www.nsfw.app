@@ -10,6 +10,7 @@ import {
 } from '@nsfw-app/ui'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
+import { marketingTheme } from 'lib/theme/marketing'
 
 const ProposalCard = Stitches.styled(Flex, {
   flexDirection: 'column',
@@ -127,7 +128,7 @@ export const DAO = () => {
         <DoaCardIcon center>
           <Text css={{ fontSize: '30px' }}>💎</Text>
         </DoaCardIcon>
-        <Heading as='h4' css={{ marginTop: '10px' }}>
+        <Heading as='h4' css={{ marginTop: '10px', color: '$voilet300' }}>
           Proposals
         </Heading>
         <Text type='body2' subText css={{ margin: '15px 0 22px 0' }}>
@@ -141,7 +142,7 @@ export const DAO = () => {
         <Anchor
           href='#'
           css={{
-            color: '$violet800',
+            color: marketingTheme.colors.violet300,
             marginTop: '10px',
             svg: {
               transform: 'translateX(0)',
@@ -156,7 +157,7 @@ export const DAO = () => {
           }}
         >
           <Flex row>
-            <Text type='body2' css={{ color: '$violet800' }}>
+            <Text type='body2' css={{ color: '$violet300' }}>
               View past proposals
             </Text>
             <Icon
@@ -164,7 +165,7 @@ export const DAO = () => {
               css={{
                 paddingLeft: spaces[1],
                 '.primary': {
-                  stroke: '$violet800',
+                  stroke: '$violet300',
                 },
               }}
             />

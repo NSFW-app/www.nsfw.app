@@ -5,7 +5,6 @@ const { createTheme, theme } = Stitches
 // Can override values from the nsfw/ui theme, or provide new ones.
 export const marketingTheme = createTheme('marketing-theme', {
   colors: {
-    //@ts-ignore
-    violet800: '#6966FF',
+    violet300: '#6966FF',
   },
 })

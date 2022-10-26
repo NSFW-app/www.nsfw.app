@@ -145,7 +145,7 @@ export const Operate = () => {
         <Anchor
           href='#'
           css={{
-            color: '$violet800',
+            color: '$violet300',
             marginTop: '20px',
             svg: {
               transform: 'translateX(0)',
@@ -160,7 +160,7 @@ export const Operate = () => {
           }}
         >
           <Flex row css={{ justifySelf: 'end' }}>
-            <Text type='body2' css={{ color: '$violet800' }}>
+            <Text type='body2' css={{ color: '$violet300' }}>
               More info
             </Text>
             <Icon
@@ -168,7 +168,7 @@ export const Operate = () => {
               css={{
                 paddingLeft: spaces[1],
                 '.primary': {
-                  stroke: '$violet800',
+                  stroke: '$violet300',
                 },
               }}
             />
