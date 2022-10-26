@@ -60,7 +60,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
             {emoji}
           </Text>
         </Flex>
-        <Heading type='h3'>{heading}</Heading>
+        <Heading type='h2'>{heading}</Heading>
       </Flex>
 
       <Flex column css={{ gap: '25px' }}>

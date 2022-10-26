@@ -18,11 +18,14 @@ export const Heading = Stitches.styled(UIHeading, {
           fontSize: '38px',
         },
       },
+
+      // e.g  Structure OKR / #standups heading
+      // e.g DOA "Proposals" heading
       h2: {
-        // e.g DOA "Proposals" heading
+        fontWeight: 700,
         lineHeight: '36px',
         wordSpacing: 0,
-        fontWeight: 700,
+        letterSpacing: '1.2%',
         '@xs': {
           fontSize: '22px',
         },
@@ -32,21 +35,6 @@ export const Heading = Stitches.styled(UIHeading, {
         '@xl': {
           fontSize: '28px',
         },
-      },
-
-      // Structure block heading e.g OKR / #standups
-      h3: {
-        fontSize: '28px',
-        fontWeight: 700,
-        lineHeight: '36px',
-        wordSpacing: 0,
-        letterSpacing: '1.2%',
-        // '@md': {
-        //   fontSize: '20px',
-        // },
-        // '@lg': {
-        //   fontSize: '22px',
-        // },
       },
 
       // Marked as h5 and used in testimonial user name
