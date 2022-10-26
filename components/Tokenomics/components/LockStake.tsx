@@ -1,8 +1,19 @@
-import { Flex, Icon } from '@nsfw-app/ui'
+import { Flex, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
 import { ArrowLink } from 'components/ArrowLink'
+
+const HeaderIcon = Stitches.styled(Flex, {
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '20px',
+  backgroundColor: '$gray100',
+  borderRadius: '100%',
+  border: '1px solid $gray500',
+  width: '60px',
+  height: '60px',
+})
 
 export const LockStake: React.FC = ({}) => {
   return (
@@ -24,8 +35,10 @@ export const LockStake: React.FC = ({}) => {
         }}
       >
         <Flex column css={{ gap: '35px' }}>
-          <Flex row css={{ gap: '15px' }}>
-            <Icon icon='BadgeBinance' />
+          <Flex row css={{ gap: '15px', alignItems: 'center' }}>
+            <HeaderIcon>
+              <Text css={{ fontSize: '32px' }}>🪃</Text>
+            </HeaderIcon>
             <Heading type='h1'>Staking (xNSFW+) </Heading>
           </Flex>
 
@@ -59,8 +72,10 @@ export const LockStake: React.FC = ({}) => {
           gap: '30px',
         }}
       >
-        <Flex row css={{ gap: '15px' }}>
-          <Icon icon='BadgeBinance' />
+        <Flex row css={{ gap: '15px', alignItems: 'center' }}>
+          <HeaderIcon>
+            <Text css={{ fontSize: '32px' }}>🔐</Text>
+          </HeaderIcon>
           <Heading type='h1'>Locking (veNSFW+) </Heading>
         </Flex>
         <Text type='body2' subText>
