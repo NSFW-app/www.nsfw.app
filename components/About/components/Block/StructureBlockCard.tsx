@@ -1,5 +1,5 @@
-import { Stitches, Flex, Text, Heading, Icon, Anchor, Box } from '@nsfw-app/ui'
-import { spaces } from 'config'
+import { Stitches, Flex, Text, Heading, Icon } from '@nsfw-app/ui'
+import { ArrowLink } from 'components/ArrowLink'
 
 export interface StructureBlockProps {
   heading: string
@@ -87,38 +87,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         )}
       </Flex>
 
-      <Anchor
-        href={href}
-        css={{
-          color: '$violet300',
-          marginTop: '15px',
-          svg: {
-            transform: 'translateX(0)',
-            transition: '0.2s',
-          },
-          ':hover': {
-            svg: {
-              transform: 'translateX(4px)',
-              transition: '0.3s',
-            },
-          },
-        }}
-      >
-        <Flex row>
-          <Text type='body2' css={{ color: '$violet300' }}>
-            More info
-          </Text>
-          <Icon
-            icon='Arrow'
-            css={{
-              paddingLeft: spaces[1],
-              '.primary': {
-                stroke: '$violet300',
-              },
-            }}
-          />
-        </Flex>
-      </Anchor>
+      <ArrowLink href='#'>More info</ArrowLink>
     </Flex>
   )
 }

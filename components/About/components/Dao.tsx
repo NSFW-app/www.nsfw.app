@@ -1,16 +1,7 @@
-import {
-  Flex,
-  Heading,
-  Icon,
-  Text,
-  Button,
-  Box,
-  Anchor,
-  Stitches,
-} from '@nsfw-app/ui'
+import { Flex, Heading, Icon, Text, Button, Box, Stitches } from '@nsfw-app/ui'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
-import { marketingTheme } from 'lib/theme/marketing'
+import { ArrowLink } from 'components/ArrowLink'
 
 const ProposalCard = Stitches.styled(Flex, {
   flexDirection: 'column',
@@ -139,38 +130,7 @@ export const DAO = () => {
           View proposals in discussion
         </Button>
         {/* <Button theme='secondary'>Proposals In Discussion</Button> */}
-        <Anchor
-          href='#'
-          css={{
-            color: marketingTheme.colors.violet300,
-            marginTop: '10px',
-            svg: {
-              transform: 'translateX(0)',
-              transition: '0.2s',
-            },
-            ':hover': {
-              svg: {
-                transform: 'translateX(4px)',
-                transition: '0.3s',
-              },
-            },
-          }}
-        >
-          <Flex row>
-            <Text type='body2' css={{ color: '$violet300' }}>
-              View past proposals
-            </Text>
-            <Icon
-              icon='Arrow'
-              css={{
-                paddingLeft: spaces[1],
-                '.primary': {
-                  stroke: '$violet300',
-                },
-              }}
-            />
-          </Flex>
-        </Anchor>
+        <ArrowLink href='#'>View past proposals</ArrowLink>
       </ProposalCard>
 
       <DelegatesCard>
