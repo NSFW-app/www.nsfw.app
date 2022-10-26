@@ -3,6 +3,7 @@ import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
 import { ArrowLink } from 'components/ArrowLink'
+import { AsteriskColor } from 'components/Icons/AsteriskColor'
 
 const ProposalCard = Stitches.styled(Flex, {
   flexDirection: 'column',
@@ -53,47 +54,58 @@ const BackgroundBlurIcons: React.FC = () => {
       <Flex
         css={{
           position: 'absolute',
-          top: -20,
+          top: 50,
           left: -150,
-          filter: 'blur(25px) opacity(0.33)',
+          filter: 'blur(20px) opacity(0.23)',
           zIndex: 1,
         }}
       >
-        <Icon icon='Asterisk' css={{ width: '400px', height: '400px' }} />
+        <AsteriskColor
+          css={{
+            '@xs': {
+              width: '200px',
+              height: '200px',
+            },
+            '@md': {
+              width: '400px',
+              height: '400px',
+            },
+          }}
+        />
       </Flex>
+
       <Flex
         css={{
           position: 'absolute',
-          top: 130,
-          left: 330,
-          filter: 'blur(25px) opacity(0.35)',
+          top: 230,
+          left: 420,
+          filter: 'blur(20px) opacity(0.25)',
           zIndex: 1,
         }}
       >
-        <Icon
-          icon='Asterisk'
+        <AsteriskColor
           css={{
-            width: '300px',
-            height: '300px',
+            width: '200px',
+            height: '200px',
             '@xs': { display: 'none' },
             '@lg': { display: 'block' },
           }}
         />
       </Flex>
+
       <Flex
         css={{
           position: 'absolute',
-          top: 330,
-          left: 130,
-          filter: 'blur(30px) opacity(0.45)',
+          top: 460,
+          left: 220,
+          filter: 'blur(20px) opacity(0.35)',
           zIndex: 1,
         }}
       >
-        <Icon
-          icon='Asterisk'
+        <AsteriskColor
           css={{
-            width: '200px',
-            height: '200px',
+            width: '100px',
+            height: '100px',
             '@xs': { display: 'none' },
             '@lg': { display: 'block' },
           }}
