@@ -2,4 +2,4 @@
 '@nsfw-app/marketing': minor
 ---
 
-Implement DAO page layout
+Implement Tokenomics page layout
