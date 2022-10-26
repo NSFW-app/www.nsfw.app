@@ -1,5 +1,5 @@
 import { Anchor, Flex, Icon, Stitches } from '@nsfw-app/ui'
-import { Text } from 'components/Text'
+import { Text } from 'components/Typography'
 
 export const ArrowLink: React.FC<Stitches.ComponentProps<typeof Anchor>> = ({
   css,

@@ -1,6 +1,5 @@
 import { Flex, Icon } from '@nsfw-app/ui'
-import { Text } from 'components/Text'
-import { Heading } from 'components/Heading'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { InnerGrid } from 'components/About/components/Block/Blocks'
 

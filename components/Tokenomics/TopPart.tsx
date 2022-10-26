@@ -1,6 +1,5 @@
 import { Stitches, Icon, Flex, Box } from '@nsfw-app/ui'
-import { Text } from 'components/Text'
-import { Heading } from 'components/Heading'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'

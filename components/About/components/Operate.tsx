@@ -1,6 +1,5 @@
 import { Flex, Span, Stitches } from '@nsfw-app/ui'
-import { Heading } from 'components/Heading'
-import { Text } from 'components/Text'
+import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
 import { BlopOrange } from '../../Icons/Blops/BlopOrange'

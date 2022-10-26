@@ -1,6 +1,5 @@
-import { Anchor, Flex, Icon } from '@nsfw-app/ui'
-import { Text } from 'components/Text'
-import { Heading } from 'components/Heading'
+import { Flex, Icon } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
 import { ArrowLink } from 'components/ArrowLink'

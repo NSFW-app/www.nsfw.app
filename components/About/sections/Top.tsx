@@ -1,6 +1,5 @@
 import { Stitches, Icon, Flex, Box } from '@nsfw-app/ui'
-import { Heading } from 'components/Heading'
-import { Text } from 'components/Text'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
@@ -22,7 +21,7 @@ const FlexLayout = Stitches.styled(Flex, {
 export const TopSection = () => {
   return (
     <GridSection>
-      <GridContent 
+      <GridContent
         columns={{
           tablet: '2 / 8',
           desktop: '2 / 12',

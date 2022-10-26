@@ -1,5 +1,5 @@
 import { Stitches, Flex } from '@nsfw-app/ui'
-import { Text } from 'components/Text'
+import { Text } from 'components/Typography'
 
 export interface BlockCardProps {
   body: string

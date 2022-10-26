@@ -1,6 +1,6 @@
 import { Stitches, Flex, Icon } from '@nsfw-app/ui'
-import { Text } from 'components/Text'
-import { Heading } from 'components/Heading'
+import { Text } from 'components/Typography'
+import { Heading } from 'components/Typography'
 import { ArrowLink } from 'components/ArrowLink'
 
 export interface StructureBlockProps {

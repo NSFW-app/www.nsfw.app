@@ -1,6 +1,5 @@
-import { Box, Button, Flex } from '@nsfw-app/ui'
-import { Text } from 'components/Text'
-import { Heading } from 'components/Heading'
+import { Box, Flex } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/Blocks'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { ArrowLink } from 'components/ArrowLink'

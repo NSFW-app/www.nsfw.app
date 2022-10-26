@@ -1,14 +1,13 @@
 import { GridContent, GridSection } from 'components/GridLayout'
 import { DiagonalBgBreak } from 'components/DiagonalBgBreak'
 import { Flex } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { InnerGrid } from 'components/About/components/Block/Blocks'
 import { TokenUtilityGraph } from 'components/Icons/TokenUtilityGraph'
 import { CheckIcon } from 'components/Icons/Check'
 import { LockStake } from './components/LockStake'
 import { Features } from './components/Features'
-import { Heading } from 'components/Heading'
-import { Text } from 'components/Text'
 
 const UtilityHeading: React.FC = () => {
   return (

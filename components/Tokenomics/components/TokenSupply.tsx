@@ -1,6 +1,5 @@
 import { TokenomicsGraph } from 'components/Icons/TokenomicsGraph'
-import { Heading } from 'components/Heading'
-import { Text } from 'components/Text'
+import { Heading, Text } from 'components/Typography'
 import { Flex, Span } from '@nsfw-app/ui'
 
 export const TokenSupply: React.FC = ({}) => {

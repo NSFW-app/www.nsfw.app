@@ -1,7 +1,6 @@
 import { Flex } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
-import { Heading } from 'components/Heading'
-import { Text } from 'components/Text'
 
 export const StructureHeading: React.FC = ({}) => {
   return (

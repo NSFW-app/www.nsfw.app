@@ -1,10 +1,9 @@
-import { Box, Button, Flex, Icon, Grid } from '@nsfw-app/ui'
+import { Box, Flex, Icon, Grid } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
 import { Link } from 'components/Link'
 import { spaces } from 'config'
-import { Heading } from 'components/Heading'
-import { Text } from 'components/Text'
 
 export const Features: React.FC = ({}) => {
   const features = [
