@@ -16,7 +16,7 @@ export const MiddleSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 24',
+          desktop: '1 / 24',
         }}
         css={{
           zIndex: 1,

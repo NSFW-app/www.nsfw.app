@@ -1,4 +1,6 @@
-import { Flex, Heading, Text, Span, Stitches } from '@nsfw-app/ui'
+import { Flex, Span, Stitches } from '@nsfw-app/ui'
+import { Heading } from 'components/Heading'
+import { Text } from 'components/Text'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
 import { BlopOrange } from '../../Icons/Blops/BlopOrange'
@@ -11,9 +13,10 @@ const OperateCard = Stitches.styled(Flex, {
   backgroundColor: '$gray300',
   gap: '30px',
   borderRadius: '8px',
-  minWidth: '280px',
+  minWidth: '150px',
   padding: '20px',
   height: '100%',
+  width: '100%',
   justifyContent: 'space-around',
   '@lg': {
     maxWidth: '300px',
@@ -25,9 +28,11 @@ const OperateCard = Stitches.styled(Flex, {
 
 const CommPortalCard = Stitches.styled(OperateCard, {
   padding: '20px 30px',
-  minWidth: '330px',
+  minWidth: '350px',
+  width: '100%',
+  height: '100%',
   justifyContent: 'center',
-  '@sm': { flexDirection: 'row', justifyContent: 'space-around' },
+  '@xs': { flexDirection: 'row', justifyContent: 'space-around' },
   '@lg': { flexDirection: 'column', justifyContent: 'center' },
 })
 
@@ -38,27 +43,15 @@ export const Operate = () => {
         <CommPortalCard>
           <BlopViolet
             css={{
-              '@sm': { height: '110px', width: '190px' },
+              '@xs': { height: '130px', width: '150px' },
               '@lg': { width: '100%', height: '100%' },
             }}
           />
           <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
             <Span>
-              <Text
-                type='body4'
-                css={{
-                  backgroundColor: '$gray500',
-                  display: 'inline',
-                  padding: '2px 6px',
-                  borderRadius: '4px',
-                }}
-              >
-                OPEN SOURCE
-              </Text>
+              <Text type='pill'>OPEN SOURCE</Text>
             </Span>
-            <Heading as='h4' css={{ lineHeight: 1.2, whiteSpace: 'nowrap' }}>
-              Community Portal
-            </Heading>
+            <Text type='subhead1'>Community Portal</Text>
           </Flex>
         </CommPortalCard>
       </Link>
@@ -69,22 +62,9 @@ export const Operate = () => {
             <BlopOrange css={{ height: '100%' }} />
             <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
               <Span>
-                <Text
-                  type='body4'
-                  subText
-                  css={{
-                    backgroundColor: '$gray500',
-                    display: 'inline',
-                    padding: '2px 6px',
-                    borderRadius: '4px',
-                  }}
-                >
-                  OPEN SOURCE
-                </Text>
+                <Text type='pill'>OPEN SOURCE</Text>
               </Span>
-              <Heading as='h4' css={{ lineHeight: 1.2 }}>
-                Design System
-              </Heading>
+              <Text type='subhead1'>Design System</Text>
             </Flex>
           </OperateCard>
         </Link>
@@ -94,22 +74,9 @@ export const Operate = () => {
             <BlopGreen css={{ height: '100%' }} />
             <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
               <Span>
-                <Text
-                  type='body4'
-                  subText
-                  css={{
-                    backgroundColor: '$gray500',
-                    display: 'inline',
-                    padding: '2px 6px',
-                    borderRadius: '4px',
-                  }}
-                >
-                  OPEN SOURCE
-                </Text>
+                <Text type='pill'>OPEN SOURCE</Text>
               </Span>
-              <Heading as='h4' css={{ lineHeight: 1.2 }}>
-                DAO Playbook
-              </Heading>
+              <Text type='subhead1'>DAO Playbook</Text>
             </Flex>
           </OperateCard>
         </Link>
@@ -124,11 +91,11 @@ export const Operate = () => {
           alignItems: 'end',
         }}
       >
-        <Heading as='h3' css={{ marginBottom: spaces[3] }}>
+        <Heading type='h1' css={{ marginBottom: spaces[3] }}>
           How we operate
         </Heading>
 
-        <Text subText>
+        <Text type='subhead1' subText>
           Drawing from collective leadership experience spanning 30 years we are
           commited to creating an inclusive and transparent DAO which pioneers a
           new type of modern workplace.

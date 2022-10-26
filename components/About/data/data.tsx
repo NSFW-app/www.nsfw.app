@@ -30,7 +30,7 @@ export const serviceData: BlockCardProps[] = [
 
 export const structureData: StructureBlockProps[] = [
   {
-    heading: 'OKR',
+    heading: 'OKRs',
     subheading:
       'Aliquam a velit tellus. Nunc interdum, tellus semper pulvinar mollis, mi nibh cursus dui, et accumsan ipsum nulla id massa. ',
     gradient:

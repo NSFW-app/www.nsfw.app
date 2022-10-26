@@ -37,7 +37,7 @@ export const BottomSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 12',
+          desktop: '1 / 24',
         }}
       >
         <FlexLayout column>

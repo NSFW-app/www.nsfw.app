@@ -12,6 +12,15 @@ export const Text = Stitches.styled(UIText, {
         lineHeight: '28px',
         wordSpacing: 0,
         letterSpacing: '1.2%',
+        '@xs': {
+          fontSize: '16px',
+        },
+        '@md': {
+          fontSize: '18px',
+        },
+        '@lg': {
+          fontSize: '22px',
+        },
       },
       // Not seen in designs but body1 should
       body1: {
@@ -21,15 +30,37 @@ export const Text = Stitches.styled(UIText, {
       // Marked as P2 in designs
       body2: {
         fontSize: '14px',
+        fontWeight: 400,
         letterSpacing: '1.5%',
         lineHeight: '20px',
       },
-      // Unmarked in the designs, see bullet points in OKRs
+      // Bullet points in OKRs
       body3: {
         fontSize: '13px',
+        fontWeight: 500,
         wordSpacing: 0,
         lineHeight: '16px',
         letterSpacing: '1.5%',
+      },
+      // Button label e.g: Learn more about DAO
+      body4: {
+        fontSize: '14px',
+        fontWeight: 600,
+        lineHeight: '16px',
+        letterSpacing: '1.5%',
+      },
+
+      // E.g: OPEN SOURCE
+      pill: {
+        fontSize: '12px',
+        fontWeight: 600,
+        lineHeight: '16px',
+        letterSpacing: '1%',
+        backgroundColor: '$gray500',
+        display: 'inline',
+        padding: '2px 6px',
+        borderRadius: '4px',
+        color: '$gray800',
       },
     },
   },

@@ -1,4 +1,6 @@
-import { Flex, Heading, Icon, Text, Button, Box, Stitches } from '@nsfw-app/ui'
+import { Flex, Icon, Button, Box, Stitches } from '@nsfw-app/ui'
+import { Heading } from 'components/Heading'
+import { Text } from 'components/Text'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
 import { ArrowLink } from 'components/ArrowLink'
@@ -6,7 +8,7 @@ import { ArrowLink } from 'components/ArrowLink'
 const ProposalCard = Stitches.styled(Flex, {
   flexDirection: 'column',
   backgroundColor: '$gray300',
-  gap: '10px',
+  gap: '15px',
   padding: '40px',
   borderRadius: '8px',
   minWidth: '300px',
@@ -18,21 +20,22 @@ const ProposalCard = Stitches.styled(Flex, {
     marginBottom: '50px',
   },
   '@lg': {
-    maxWidth: '320px',
-    margin: '-5vw 0 0 2vw',
+    maxWidth: '304px',
+    margin: '-5vw 0 0 4vw',
+    justifySelf: 'end',
   },
 })
 
 const DelegatesCard = Stitches.styled(Flex, {
   flexDirection: 'column',
   backgroundColor: '$gray300',
-  gap: '11px',
+  gap: '16px',
   padding: '40px ',
   marginTop: '-5vw',
   borderRadius: '8px',
   minWidth: '300px',
   '@lg': {
-    maxWidth: '320px',
+    maxWidth: '304px',
   },
 })
 
@@ -73,7 +76,7 @@ const BackgroundBlurIcons: React.FC = () => {
           css={{
             width: '300px',
             height: '300px',
-            '@sm': { display: 'none' },
+            '@xs': { display: 'none' },
             '@lg': { display: 'block' },
           }}
         />
@@ -87,7 +90,15 @@ const BackgroundBlurIcons: React.FC = () => {
           zIndex: 1,
         }}
       >
-        <Icon icon='Asterisk' css={{ width: '200px', height: '200px' }} />
+        <Icon
+          icon='Asterisk'
+          css={{
+            width: '200px',
+            height: '200px',
+            '@xs': { display: 'none' },
+            '@lg': { display: 'block' },
+          }}
+        />
       </Flex>
     </>
   )
@@ -96,19 +107,24 @@ const BackgroundBlurIcons: React.FC = () => {
 export const DAO = () => {
   return (
     <InnerGrid>
-      <BackgroundBlurIcons />
+      {/* <BackgroundBlurIcons /> */}
       <Flex
         column
         css={{
           zIndex: 2,
-          '@lg': { minWidth: '300px' },
+          '@lg': { minWidth: '320px' },
         }}
       >
-        <Heading as='h3' css={{ marginBottom: spaces[3] }}>
+        <Heading
+          type='h1'
+          css={{
+            marginBottom: spaces[3],
+          }}
+        >
           Participate in the DAO
         </Heading>
 
-        <Text subText>
+        <Text type='subhead1' subText>
           Part of being DAO-run means holders of the NSFW token are able to
           participate in governance proposals that inform the direction of this
           project.
@@ -119,14 +135,14 @@ export const DAO = () => {
         <DoaCardIcon center>
           <Text css={{ fontSize: '30px' }}>💎</Text>
         </DoaCardIcon>
-        <Heading as='h4' css={{ marginTop: '10px', color: '$voilet300' }}>
+        <Heading type='h2' css={{ color: '$voilet300' }}>
           Proposals
         </Heading>
         <Text type='body2' subText css={{ margin: '15px 0 22px 0' }}>
           We support the right of (legal) freedom of expression, without
           corporate and federal oversight.
         </Text>
-        <Button theme='primary' css={{ padding: '10px 10px', fontWeight: 400 }}>
+        <Button theme='primary' css={{ padding: '10px 10px', fontWeight: 500 }}>
           View proposals in discussion
         </Button>
         {/* <Button theme='secondary'>Proposals In Discussion</Button> */}
@@ -138,7 +154,7 @@ export const DAO = () => {
           <DoaCardIcon center>
             <Text css={{ fontSize: '30px' }}>🤝</Text>
           </DoaCardIcon>
-          <Heading as='h4' css={{ marginTop: '16px' }}>
+          <Heading type='h2' css={{ marginTop: '12px' }}>
             Delegates
           </Heading>
           <Text type='body2' subText css={{ margin: '25px 0' }}>
@@ -147,7 +163,7 @@ export const DAO = () => {
           </Text>
         </Box>
 
-        <Button theme='primary' css={{ padding: '10px', fontWeight: 400 }}>
+        <Button theme='primary' css={{ padding: '10px', fontWeight: 500 }}>
           View delegate proposals
         </Button>
       </DelegatesCard>

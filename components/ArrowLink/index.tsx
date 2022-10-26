@@ -1,4 +1,5 @@
-import { Anchor, Flex, Icon, Stitches, Text } from '@nsfw-app/ui'
+import { Anchor, Flex, Icon, Stitches } from '@nsfw-app/ui'
+import { Text } from 'components/Text'
 
 export const ArrowLink: React.FC<Stitches.ComponentProps<typeof Anchor>> = ({
   css,
@@ -24,7 +25,7 @@ export const ArrowLink: React.FC<Stitches.ComponentProps<typeof Anchor>> = ({
     {...props}
   >
     <Flex row>
-      <Text type='body2' css={{ color: '$violet300' }}>
+      <Text type='body3' css={{ color: '$violet300', fontWeight: 400 }}>
         {children}
       </Text>
       <Icon

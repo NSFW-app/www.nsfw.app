@@ -1,4 +1,6 @@
-import { Stitches, Flex, Text, Heading, Icon } from '@nsfw-app/ui'
+import { Stitches, Flex, Icon } from '@nsfw-app/ui'
+import { Text } from 'components/Text'
+import { Heading } from 'components/Heading'
 import { ArrowLink } from 'components/ArrowLink'
 
 export interface StructureBlockProps {
@@ -58,7 +60,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
             {emoji}
           </Text>
         </Flex>
-        <Heading as='h4'>{heading}</Heading>
+        <Heading type='h3'>{heading}</Heading>
       </Flex>
 
       <Flex column css={{ gap: '25px' }}>
@@ -87,7 +89,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         )}
       </Flex>
 
-      <ArrowLink href='#'>More info</ArrowLink>
+      <ArrowLink href={href}>More info</ArrowLink>
     </Flex>
   )
 }
