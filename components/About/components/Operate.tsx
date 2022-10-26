@@ -27,7 +27,7 @@ const OperateCard = Stitches.styled(Flex, {
 
 const CommPortalCard = Stitches.styled(OperateCard, {
   padding: '20px 30px',
-  minWidth: '350px',
+  minWidth: '370px',
   width: '100%',
   height: '100%',
   justifyContent: 'center',
@@ -38,24 +38,39 @@ const CommPortalCard = Stitches.styled(OperateCard, {
 export const Operate = () => {
   return (
     <InnerGrid css={{ marginTop: '10vw' }}>
-      <Link nounderline href='https://github.com/nsfw-app' target='_blank'>
-        <CommPortalCard>
-          <BlopViolet
-            css={{
-              '@xs': { height: '130px', width: '150px' },
-              '@lg': { width: '100%', height: '100%' },
-            }}
-          />
-          <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
-            <Span>
-              <Text type='pill'>OPEN SOURCE</Text>
-            </Span>
-            <Text type='subhead1'>Community Portal</Text>
-          </Flex>
-        </CommPortalCard>
-      </Link>
+      <Flex
+        css={{
+          a: { width: '100%' },
+          '@xs': { order: 2 },
+          '@lg': { order: 1 },
+        }}
+      >
+        <Link nounderline href='https://github.com/nsfw-app' target='_blank'>
+          <CommPortalCard>
+            <BlopViolet
+              css={{
+                '@xs': { height: '130px', width: '150px' },
+                '@lg': { width: '100%', height: '100%' },
+              }}
+            />
+            <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
+              <Span>
+                <Text type='pill'>OPEN SOURCE</Text>
+              </Span>
+              <Text type='subhead1'>Community Portal</Text>
+            </Flex>
+          </CommPortalCard>
+        </Link>
+      </Flex>
 
-      <Flex column css={{ gap: '35px', a: { height: '100%' } }}>
+      <Flex
+        column
+        css={{
+          gap: '35px',
+          a: { height: '100%' },
+          order: 2,
+        }}
+      >
         <Link nounderline href='https://github.com/NSFW-app/ui' target='_blank'>
           <OperateCard>
             <BlopOrange css={{ height: '100%' }} />
@@ -88,6 +103,8 @@ export const Operate = () => {
           textAlign: 'right',
           justifyContent: 'center',
           alignItems: 'end',
+          '@xs': { order: 1 },
+          '@lg': { order: 3 },
         }}
       >
         <Heading type='h1' css={{ marginBottom: spaces[3] }}>
