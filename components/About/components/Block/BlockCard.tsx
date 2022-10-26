@@ -36,12 +36,7 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
       }}
     >
       {blopIcon}
-      <Text
-        type='body2'
-        // css={{ wo  rdSpacing: 0, lineHeight: '20px', letterSpacing: '1.5%' }}
-      >
-        {body}
-      </Text>
+      <Text type='body2'>{body}</Text>
     </Flex>
   )
 }

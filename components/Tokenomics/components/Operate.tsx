@@ -44,7 +44,7 @@ export const Operate: React.FC = ({}) => {
               <Text css={{ fontSize: '28px' }}>💸</Text>
             </FeatureIcon>
 
-            <Heading type='h2'>Share the platform fees</Heading>
+            <Heading as='h2'>Share the platform fees</Heading>
             <Text type='body2' subText>
               XX% of platform fees are earned by NSFW stakers and lockers.
             </Text>
@@ -70,7 +70,7 @@ export const Operate: React.FC = ({}) => {
             <FeatureIcon>
               <Text css={{ fontSize: '28px' }}>⚡</Text>
             </FeatureIcon>
-            <Heading type='h2'>Fast creator withdrawals</Heading>
+            <Heading as='h2'>Fast creator withdrawals</Heading>
             <Text type='body2' subText>
               Creators are able to cash out.
             </Text>
@@ -104,7 +104,7 @@ export const Operate: React.FC = ({}) => {
           gap: '30px',
         }}
       >
-        <Heading type='h1' css={{ marginBottom: spaces[3] }}>
+        <Heading as='h1' css={{ marginBottom: spaces[3] }}>
           The NSFW+ token captures value from all ecosystem projects.
         </Heading>
 

@@ -39,7 +39,7 @@ export const LockStake: React.FC = ({}) => {
             <HeaderIcon>
               <Text css={{ fontSize: '32px' }}>🪃</Text>
             </HeaderIcon>
-            <Heading type='h1'>Staking (xNSFW+) </Heading>
+            <Heading as='h1'>Staking (xNSFW+) </Heading>
           </Flex>
 
           <Text type='body2' subText>
@@ -76,7 +76,7 @@ export const LockStake: React.FC = ({}) => {
           <HeaderIcon>
             <Text css={{ fontSize: '32px' }}>🔐</Text>
           </HeaderIcon>
-          <Heading type='h1'>Locking (veNSFW+) </Heading>
+          <Heading as='h1'>Locking (veNSFW+) </Heading>
         </Flex>
         <Text type='body2' subText>
           Similar to staking, Locking is a way of receiving a proportion of

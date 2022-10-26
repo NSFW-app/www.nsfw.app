@@ -107,7 +107,7 @@ export const Operate = () => {
           '@lg': { order: 3 },
         }}
       >
-        <Heading type='h1' css={{ marginBottom: spaces[3] }}>
+        <Heading as='h1' css={{ marginBottom: spaces[3] }}>
           How we operate
         </Heading>
 

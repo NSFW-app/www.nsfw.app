@@ -127,7 +127,7 @@ export const DAO = () => {
         }}
       >
         <Heading
-          type='h1'
+          as='h1'
           css={{
             marginBottom: spaces[3],
           }}
@@ -146,7 +146,7 @@ export const DAO = () => {
         <DoaCardIcon center>
           <Text css={{ fontSize: '30px' }}>💎</Text>
         </DoaCardIcon>
-        <Heading type='h2' css={{ color: '$voilet300' }}>
+        <Heading as='h2' css={{ color: '$voilet300' }}>
           Proposals
         </Heading>
         <Text type='body2' subText css={{ margin: '15px 0 22px 0' }}>
@@ -165,7 +165,7 @@ export const DAO = () => {
           <DoaCardIcon center>
             <Text css={{ fontSize: '30px' }}>🤝</Text>
           </DoaCardIcon>
-          <Heading type='h2' css={{ marginTop: '12px' }}>
+          <Heading as='h2' css={{ marginTop: '12px' }}>
             Delegates
           </Heading>
           <Text type='body2' subText css={{ margin: '25px 0' }}>

@@ -29,7 +29,7 @@ export const TopSection = () => {
       >
         <FlexLayout column>
           <Heading
-            type='h1'
+            as='h1'
             css={{
               marginBottom: spaces[3],
             }}

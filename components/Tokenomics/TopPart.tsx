@@ -46,7 +46,7 @@ export const TopPart: React.FC = ({}) => {
               }}
             >
               <Heading
-                type='h1'
+                as='h1'
                 css={{
                   marginBottom: spaces[3],
                 }}

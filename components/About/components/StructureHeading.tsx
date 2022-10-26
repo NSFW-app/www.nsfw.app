@@ -5,7 +5,7 @@ import { spaces } from 'config'
 export const StructureHeading: React.FC = ({}) => {
   return (
     <>
-      <Heading type='h1' css={{ marginBottom: spaces[3] }}>
+      <Heading as='h1' css={{ marginBottom: spaces[3] }}>
         NSFW App Structure
       </Heading>
 

@@ -60,7 +60,7 @@ export const Ecosystem: React.FC = ({}) => {
                 <Text css={{ fontSize: '30px' }}>💰</Text>
               </Flex>
 
-              <Heading type='h2' css={{ marginTop: '16px' }}>
+              <Heading as='h2' css={{ marginTop: '16px' }}>
                 Platform Fees
               </Heading>
               <Flex column css={{ gap: '15px', marginTop: spaces[3] }}>
@@ -104,7 +104,7 @@ export const Ecosystem: React.FC = ({}) => {
               >
                 <Text css={{ fontSize: '30px' }}>🎨</Text>
               </Flex>
-              <Heading type='h2' css={{ marginTop: '16px' }}>
+              <Heading as='h2' css={{ marginTop: '16px' }}>
                 Creator ‘Pro’ Features
               </Heading>
 
@@ -129,7 +129,7 @@ export const Ecosystem: React.FC = ({}) => {
               '@xl': { minWidth: '550px' },
             }}
           >
-            <Heading type='h1'>NSFW.app Ecosystem</Heading>
+            <Heading as='h1'>NSFW.app Ecosystem</Heading>
             <Text subText type='subhead1'>
               An independent creator marketplace, with a focus on zero commisons
               on creator content, near instant payment settlement, and web3
@@ -151,7 +151,7 @@ export const Ecosystem: React.FC = ({}) => {
         </InnerGrid>
 
         <Flex center css={{ marginTop: '8vw' }}>
-          <Heading type='h1'>Voices from the community</Heading>
+          <Heading as='h1'>Voices from the community</Heading>
         </Flex>
       </GridContent>
     </GridSection>

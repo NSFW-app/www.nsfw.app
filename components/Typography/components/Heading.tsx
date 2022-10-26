@@ -3,7 +3,7 @@ import { Heading as UIHeading } from '@nsfw-app/ui'
 
 export const Heading = Stitches.styled(UIHeading, {
   variants: {
-    type: {
+    as: {
       h1: {
         // TODO: review the md and sm breakpoints by eye across these variants (not explicity in designs)
         lineHeight: '48px',

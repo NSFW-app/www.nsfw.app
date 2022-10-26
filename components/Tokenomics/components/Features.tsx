@@ -21,7 +21,7 @@ export const Features: React.FC = ({}) => {
         css={{ gap: '30px', marginTop: '20px', '@lg': { padding: '0 90px' } }}
       >
         <Heading
-          type='h1'
+          as='h1'
           css={{ '@xs': { textAlign: 'center' }, '@md': { textAlign: 'left' } }}
         >
           Lockers are also bestowed a non-transferable token
@@ -53,7 +53,7 @@ export const Features: React.FC = ({}) => {
       </Flex>
 
       <Flex column css={{ gap: '15px', marginTop: '1.5vw' }}>
-        <Heading type='h2' css={{ color: '$gray800' }}>
+        <Heading as='h2' css={{ color: '$gray800' }}>
           Proposed features
         </Heading>
 
