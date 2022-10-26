@@ -22,7 +22,7 @@ const FlexLayout = Stitches.styled(Flex, {
 export const TopSection = () => {
   return (
     <GridSection>
-      <GridContent
+      <GridContent 
         columns={{
           tablet: '2 / 8',
           desktop: '2 / 12',

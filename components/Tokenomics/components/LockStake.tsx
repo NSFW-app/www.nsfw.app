@@ -1,6 +1,9 @@
-import { Anchor, Flex, Heading, Icon, Text } from '@nsfw-app/ui'
+import { Anchor, Flex, Icon } from '@nsfw-app/ui'
+import { Text } from 'components/Text'
+import { Heading } from 'components/Heading'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
+import { ArrowLink } from 'components/ArrowLink'
 
 export const LockStake: React.FC = ({}) => {
   return (
@@ -12,7 +15,7 @@ export const LockStake: React.FC = ({}) => {
             padding: '20px',
           },
           '@md': {
-            padding: '45px',
+            padding: '45px 65px',
           },
           justifyContent: 'space-between',
           borderRadius: '8px',
@@ -24,7 +27,7 @@ export const LockStake: React.FC = ({}) => {
         <Flex column css={{ gap: '35px' }}>
           <Flex row css={{ gap: '15px' }}>
             <Icon icon='BadgeBinance' />
-            <Heading as='h3'>Staking (xNSFW+) </Heading>
+            <Heading type='h1'>Staking (xNSFW+) </Heading>
           </Flex>
 
           <Text type='body2' subText>
@@ -39,24 +42,7 @@ export const LockStake: React.FC = ({}) => {
           </Text>
         </Flex>
 
-        <Anchor
-          href='#'
-          css={{
-            color: '$voilet100',
-            gap: '10px',
-            '@lg': {},
-          }}
-        >
-          <Text css={{ color: '$voilet100' }}>Join the discussion</Text>
-          <Icon
-            icon='Arrow'
-            css={{
-              '.primary': {
-                stroke: '$voilet100',
-              },
-            }}
-          />
-        </Anchor>
+        <ArrowLink href='#'>Join the discussion</ArrowLink>
       </Flex>
 
       <Flex
@@ -66,7 +52,7 @@ export const LockStake: React.FC = ({}) => {
             padding: '20px',
           },
           '@md': {
-            padding: '45px',
+            padding: '45px 65px',
           },
           borderRadius: '8px',
           background:
@@ -76,7 +62,7 @@ export const LockStake: React.FC = ({}) => {
       >
         <Flex row css={{ gap: '15px' }}>
           <Icon icon='BadgeBinance' />
-          <Heading as='h3'>Locking (veNSFW+) </Heading>
+          <Heading type='h1'>Locking (veNSFW+) </Heading>
         </Flex>
         <Text type='body2' subText>
           Similar to staking, Locking is a way of receiving a proportion of
@@ -90,30 +76,13 @@ export const LockStake: React.FC = ({}) => {
           Proposed features:
         </Text>
         <Flex row css={{ alignItems: 'center', gap: '15px' }}>
-          <CheckIcon css={{ height: 25, width: 25 }} />
+          <CheckIcon css={{ height: 18, width: 18 }} />
           <Text type='body2'>
             Receive % of protocol revenue from all ecosystem projects
           </Text>
         </Flex>
 
-        <Anchor
-          href='#'
-          css={{
-            color: '$voilet100',
-            marginTop: '30px',
-            gap: '10px',
-          }}
-        >
-          <Text css={{ color: '$voilet100' }}>Join the discussion</Text>
-          <Icon
-            icon='Arrow'
-            css={{
-              '.primary': {
-                stroke: '$voilet100',
-              },
-            }}
-          />
-        </Anchor>
+        <ArrowLink href='#'>Join the discussion</ArrowLink>
       </Flex>
     </InnerGrid>
   )

@@ -48,6 +48,7 @@ export const Text = Stitches.styled(UIText, {
         fontWeight: 600,
         lineHeight: '16px',
         letterSpacing: '1.5%',
+        color: '$gray900',
       },
 
       // E.g: OPEN SOURCE

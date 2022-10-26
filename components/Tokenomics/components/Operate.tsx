@@ -1,4 +1,6 @@
-import { Flex, Heading, Text, Span, Icon } from '@nsfw-app/ui'
+import { Flex, Icon } from '@nsfw-app/ui'
+import { Text } from 'components/Text'
+import { Heading } from 'components/Heading'
 import { spaces } from 'config'
 import { InnerGrid } from 'components/About/components/Block/Blocks'
 
@@ -6,7 +8,7 @@ export const Operate: React.FC = ({}) => {
   return (
     <InnerGrid
       css={{
-        gridGap: '120px',
+        gridGap: '100px',
         '@lg': { gridTemplateColumns: 'repeat(2,2fr)' },
       }}
     >
@@ -30,8 +32,8 @@ export const Operate: React.FC = ({}) => {
             }}
           >
             <Icon icon='MetamaskOutline' css={{ alignSelf: 'start' }} />
-            <Heading as='h4'>Share the platform fees</Heading>
-            <Text type='body3' subText>
+            <Heading type='h2'>Share the platform fees</Heading>
+            <Text type='body2' subText>
               XX% of platform fees are earned by NSFW stakers and lockers.
             </Text>
           </Flex>
@@ -54,8 +56,8 @@ export const Operate: React.FC = ({}) => {
             }}
           >
             <Icon icon='Asterisk' css={{ alignSelf: 'start' }} />
-            <Heading as='h4'>Fast creator withdrawals</Heading>
-            <Text type='body3' subText>
+            <Heading type='h2'>Fast creator withdrawals</Heading>
+            <Text type='body2' subText>
               Creators are able to cash out.
             </Text>
           </Flex>
@@ -81,23 +83,22 @@ export const Operate: React.FC = ({}) => {
       <Flex
         column
         css={{
-          // minWidth: '300px',
           textAlign: 'left',
           justifyContent: 'center',
           gap: '25px',
         }}
       >
-        <Heading as='h3' css={{ marginBottom: spaces[3] }}>
+        <Heading type='h1' css={{ marginBottom: spaces[3] }}>
           The NSFW+ token captures value from all ecosystem projects.
         </Heading>
 
-        <Text subText>
+        <Text type='subhead1' subText>
           Each project will have its own way of generating revenue within the
           ecosystem, but the mandate across all projects share a common theme.
           Drive value to token holders with the mandate of empowering and
           rewarding content creators, fans and community members.
         </Text>
-        <Text subText>
+        <Text type='subhead1' subText>
           Drive value to token holders with the mandate of empowering and
           rewarding content creators, fans and community members.
         </Text>

@@ -6,7 +6,7 @@ export const Heading = Stitches.styled(UIHeading, {
     type: {
       h1: {
         // TODO: review the md and sm breakpoints by eye across these variants (not explicity in designs)
-        lineHeight: '38px',
+        lineHeight: '48px',
         wordSpacing: 0,
         '@xs': {
           fontSize: '24px',
