@@ -13,8 +13,8 @@ const HeaderIcon = Stitches.styled(Flex, {
   backgroundColor: '$gray100',
   borderRadius: '100%',
   border: '1px solid $gray500',
-  width: '60px',
-  height: '60px',
+  width: '54px',
+  height: '54px',
 })
 
 export const LockStake: React.FC = ({}) => {
