@@ -6,12 +6,13 @@ import { BackgroundBlurIcons } from 'components/BackgroundBlurAsterisk'
 
 const FeatureIcon = Stitches.styled(Flex, {
   justifyContent: 'center',
+  alignItems: 'center',
   padding: '10px',
   backgroundColor: '$gray100',
   borderRadius: '100%',
   border: '1px solid $gray500',
-  width: '50px',
-  height: '50px',
+  width: '54px',
+  height: '54px',
 })
 
 export const Operate: React.FC = ({}) => {
@@ -43,7 +44,7 @@ export const Operate: React.FC = ({}) => {
             }}
           >
             <FeatureIcon>
-              <Text css={{ fontSize: '28px' }}>💸</Text>
+              <Text css={{ fontSize: '32px' }}>💸</Text>
             </FeatureIcon>
 
             <Heading as='h2'>Share the platform fees</Heading>
@@ -70,7 +71,7 @@ export const Operate: React.FC = ({}) => {
             }}
           >
             <FeatureIcon>
-              <Text css={{ fontSize: '28px' }}>⚡</Text>
+              <Text css={{ fontSize: '32px' }}>⚡</Text>
             </FeatureIcon>
             <Heading as='h2'>Fast creator withdrawals</Heading>
             <Text type='body2'>Creators are able to cash out.</Text>
@@ -86,7 +87,7 @@ export const Operate: React.FC = ({}) => {
           }}
         >
           <FeatureIcon center css={{ minHeight: '50px', minWidth: '50px' }}>
-            <Icon icon='BadgePolygon' css={{ height: 22, width: 22 }} />
+            <Icon icon='BadgePolygon' css={{ height: 28, width: 32 }} />
           </FeatureIcon>
           <Heading as='h2' css={{ lineHeight: 1.2 }}>
             We will be operating on the Polygon to enjoy low-cost fee
