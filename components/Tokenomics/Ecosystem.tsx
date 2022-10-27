@@ -12,7 +12,9 @@ const CreatorFeatures = ['DMs', 'PetrificationTotalus', 'Wingman Blopster']
 const BulletPoint: React.FC<{ title: string }> = ({ title }) => {
   return (
     <Flex row css={{ gap: '15px', alignItems: 'center' }}>
-      <CheckIcon css={{ height: '18px' }} />
+      <Flex>
+        <CheckIcon css={{ height: 14, width: 14 }} />
+      </Flex>
       <Text type='body2'>{title}</Text>
     </Flex>
   )
@@ -53,11 +55,11 @@ export const Ecosystem: React.FC = ({}) => {
                   backgroundColor: '$gray100',
                   borderRadius: '100%',
                   border: '1px solid $gray500',
-                  width: '50px',
-                  height: '50px',
+                  width: '54px',
+                  height: '54px',
                 }}
               >
-                <Text css={{ fontSize: '30px' }}>💰</Text>
+                <Text css={{ fontSize: '32px' }}>💰</Text>
               </Flex>
 
               <Heading as='h2' css={{ marginTop: '16px' }}>
@@ -98,11 +100,11 @@ export const Ecosystem: React.FC = ({}) => {
                   backgroundColor: '$gray100',
                   borderRadius: '100%',
                   border: '1px solid $gray500',
-                  width: '50px',
-                  height: '50px',
+                  width: '54px',
+                  height: '54px',
                 }}
               >
-                <Text css={{ fontSize: '30px' }}>🎨</Text>
+                <Text css={{ fontSize: '32px' }}>🎨</Text>
               </Flex>
               <Heading as='h2' css={{ marginTop: '16px' }}>
                 Creator ‘Pro’ Features
