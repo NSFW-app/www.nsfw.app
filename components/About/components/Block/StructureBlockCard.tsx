@@ -1,5 +1,7 @@
-import { Stitches, Flex, Text, Heading, Icon, Anchor, Box } from '@nsfw-app/ui'
-import { spaces } from 'config'
+import { Stitches, Flex, Icon } from '@nsfw-app/ui'
+import { Text } from 'components/Typography'
+import { Heading } from 'components/Typography'
+import { ArrowLink } from 'components/ArrowLink'
 
 export interface StructureBlockProps {
   heading: string
@@ -29,7 +31,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         flexDirection: 'column',
         gap: '25px',
         '@xs': {
-          padding: '40px 60px',
+          padding: '40px 20px',
         },
         '@lg': {
           padding: '4vw',
@@ -58,7 +60,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
             {emoji}
           </Text>
         </Flex>
-        <Heading as='h4'>{heading}</Heading>
+        <Heading as='h2'>{heading}</Heading>
       </Flex>
 
       <Flex column css={{ gap: '25px' }}>
@@ -87,38 +89,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         )}
       </Flex>
 
-      <Anchor
-        href={href}
-        css={{
-          color: '$violet800',
-          marginTop: '15px',
-          svg: {
-            transform: 'translateX(0)',
-            transition: '0.2s',
-          },
-          ':hover': {
-            svg: {
-              transform: 'translateX(4px)',
-              transition: '0.3s',
-            },
-          },
-        }}
-      >
-        <Flex row>
-          <Text type='body2' css={{ color: '$violet800' }}>
-            More info
-          </Text>
-          <Icon
-            icon='Arrow'
-            css={{
-              paddingLeft: spaces[1],
-              '.primary': {
-                stroke: '$violet800',
-              },
-            }}
-          />
-        </Flex>
-      </Anchor>
+      <ArrowLink href={href}>More info</ArrowLink>
     </Flex>
   )
 }

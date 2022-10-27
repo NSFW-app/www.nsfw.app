@@ -1,6 +1,6 @@
-import { Stitches, Text, Icon, Flex, Heading, Button, Box } from '@nsfw-app/ui'
+import { Stitches, Icon, Flex, Box } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
-
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
 import { VectorPurple } from 'components/Icons/VectorPurple'
@@ -14,11 +14,11 @@ const FlexLayout = Stitches.styled(Flex, {
   alignItems: 'center',
   '@xs': {
     minHeight: '40vh',
-    marginTop: '15vw',
+    marginTop: '18vw',
   },
   '@lg': {
     minHeight: '100vh',
-    marginTop: '1vw',
+    marginTop: '2vw',
   },
 })
 
@@ -45,7 +45,12 @@ export const TopPart: React.FC = ({}) => {
                 },
               }}
             >
-              <Heading as='h2' css={{ marginBottom: spaces[3] }}>
+              <Heading
+                as='h1'
+                css={{
+                  marginBottom: spaces[3],
+                }}
+              >
                 NSFW+ tokenomics
               </Heading>
 
@@ -69,7 +74,7 @@ export const TopPart: React.FC = ({}) => {
                 }}
               >
                 <Link button theme='primary' href='#'>
-                  Join the discussion
+                  <Text type='body4'>Join the discussion</Text>
                   <Icon
                     icon='Arrow'
                     css={{ paddingLeft: spaces[1], height: 0 }}

@@ -1,4 +1,5 @@
-import { Stitches, Text, Icon, Flex, Heading, Box } from '@nsfw-app/ui'
+import { Stitches, Icon, Flex, Box } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
@@ -27,11 +28,20 @@ export const TopSection = () => {
         }}
       >
         <FlexLayout column>
-          <Heading as='h2' css={{ marginBottom: spaces[3] }}>
+          <Heading
+            as='h1'
+            css={{
+              marginBottom: spaces[3],
+            }}
+          >
             Not Safe for Work (NSFW) is an Impact DAO
           </Heading>
 
-          <Text type='subhead1' subText css={{ marginBottom: spaces[4] }}>
+          <Text
+            type='subhead1'
+            subText
+            css={{ marginBottom: spaces[4], lineHeight: '28px' }}
+          >
             NSFW focusses to provide stable services to content creators and
             rewarding long-term participants through the use of Web3 technology.
           </Text>
@@ -40,9 +50,8 @@ export const TopSection = () => {
 
           <Box
             css={{
-              marginTop: '5vw',
-              '@sm': { width: '80%' },
-              '@lg': { width: '50%' },
+              '@xs': { width: '80%', marginTop: '10vw' },
+              '@lg': { width: '50%', marginTop: '4vw' },
               alignSelf: 'center',
               alignItems: 'center',
               svg: {
@@ -66,7 +75,10 @@ export const TopSection = () => {
                 '@lg': { marginBottom: '0px' },
               }}
             >
-              Learn more about the DAO
+              <Text type='body4' css={{ color: '$gray900' }}>
+                {' '}
+                Learn more about the DAO
+              </Text>
               <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />
             </Link>
           </Box>

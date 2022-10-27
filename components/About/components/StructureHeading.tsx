@@ -1,10 +1,11 @@
-import { Heading, Flex, Text } from '@nsfw-app/ui'
+import { Flex } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 
 export const StructureHeading: React.FC = ({}) => {
   return (
     <>
-      <Heading as='h2' css={{ marginBottom: spaces[3] }}>
+      <Heading as='h1' css={{ marginBottom: spaces[3] }}>
         NSFW App Structure
       </Heading>
 
@@ -18,12 +19,12 @@ export const StructureHeading: React.FC = ({}) => {
             textAlign: 'left',
           }}
         >
-          <Text type='body1' subText>
+          <Text type='subhead1' subText>
             The core team is supported by a dedicated “delegates” group
             responsible for the discussion of sensitive topics before it is put
             to the community for a DAO vote.
           </Text>
-          <Text type='body1' subText>
+          <Text type='subhead1' subText>
             Within the #delegates group; We are commiting to complete
             transparancy into the workings of various departments, following
             Agile product development best practices.

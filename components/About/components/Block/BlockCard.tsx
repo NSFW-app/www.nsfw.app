@@ -1,4 +1,5 @@
-import { Stitches, Flex, Text } from '@nsfw-app/ui'
+import { Stitches, Flex } from '@nsfw-app/ui'
+import { Text } from 'components/Typography'
 
 export interface BlockCardProps {
   body: string
@@ -19,15 +20,15 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
         flexDirection: 'column',
         borderRadius: '8px',
         justifyContent: 'space-between',
-        '@sm': {
-          padding: '20px 50px',
+        '@xs': {
+          padding: '30px 20px',
         },
         '@md': {
           minWidth: '325px',
         },
         '@xl': {
           minWidth: '27vw',
-          padding: '16px 85px 36px 85px',
+          padding: '16px 42px 36px',
         },
         alignItems: 'center',
         textAlign: 'center',
@@ -35,9 +36,7 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
       }}
     >
       {blopIcon}
-      <Text type='body2' css={{ wordSpacing: 0 }}>
-        {body}
-      </Text>
+      <Text type='body2'>{body}</Text>
     </Flex>
   )
 }

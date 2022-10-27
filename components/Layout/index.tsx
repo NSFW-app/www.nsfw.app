@@ -40,6 +40,7 @@ export const Layout: React.FC<LayoutProps> = ({
   og,
   children,
   css,
+  ...props
 }) => {
   const { asPath } = useRouter() || {}
   return (
@@ -67,7 +68,10 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta content='summary_large_image' name='twitter:card' />
       </Nexthead>
       <Navigation />
-      <Box css={{ ...css, minHeight: `calc(100vh - ${sizes.footerHeight})` }}>
+      <Box
+        css={{ ...css, minHeight: `calc(100vh - ${sizes.footerHeight})` }}
+        {...props}
+      >
         {children}
       </Box>
       <Footer />

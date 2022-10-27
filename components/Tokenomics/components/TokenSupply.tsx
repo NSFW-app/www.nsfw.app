@@ -1,5 +1,6 @@
 import { TokenomicsGraph } from 'components/Icons/TokenomicsGraph'
-import { Flex, Heading, Text } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
+import { Flex, Span } from '@nsfw-app/ui'
 
 export const TokenSupply: React.FC = ({}) => {
   return (
@@ -13,10 +14,12 @@ export const TokenSupply: React.FC = ({}) => {
         '@md': { display: 'flex' },
       }}
     >
-      <Heading as='h3'>Token supply</Heading>
-      <Text type='body1' subText>
-        We have a fixed supply of 1B tokens (1,000,000,000) which was voted in
-        via NIP-4. The fixed supply token allocations are outlined below.
+      <Heading as='h1'>Token supply</Heading>
+      <Text type='subhead1' css={{ maxWidth: '60vw' }} subText>
+        We have a fixed supply of{' '}
+        <Span css={{ color: '$violet300' }}> 1B tokens (1,000,000,000)</Span>{' '}
+        which was voted in via NIP-4. The fixed supply token allocations are
+        outlined below.
       </Text>
       <Flex>
         <TokenomicsGraph
@@ -25,7 +28,7 @@ export const TokenSupply: React.FC = ({}) => {
             '@md': {
               marginLeft: '5rem',
             },
-            '@lg': { marginLeft: '7rem' },
+            '@lg': { marginLeft: '6.5rem' },
           }}
         />
       </Flex>

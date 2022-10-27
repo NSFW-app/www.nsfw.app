@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Heading, Text, Icon, Grid } from '@nsfw-app/ui'
+import { Box, Flex, Icon, Grid } from '@nsfw-app/ui'
+import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
 import { Link } from 'components/Link'
@@ -20,14 +21,14 @@ export const Features: React.FC = ({}) => {
         css={{ gap: '30px', marginTop: '20px', '@lg': { padding: '0 90px' } }}
       >
         <Heading
-          as='h2'
+          as='h1'
           css={{ '@xs': { textAlign: 'center' }, '@md': { textAlign: 'left' } }}
         >
           Lockers are also bestowed a non-transferable token
         </Heading>
         <Text
           subText
-          type='body1'
+          type='subhead1'
           css={{ '@xs': { textAlign: 'center' }, '@md': { textAlign: 'left' } }}
         >
           These tokens can boost their voting weights and have the opportunity
@@ -52,7 +53,7 @@ export const Features: React.FC = ({}) => {
       </Flex>
 
       <Flex column css={{ gap: '15px', marginTop: '1.5vw' }}>
-        <Heading as='h3' css={{ color: '$gray800' }}>
+        <Heading as='h2' css={{ color: '$gray800' }}>
           Proposed features
         </Heading>
 
@@ -79,7 +80,7 @@ export const Features: React.FC = ({}) => {
               <Box css={{ minWidth: '21px' }}>
                 <CheckIcon />
               </Box>
-              <Text type='body3'>{text}</Text>
+              <Text type='body2'>{text}</Text>
             </Flex>
           ))}
         </Grid>

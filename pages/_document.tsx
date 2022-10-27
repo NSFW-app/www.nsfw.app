@@ -1,7 +1,6 @@
 import React from 'react'
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 import { Stitches } from '@nsfw-app/ui'
-import { marketingTheme } from 'lib/theme/marketing'
 
 export default class Document extends NextDocument {
   render() {
@@ -13,7 +12,7 @@ export default class Document extends NextDocument {
             dangerouslySetInnerHTML={{ __html: Stitches.getCssText() }}
           />
         </Head>
-        <body style={{ position: 'relative' }} className={marketingTheme}>
+        <body style={{ position: 'relative' }}>
           {/* TODO: this is a requirement for @nfsw/ui modals, review this for lib consumers */}
           <div
             id='modal-container'

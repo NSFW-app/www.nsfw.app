@@ -1,8 +1,8 @@
 import { BlockCardProps } from '../components/Block/BlockCard'
 import { StructureBlockProps } from '../components/Block/StructureBlockCard'
-import { BlopPink } from '../Icons/Blops/BlopPink'
-import { BlopPurple } from '../Icons/Blops/BlopPurple'
-import { BlopYellow } from '../Icons/Blops/BlopYellow'
+import { BlopPink } from '../../Icons/Blops/BlopPink'
+import { BlopPurple } from '../../Icons/Blops/BlopPurple'
+import { BlopYellow } from '../../Icons/Blops/BlopYellow'
 
 export const serviceData: BlockCardProps[] = [
   {
@@ -30,7 +30,7 @@ export const serviceData: BlockCardProps[] = [
 
 export const structureData: StructureBlockProps[] = [
   {
-    heading: 'OKR',
+    heading: 'OKRs',
     subheading:
       'Aliquam a velit tellus. Nunc interdum, tellus semper pulvinar mollis, mi nibh cursus dui, et accumsan ipsum nulla id massa. ',
     gradient:

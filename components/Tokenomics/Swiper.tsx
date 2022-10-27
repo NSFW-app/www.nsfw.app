@@ -1,12 +1,4 @@
-import {
-  Text,
-  Flex,
-  Grid,
-  Heading,
-  Stitches,
-  Anchor,
-  Icon,
-} from '@nsfw-app/ui'
+import { Text, Flex, Grid, Heading, Stitches, Anchor, Icon } from '@nsfw-app/ui'
 import Image from 'next/image'
 import { styled } from '@stitches/react'
 import { Carousel } from '@mantine/carousel'
