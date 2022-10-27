@@ -2,6 +2,7 @@ import { Stitches, Flex, Icon } from '@nsfw-app/ui'
 import { Text } from 'components/Typography'
 import { Heading } from 'components/Typography'
 import { ArrowLink } from 'components/ArrowLink'
+import { CheckIcon } from 'components/Icons/Check'
 
 export interface StructureBlockProps {
   heading: string
@@ -73,8 +74,7 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
               key={`${i}-${bullet}`}
               css={{ alignItems: 'center', gap: '12px' }}
             >
-              {/* TODO (after merging the tokenomics page): Change to CheckIcon (I created the icon component on a new branch: feat/tokenomics) */}
-              <Icon icon='Asterisk' />
+              <CheckIcon css={{ width: 12, height: 12 }} />
               <Text type='body3' css={{ color: '$gray900' }}>
                 {bullet}
               </Text>
