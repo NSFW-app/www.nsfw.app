@@ -4,6 +4,7 @@ import { styled } from '@stitches/react'
 import { Carousel } from '@mantine/carousel'
 import { CreatorsData } from './data/ContentCreators'
 import { useEffect, useState } from 'react'
+import { getSelectorsByUserAgent } from 'react-device-detect'
 
 const CreatorCard = styled(Flex, {
   minHeight: '325px',
@@ -54,11 +55,13 @@ const NextIcon = () => {
 
 export const SwiperComponent = () => {
   const [isDesktop, setIsDesktop] = useState(false)
+
   useEffect(() => {
-    if (localStorage.getItem('deviceType') == 'desktop') {
+    const { isMobile } = getSelectorsByUserAgent(navigator.userAgent)
+    if (!isMobile) {
       setIsDesktop(true)
     }
-  }, [isDesktop])
+  }, [])
 
   return (
     <Carousel
