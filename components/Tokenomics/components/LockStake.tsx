@@ -3,8 +3,8 @@ import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
 import { ArrowLink } from 'components/ArrowLink'
-import { VectorPink } from 'components/Icons/VectorPink'
 import { BlopYellow } from 'components/Icons/Blops/BlopYellow'
+import { BlopPink } from 'components/Icons/Blops/BlopPink'
 
 const HeaderIcon = Stitches.styled(Flex, {
   alignItems: 'center',
@@ -37,13 +37,22 @@ export const LockStake: React.FC = ({}) => {
             'linear-gradient(248.77deg, rgba(59, 172, 236, 0.1) 1.24%, rgba(52, 152, 209, 0.0885417) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
         }}
       >
-        <VectorPink
+        <BlopPink
           css={{
-            height: '350px',
-            width: '350px',
             position: 'absolute',
             filter: 'blur(10px) opacity(0.2)',
-            right: 10,
+            '@xs': {
+              height: '250px',
+              width: '250px',
+              right: 0,
+              top: 100,
+            },
+            '@md': {
+              right: -30,
+              top: 0,
+              height: '400px',
+              width: '400px',
+            },
           }}
         />
         <Flex column css={{ gap: '35px' }}>
@@ -87,12 +96,20 @@ export const LockStake: React.FC = ({}) => {
       >
         <BlopYellow
           css={{
-            height: '350px',
-            width: '350px',
             position: 'absolute',
             filter: 'blur(10px) opacity(0.2)',
-            right: -50,
-            top: 20,
+            '@xs': {
+              height: '250px',
+              width: '250px',
+              right: -10,
+              top: 50,
+            },
+            '@md': {
+              right: -70,
+              top: 10,
+              height: '400px',
+              width: '400px',
+            },
           }}
         />
         <Flex row css={{ gap: '15px', alignItems: 'center' }}>
@@ -113,7 +130,9 @@ export const LockStake: React.FC = ({}) => {
           Proposed features:
         </Text>
         <Flex row css={{ alignItems: 'center', gap: '15px' }}>
-          <CheckIcon css={{ height: 18, width: 18 }} />
+          <Flex>
+            <CheckIcon css={{ height: 14, width: 14 }} />
+          </Flex>
           <Text type='body2'>
             Receive % of protocol revenue from all ecosystem projects
           </Text>
