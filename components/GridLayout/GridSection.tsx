@@ -17,6 +17,9 @@ export const GridSection = Stitches.styled(Section, {
     gridTemplateColumns: 'repeat(8, 1fr)',
     padding: '0 40px',
   },
+  '@lg': {
+    padding: '0 100px',
+  },
   '@xxl': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     padding: sizes.sectionPadding,
