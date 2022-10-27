@@ -41,17 +41,18 @@ export const LockStake: React.FC = ({}) => {
           css={{
             position: 'absolute',
             filter: 'blur(10px) opacity(0.2)',
+            transform: 'rotate(280deg)',
             '@xs': {
               height: '250px',
               width: '250px',
-              right: 0,
+              right: 10,
               top: 100,
             },
             '@md': {
-              right: -30,
-              top: 0,
-              height: '400px',
-              width: '400px',
+              right: 30,
+              top: 30,
+              height: '350px',
+              width: '350px',
             },
           }}
         />
@@ -98,17 +99,18 @@ export const LockStake: React.FC = ({}) => {
           css={{
             position: 'absolute',
             filter: 'blur(10px) opacity(0.2)',
+            transform: 'rotate(260deg)',
             '@xs': {
               height: '250px',
               width: '250px',
-              right: -10,
+              right: 10,
               top: 50,
             },
             '@md': {
-              right: -70,
-              top: 10,
-              height: '400px',
-              width: '400px',
+              right: 0,
+              top: 20,
+              height: '350px',
+              width: '350px',
             },
           }}
         />
