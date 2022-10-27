@@ -18,7 +18,7 @@ export const Features: React.FC = ({}) => {
     <InnerGrid css={{ margin: '7vw 0' }}>
       <Flex
         column
-        css={{ gap: '30px', marginTop: '20px', '@lg': { padding: '0 90px' } }}
+        css={{ gap: '30px', marginTop: '20px', '@lg': { padding: '0 50px' } }}
       >
         <Heading
           as='h1'

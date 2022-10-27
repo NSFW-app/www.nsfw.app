@@ -4,7 +4,7 @@ import { spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
-import { BlopGreen } from 'components/Icons/Blops/BlopGreen'
+import { BlopsComponents } from 'components/About/components/BlopsComponents'
 
 const FlexLayout = Stitches.styled(Flex, {
   gap: '40px',
@@ -36,10 +36,13 @@ export const TopPart: React.FC = ({}) => {
               css={{
                 '@xs': {
                   textAlign: 'center',
+                  minWidth: '350px',
                 },
                 '@md': {
                   textAlign: 'left',
-                  paddingRight: '100px',
+                },
+                '@lg': {
+                  maxWidth: '500px',
                 },
               }}
             >
@@ -80,17 +83,8 @@ export const TopPart: React.FC = ({}) => {
                 </Link>
               </Box>
             </Flex>
-            {/* <Flex
-              css={{
-                width: '100px',
-                position: 'relative',
-                top: -100,
-                '@xs': { display: 'none' },
-                '@lg': { display: 'flex' },
-              }}
-            >
-              <BlopGreen />
-            </Flex> */}
+
+            <BlopsComponents />
           </InnerGrid>
         </FlexLayout>
       </GridContent>

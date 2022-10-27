@@ -37,11 +37,11 @@ export const Ecosystem: React.FC = ({}) => {
               gap: '11px',
               padding: '50px',
               borderRadius: '8px',
-              minWidth: '330px',
+              minWidth: '300px',
               justifyContent: 'space-between',
               '@xs': { order: 2 },
               '@lg': {
-                maxWidth: '310px',
+                maxWidth: '330px',
                 order: 2,
                 maxHeight: '450px',
               },
@@ -82,11 +82,11 @@ export const Ecosystem: React.FC = ({}) => {
               gap: '11px',
               padding: '50px',
               borderRadius: '8px',
-              minWidth: '330px',
+              minWidth: '300px',
               justifyContent: 'space-between',
               '@xs': { order: 3 },
               '@lg': {
-                maxWidth: '310px',
+                maxWidth: '330px',
                 maxHeight: '450px',
                 order: 2,
               },
@@ -127,8 +127,8 @@ export const Ecosystem: React.FC = ({}) => {
               marginTop: '-3vw',
               '@xs': { order: 1, textAlign: 'center' },
               '@md': { textAlign: 'left' },
-              '@lg': { minWidth: '330px', order: 3 },
-              '@xl': { minWidth: '550px' },
+              '@lg': { minWidth: '340px', order: 3 },
+              '@xxl': { minWidth: '550px' },
             }}
           >
             <Heading as='h1'>NSFW.app Ecosystem</Heading>
