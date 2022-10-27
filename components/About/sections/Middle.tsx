@@ -26,7 +26,7 @@ export const MiddleSection = () => {
       >
         <DAO />
         <Operate />
-        
+
       </GridContent>
     </GridSection>
   )

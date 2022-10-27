@@ -11,37 +11,46 @@ export const BlopsComponents: React.FC = () => {
     <Flex
       css={{
         position: 'relative',
-        top: -100,
+        top: -40,
         '@xs': { display: 'none', width: 0 },
         '@lg': { display: 'flex', width: '40vw' },
+        svg: {
+          transition: '0.3s',
+        },
       }}
     >
       <BlopOrange
         css={{
           position: 'absolute',
           left: '32%',
-          top: -40,
-          minHeight: '9vw',
-          minWidth: '9vw',
+          top: 0,
+          height: '8vw',
+          width: '8vw',
+          '@xl': {
+            top: 0,
+          },
         }}
       />
       <BlopYellow
         css={{
           position: 'absolute',
           left: '53%',
-          top: -50,
-          height: '13vw',
-          minWidth: '13vw',
+          top: -10,
+          height: '10vw',
+          width: '10vw',
         }}
       />
       <BlopPink
         css={{
           position: 'absolute',
           left: -100,
-          top: -60,
-          minHeight: '25vw',
-          minWidth: '25vw',
+          top: 0,
+          height: '25vw',
+          width: '25vw',
           transform: 'rotate(260deg)',
+          '@xl': {
+            top: -80,
+          },
         }}
       />
       <BlopViolet
@@ -49,27 +58,27 @@ export const BlopsComponents: React.FC = () => {
           position: 'absolute',
           left: '35%',
           top: '30%',
-          height: '22vw',
-          width: '22vw',
+          height: '20vw',
+          width: '20vw',
         }}
       />
       <BlopPurple
         css={{
           position: 'absolute',
           '@lg': {
-            left: '1%',
-            top: '80%',
+            top: 240,
+            left: '6%',
           },
-          '@xxl': {
-            left: '11%',
-            top: '99%',
+          '@xl': {
+            top: 300,
+            left: '15%',
           },
         }}
       />
       <BlopGreen
         css={{
           position: 'absolute',
-          left: '80%',
+          left: '75%',
           top: '110%',
           height: '7vw',
           width: '7vw',

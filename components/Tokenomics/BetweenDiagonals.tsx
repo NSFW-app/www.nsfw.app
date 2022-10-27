@@ -21,7 +21,7 @@ export const BetweenDiagonals: React.FC = ({}) => {
         css={{
           zIndex: 1,
           height: 'auto',
-          marginTop: '12vw',
+          marginTop: '8vw',
         }}
       >
         <Operate />

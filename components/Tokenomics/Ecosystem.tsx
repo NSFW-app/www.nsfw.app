@@ -5,6 +5,7 @@ import { GridContent, GridSection } from 'components/GridLayout'
 import { ArrowLink } from 'components/ArrowLink'
 import { CheckIcon } from 'components/Icons/Check'
 import { spaces } from 'config'
+import { styled } from '@stitches/react'
 
 const PlatformFeesBullets = ['DMs', 'PetrificationTotalus', 'Wingman Blopster']
 const CreatorFeatures = ['DMs', 'PetrificationTotalus', 'Wingman Blopster']
@@ -19,6 +20,15 @@ const BulletPoint: React.FC<{ title: string }> = ({ title }) => {
     </Flex>
   )
 }
+
+const FeatureIcon = styled(Flex, {
+  padding: '10px',
+  backgroundColor: '$gray100',
+  borderRadius: '100%',
+  border: '1px solid $gray500',
+  width: '54px',
+  height: '54px',
+})
 
 export const Ecosystem: React.FC = ({}) => {
   return (
@@ -48,19 +58,9 @@ export const Ecosystem: React.FC = ({}) => {
             }}
           >
             <Box>
-              <Flex
-                center
-                css={{
-                  padding: '10px',
-                  backgroundColor: '$gray100',
-                  borderRadius: '100%',
-                  border: '1px solid $gray500',
-                  width: '54px',
-                  height: '54px',
-                }}
-              >
+              <FeatureIcon center>
                 <Text css={{ fontSize: '32px' }}>💰</Text>
-              </Flex>
+              </FeatureIcon>
 
               <Heading as='h2' css={{ marginTop: '16px' }}>
                 Platform Fees
@@ -93,19 +93,9 @@ export const Ecosystem: React.FC = ({}) => {
             }}
           >
             <Box>
-              <Flex
-                center
-                css={{
-                  padding: '10px',
-                  backgroundColor: '$gray100',
-                  borderRadius: '100%',
-                  border: '1px solid $gray500',
-                  width: '54px',
-                  height: '54px',
-                }}
-              >
+              <FeatureIcon center>
                 <Text css={{ fontSize: '32px' }}>🎨</Text>
-              </Flex>
+              </FeatureIcon>
               <Heading as='h2' css={{ marginTop: '16px' }}>
                 Creator ‘Pro’ Features
               </Heading>

@@ -15,8 +15,8 @@ const FlexLayout = Stitches.styled(Flex, {
     marginTop: '18vw',
   },
   '@lg': {
-    minHeight: '100vh',
-    marginTop: '2vw',
+    minHeight: '55vh',
+    marginTop: '3vw',
   },
 })
 
@@ -29,7 +29,7 @@ export const TopPart: React.FC = ({}) => {
           desktop: '1 / 24',
         }}
       >
-        <FlexLayout row css={{ overflowX: 'hidden', width: '100%' }}>
+        <FlexLayout row css={{ overflow: 'hidden', width: '100%' }}>
           <InnerGrid>
             <Flex
               column
