@@ -3,7 +3,7 @@ import { DiagonalBgBreak } from 'components/DiagonalBgBreak'
 import { Operate } from './components/Operate'
 import { TokenSupply } from './components/TokenSupply'
 
-export const Blurred2: React.FC = ({}) => {
+export const BetweenDiagonals: React.FC = ({}) => {
   return (
     <GridSection
       css={{
@@ -26,12 +26,6 @@ export const Blurred2: React.FC = ({}) => {
       >
         <Operate />
         <TokenSupply />
-        {/* <DAO /> */}
-        {/* <Flex center>
-          <TokenomicsGraph
-            css={{ '@xs': { display: 'none' }, '@md': { display: 'block' } }}
-          />
-        </Flex> */}
       </GridContent>
     </GridSection>
   )

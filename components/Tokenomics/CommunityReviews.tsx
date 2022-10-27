@@ -53,7 +53,7 @@ const NextIcon = () => {
   )
 }
 
-export const SwiperComponent = () => {
+export const CommunityReviews = () => {
   const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {

@@ -1,18 +1,19 @@
 import { Layout } from 'components/Layout'
 import { TopPart } from 'components/Tokenomics/TopPart'
-import { Blurred2 } from 'components/Tokenomics/Blurred'
+import { BetweenDiagonals } from 'components/Tokenomics/BetweenDiagonals'
 import { TokenUtility } from 'components/Tokenomics/TokenUtility'
-import { SwiperComponent } from 'components/Tokenomics/Swiper'
+import { CommunityReviews } from 'components/Tokenomics/CommunityReviews'
 import { Ecosystem } from 'components/Tokenomics/Ecosystem'
 
 const Tokenomics: React.FC = () => {
   return (
     <Layout>
       <TopPart />
-      <Blurred2 />
+      <BetweenDiagonals />
       <TokenUtility />
       <Ecosystem />
-      <SwiperComponent />
+      <CommunityReviews />
+      {/* <FAQ/> */}
     </Layout>
   )
 }
