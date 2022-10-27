@@ -3,6 +3,8 @@ import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
 import { ArrowLink } from 'components/ArrowLink'
+import { VectorPink } from 'components/Icons/VectorPink'
+import { BlopYellow } from 'components/Icons/Blops/BlopYellow'
 
 const HeaderIcon = Stitches.styled(Flex, {
   alignItems: 'center',
@@ -21,6 +23,7 @@ export const LockStake: React.FC = ({}) => {
       <Flex
         column
         css={{
+          position: 'relative',
           '@xs': {
             padding: '20px',
           },
@@ -34,6 +37,15 @@ export const LockStake: React.FC = ({}) => {
             'linear-gradient(248.77deg, rgba(59, 172, 236, 0.1) 1.24%, rgba(52, 152, 209, 0.0885417) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
         }}
       >
+        <VectorPink
+          css={{
+            height: '350px',
+            width: '350px',
+            position: 'absolute',
+            filter: 'blur(10px) opacity(0.2)',
+            right: 10,
+          }}
+        />
         <Flex column css={{ gap: '35px' }}>
           <Flex row css={{ gap: '15px', alignItems: 'center' }}>
             <HeaderIcon>
@@ -60,6 +72,7 @@ export const LockStake: React.FC = ({}) => {
       <Flex
         column
         css={{
+          position: 'relative',
           '@xs': {
             padding: '20px',
           },
@@ -72,6 +85,16 @@ export const LockStake: React.FC = ({}) => {
           gap: '30px',
         }}
       >
+        <BlopYellow
+          css={{
+            height: '350px',
+            width: '350px',
+            position: 'absolute',
+            filter: 'blur(10px) opacity(0.2)',
+            right: -50,
+            top: 20,
+          }}
+        />
         <Flex row css={{ gap: '15px', alignItems: 'center' }}>
           <HeaderIcon>
             <Text css={{ fontSize: '32px' }}>🔐</Text>
