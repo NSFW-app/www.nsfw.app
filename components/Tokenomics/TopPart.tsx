@@ -14,6 +14,9 @@ const FlexLayout = Stitches.styled(Flex, {
     minHeight: '40vh',
     marginTop: '18vw',
   },
+  '@md': {
+    marginTop: '10vw',
+  },
   '@lg': {
     minHeight: '55vh',
     marginTop: '3vw',
