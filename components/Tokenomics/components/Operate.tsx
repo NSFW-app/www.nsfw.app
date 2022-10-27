@@ -2,6 +2,7 @@ import { Flex, Icon, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { InnerGrid } from 'components/About/components/Block/Blocks'
+import { BackgroundBlurIcons } from 'components/BackgroundBlurAsterisk'
 
 const FeatureIcon = Stitches.styled(Flex, {
   justifyContent: 'center',
@@ -21,7 +22,8 @@ export const Operate: React.FC = ({}) => {
         '@lg': { gridTemplateColumns: 'repeat(2,2fr)' },
       }}
     >
-      <Flex column css={{ gap: '15px' }}>
+      <BackgroundBlurIcons />
+      <Flex column css={{ gap: '15px', zIndex: 2 }}>
         <Flex row css={{ gap: '15px' }}>
           <Flex
             column
