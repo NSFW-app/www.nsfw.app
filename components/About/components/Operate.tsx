@@ -27,12 +27,16 @@ const OperateCard = Stitches.styled(Flex, {
 
 const CommPortalCard = Stitches.styled(OperateCard, {
   padding: '20px 30px',
-  minWidth: '370px',
+  minWidth: '330px',
   width: '100%',
   height: '100%',
   justifyContent: 'center',
   '@xs': { flexDirection: 'row', justifyContent: 'space-around' },
-  '@lg': { flexDirection: 'column', justifyContent: 'center' },
+  '@lg': {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    minWidth: '370px',
+  },
 })
 
 export const Operate = () => {

@@ -3,7 +3,6 @@ import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
 import { ArrowLink } from 'components/ArrowLink'
-import { AsteriskColor } from 'components/Icons/AsteriskColor'
 import { BackgroundBlurIcons } from 'components/BackgroundBlurAsterisk'
 
 const ProposalCard = Stitches.styled(Flex, {
