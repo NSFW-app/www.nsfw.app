@@ -45,7 +45,7 @@ export const Operate: React.FC = ({}) => {
             </FeatureIcon>
 
             <Heading as='h2'>Share the platform fees</Heading>
-            <Text type='body2' subText>
+            <Text type='body2'>
               XX% of platform fees are earned by NSFW stakers and lockers.
             </Text>
           </Flex>
@@ -71,25 +71,22 @@ export const Operate: React.FC = ({}) => {
               <Text css={{ fontSize: '28px' }}>⚡</Text>
             </FeatureIcon>
             <Heading as='h2'>Fast creator withdrawals</Heading>
-            <Text type='body2' subText>
-              Creators are able to cash out.
-            </Text>
+            <Text type='body2'>Creators are able to cash out.</Text>
           </Flex>
         </Flex>
         <Flex
-          row
+          column
           css={{
             backgroundColor: '$gray300',
-            alignItems: 'center',
-            gap: '30px',
+            gap: '12px',
             borderRadius: '8px',
-            padding: '45px 30px ',
+            padding: '40px',
           }}
         >
           <FeatureIcon center css={{ minHeight: '50px', minWidth: '50px' }}>
             <Icon icon='BadgePolygon' css={{ height: 22, width: 22 }} />
           </FeatureIcon>
-          <Heading as='h4' css={{ lineHeight: 1.2 }}>
+          <Heading as='h2' css={{ lineHeight: 1.2 }}>
             We will be operating on the Polygon to enjoy low-cost fee
             environment.
           </Heading>
