@@ -50,7 +50,7 @@ export const structureData: StructureBlockProps[] = [
     subheading:
       'Aliquam a velit tellus. Nunc interdum, tellus semper pulvinar mollis, mi nibh cursus dui, et accumsan ipsum nulla id massa. ',
     gradient:
-      'linear-gradient(248.77deg, rgba(233, 75, 75, 0.15) 1.24%, rgba(233, 75, 75, 0.132813) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
+      'linear-gradient(248.77deg, rgba(251, 194, 47, 0.1) 1.24%, rgba(251, 194, 47, 0.0885417) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
     bullets: [
       'Morbi id odio at mi finibus scelerisque eget et purus.',
 
@@ -66,7 +66,7 @@ export const structureData: StructureBlockProps[] = [
     subheading:
       'Aliquam a velit tellus. Nunc interdum, tellus semper pulvinar mollis, mi nibh cursus dui, et accumsan ipsum nulla id massa. ',
     gradient:
-      'linear-gradient(248.77deg, rgba(251, 194, 47, 0.1) 1.24%, rgba(251, 194, 47, 0.0885417) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
+      'linear-gradient(248.77deg, rgba(233, 75, 75, 0.15) 1.24%, rgba(233, 75, 75, 0.132813) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
     bullets: [
       'Morbi id odio at mi finibus scelerisque eget et purus.',
 
