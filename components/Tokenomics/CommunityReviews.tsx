@@ -9,6 +9,7 @@ import { getSelectorsByUserAgent } from 'react-device-detect'
 import { SemiColons } from 'components/Icons/SemiColons'
 
 const CreatorCard = styled(Flex, {
+  position: 'relative',
   minHeight: '325px',
   height: '100%',
   backgroundColor: '$gray100',
@@ -104,9 +105,9 @@ export const CommunityReviews = () => {
               css={{
                 position: 'absolute',
                 overflowX: 'hidden !important',
-                right: 10,
+                right: '-80px',
                 top: 0,
-                filter: 'blur(2px) opacity(0.5)',
+                filter: 'blur(10px) opacity(0.5)',
               }}
             >
               {cc.backgroundImg}

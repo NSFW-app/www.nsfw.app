@@ -102,7 +102,7 @@ export const Operate: React.FC = ({}) => {
           textAlign: 'left',
           justifyContent: 'center',
           gap: '30px',
-          maxWidth: '500px',
+          maxWidth: '580px',
         }}
       >
         <Heading as='h1' css={{ marginBottom: spaces[3] }}>
