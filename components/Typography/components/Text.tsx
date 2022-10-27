@@ -35,7 +35,7 @@ export const Text = Stitches.styled(UIText, {
       },
       // Bullet points in OKRs
       body3: {
-        fontSize: '13px',
+        fontSize: '14px',
         fontWeight: 500,
         wordSpacing: 0,
         lineHeight: '16px',

@@ -1,16 +1,18 @@
-import { Text, Flex, Grid, Heading, Stitches, Anchor, Icon } from '@nsfw-app/ui'
+import { Flex, Grid, Stitches, Anchor, Icon } from '@nsfw-app/ui'
+import { Text, Heading } from 'components/Typography'
 import Image from 'next/image'
 import { styled } from '@stitches/react'
 import { Carousel } from '@mantine/carousel'
 import { CreatorsData } from './data/ContentCreators'
 import { useEffect, useState } from 'react'
 import { getSelectorsByUserAgent } from 'react-device-detect'
+import { SemiColons } from 'components/Icons/SemiColons'
 
 const CreatorCard = styled(Flex, {
   minHeight: '325px',
   height: '100%',
   backgroundColor: '$gray100',
-  padding: '40px 55px',
+  padding: '40px 65px',
   borderRadius: '8px',
   flexDirection: 'column',
   gap: '30px',
@@ -68,7 +70,7 @@ export const CommunityReviews = () => {
       // withIndicators
       slideSize='33.33%'
       styles={{
-        slide: { overflowX: 'hidden' },
+        slide: { overflow: 'hidden' },
         control: {
           backgroundColor: `${Stitches.theme.colors.gray400}`,
           border: 0,
@@ -78,7 +80,7 @@ export const CommunityReviews = () => {
       }}
       dragFree
       withControls={isDesktop ? true : false}
-      slideGap={isDesktop ? 50 : 10}
+      slideGap={isDesktop ? 60 : 10}
       sx={{
         padding: isDesktop ? '50px 35px' : '20px 0px',
         backgroundColor: `${Stitches.theme.colors.gray400}`,
@@ -103,13 +105,22 @@ export const CommunityReviews = () => {
                 position: 'absolute',
                 overflowX: 'hidden !important',
                 right: 10,
-                top: -60,
-                filter: 'blur(8px) opacity(0.5)',
+                top: 0,
+                filter: 'blur(2px) opacity(0.5)',
               }}
             >
               {cc.backgroundImg}
             </Flex>
-            <Grid css={{ gridTemplateColumns: '90px 2fr' }}>
+            <SemiColons
+              css={{ position: 'absolute', top: 135, left: 40, zIndex: 1 }}
+            />
+            <Grid
+              css={{
+                gridTemplateColumns: '90px 2fr',
+                alignItems: 'center',
+                marginLeft: '-20px',
+              }}
+            >
               <Image
                 src={cc.avatar}
                 layout='fixed'
@@ -119,15 +130,19 @@ export const CommunityReviews = () => {
               />
               <Flex column css={{ gap: '5px' }}>
                 <Heading as='h5'>{cc.name}</Heading>
-                <Text subText type='body2'>
+                <Text subText type='body3'>
                   {cc.lastSeen}
                 </Text>
                 <Anchor href={cc.href} css={{ color: '$voilet100' }}>
-                  view profile
+                  <Text type='body3' css={{ color: 'inherit' }}>
+                    view profile
+                  </Text>
                 </Anchor>
               </Flex>
             </Grid>
-            <Text type='body2'>{cc.bio}</Text>
+            <Text type='body2' css={{ zIndex: 2 }}>
+              {cc.bio}
+            </Text>
           </CreatorCard>
         </Carousel.Slide>
       ))}
