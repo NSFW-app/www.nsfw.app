@@ -77,8 +77,6 @@ export const TokenUtility: React.FC = ({}) => {
             <TokenUtilityGraph css={{ width: '100%' }} />
           </Flex>
         </InnerGrid>
-        <LockStake />
-        <Features />
       </GridContent>
     </GridSection>
   )
