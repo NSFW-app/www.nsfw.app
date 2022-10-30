@@ -132,7 +132,7 @@ export const Navigation = () => {
           <LaunchButton
             css={{
               marginLeft: sizes.navigationItemMargin,
-              display: 'none',
+              '@xs': { padding: '6px 12px' },
               '@lg': { display: 'inline-flex' },
             }}
             onClick={() => analytics.track(NSFW_EVENT.LAUNCH_APP)}
