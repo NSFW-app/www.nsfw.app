@@ -25,12 +25,12 @@ export const CreatorsHeroSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 12',
+          desktop: '2 / 13',
         }}
       >
         <HeroFlex center column>
           <Heading css={{ marginBottom: spaces[3] }}>
-          Are you a creative professional?
+            Are you a creative professional?
           </Heading>
           <Text
             type='subhead1'

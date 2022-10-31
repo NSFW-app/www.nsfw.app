@@ -35,8 +35,8 @@ export const Ecosystem: React.FC = ({}) => {
     <GridSection css={{ backgroundColor: '$gray400', paddingTop: '50px' }}>
       <GridContent
         columns={{
-          tablet: '1 / 12',
-          desktop: '1 / 24',
+          tablet: '1 / 13',
+          desktop: '1 / 13',
         }}
       >
         <InnerGrid>

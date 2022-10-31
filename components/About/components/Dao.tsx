@@ -1,4 +1,4 @@
-import { Flex, Icon, Button, Box, Stitches } from '@nsfw-app/ui'
+import { Flex, Button, Box, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from './Block/Blocks'
 import { spaces } from 'config'
@@ -11,17 +11,9 @@ const ProposalCard = Stitches.styled(Flex, {
   gap: '15px',
   padding: '40px',
   borderRadius: '8px',
-  minWidth: '300px',
   justifyContent: 'center',
   zIndex: 3,
-  marginBottom: '30px',
-  '@sm': {
-    marginTop: '20px',
-    marginBottom: '50px',
-  },
   '@lg': {
-    maxWidth: '304px',
-    margin: '-5vw 0 0 4vw',
     justifySelf: 'end',
   },
 })
@@ -31,12 +23,7 @@ const DelegatesCard = Stitches.styled(Flex, {
   backgroundColor: '$gray300',
   gap: '16px',
   padding: '40px ',
-  marginTop: '-5vw',
   borderRadius: '8px',
-  minWidth: '300px',
-  '@lg': {
-    maxWidth: '304px',
-  },
 })
 
 const DoaCardIcon = Stitches.styled(Flex, {
@@ -56,7 +43,7 @@ export const DAO = () => {
         column
         css={{
           zIndex: 2,
-          '@lg': { minWidth: '320px' },
+          justifyContent: 'center',
         }}
       >
         <Heading

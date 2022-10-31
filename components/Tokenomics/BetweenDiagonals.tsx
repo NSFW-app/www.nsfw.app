@@ -15,8 +15,8 @@ export const BetweenDiagonals: React.FC = ({}) => {
       <DiagonalBgBreak />
       <GridContent
         columns={{
-          tablet: '1 / 12',
-          desktop: '1 / 24',
+          tablet: '1 / 13',
+          desktop: '1 / 13',
         }}
         css={{
           zIndex: 1,

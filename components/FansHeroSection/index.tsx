@@ -25,7 +25,7 @@ export const FansHeroSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 12',
+          desktop: '2 / 13',
         }}
       >
         <HeroFlex center column>
@@ -37,7 +37,8 @@ export const FansHeroSection = () => {
             subText
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
-            Explore a new and exciting way to unlock your favourite adult content using crypto.
+            Explore a new and exciting way to unlock your favourite adult
+            content using crypto.
           </Text>
           <Flex
             fullWidth

@@ -6,25 +6,17 @@ import { Link } from 'components/Link'
 import { Blocks } from '../components/Block/Blocks'
 
 const FlexLayout = Stitches.styled(Flex, {
-  minHeight: '100vh',
   textAlign: 'center',
   justifyContent: 'center',
-  marginTop: '0',
-  '@xs': {
-    marginTop: '18vw',
-  },
-  '@lg': {
-    marginTop: '2vw',
-  },
 })
 
 export const TopSection = () => {
   return (
-    <GridSection>
+    <GridSection css={{ paddingTop: '10vh', '@lg': { paddingTop: '20vh' } }}>
       <GridContent
         columns={{
-          tablet: '2 / 8',
-          desktop: '2 / 12',
+          tablet: '1 / 9',
+          desktop: '1 / 13',
         }}
       >
         <FlexLayout column>

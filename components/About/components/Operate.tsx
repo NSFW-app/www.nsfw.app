@@ -27,7 +27,6 @@ const OperateCard = Stitches.styled(Flex, {
 
 const CommPortalCard = Stitches.styled(OperateCard, {
   padding: '20px 30px',
-  minWidth: '330px',
   width: '100%',
   height: '100%',
   justifyContent: 'center',
@@ -35,13 +34,12 @@ const CommPortalCard = Stitches.styled(OperateCard, {
   '@lg': {
     flexDirection: 'column',
     justifyContent: 'center',
-    minWidth: '370px',
   },
 })
 
 export const Operate = () => {
   return (
-    <InnerGrid css={{ marginTop: '10vw' }}>
+    <InnerGrid>
       <Flex
         css={{
           a: { width: '100%' },

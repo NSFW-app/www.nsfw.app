@@ -4,8 +4,8 @@ import { StructureBlock } from './StructureBlockCard'
 
 export const InnerGrid = Stitches.styled(Grid, {
   gridGap: '46px',
-  margin: '4vw 0',
   justifyContent: 'center',
+  marginTop: '80px',
   '@lg': {
     gridTemplateColumns: 'repeat(2,2fr)',
   },

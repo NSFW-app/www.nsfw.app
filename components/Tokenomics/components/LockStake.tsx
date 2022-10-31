@@ -23,8 +23,8 @@ export const LockStake: React.FC = ({}) => {
     <GridSection css={{ '@lg': { padding: '0 50px' } }}>
       <GridContent
         columns={{
-          tablet: '1 / 12',
-          desktop: '1 / 24',
+          tablet: '1 / 13',
+          desktop: '1 / 13',
         }}
       >
         <InnerGrid css={{ '@lg': { marginTop: '8vw' } }}>

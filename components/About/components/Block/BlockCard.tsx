@@ -23,11 +23,7 @@ export const BlockCard: React.FC<Stitches.CSSProp & BlockCardProps> = ({
         '@xs': {
           padding: '30px 20px',
         },
-        '@md': {
-          minWidth: '325px',
-        },
         '@xl': {
-          minWidth: '27vw',
           padding: '16px 42px 36px',
         },
         alignItems: 'center',

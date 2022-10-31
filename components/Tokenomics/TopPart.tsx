@@ -10,29 +10,19 @@ const FlexLayout = Stitches.styled(Flex, {
   gap: '40px',
   justifyContent: 'center',
   alignItems: 'center',
-  '@xs': {
-    minHeight: '40vh',
-    marginTop: '18vw',
-  },
-  '@md': {
-    marginTop: '10vw',
-  },
-  '@lg': {
-    minHeight: '55vh',
-    marginTop: '3vw',
-  },
 })
 
 export const TopPart: React.FC = ({}) => {
   return (
-    <GridSection>
+    <GridSection css={{ paddingTop: '5vh', '@lg': { paddingTop: '10vh' } }}>
       <GridContent
+        css={{ minHeight: '50vh', '@lg': { minHeight: '550px' } }}
         columns={{
-          tablet: '2 / 12',
-          desktop: '1 / 24',
+          tablet: '1 / 9',
+          desktop: '2 / 13',
         }}
       >
-        <FlexLayout row css={{ overflow: 'hidden', width: '100%' }}>
+        <FlexLayout row css={{ width: '100%' }}>
           <InnerGrid>
             <Flex
               column
@@ -73,8 +63,8 @@ export const TopPart: React.FC = ({}) => {
                   marginTop: '1vw',
                   width: '80%',
                   whiteSpace: 'nowrap',
-                  '@xs': { alignSelf: 'center' },
-                  '@md': { alignSelf: 'start' },
+                  alignSelf: 'center',
+                  '@lg': { alignSelf: 'start' },
                 }}
               >
                 <Link button theme='primary' href='#'>
