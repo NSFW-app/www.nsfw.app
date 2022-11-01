@@ -13,7 +13,7 @@ const FlexLayout = Stitches.styled(Flex, {
     marginTop: '18vw',
   },
   '@lg': {
-    marginTop: '3vw',
+    marginTop: '0',
   },
 })
 
@@ -23,11 +23,12 @@ export const BottomSection = () => {
       css={{
         backgroundColor: '$gray100',
         position: 'relative',
+        marginBottom: '80px',
         '@md': {
           paddingTop: '2vw',
         },
         '@lg': {
-          paddingTop: '10vw',
+          paddingTop: '15vw',
         },
       }}
     >
@@ -36,8 +37,8 @@ export const BottomSection = () => {
       />
       <GridContent
         columns={{
-          tablet: '2 / 8',
-          desktop: '1 / 24',
+          tablet: '1 / 9',
+          desktop: '1 / 13',
         }}
       >
         <FlexLayout column>

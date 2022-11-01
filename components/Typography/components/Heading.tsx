@@ -10,12 +10,16 @@ export const Heading = Stitches.styled(UIHeading, {
         wordSpacing: 0,
         '@xs': {
           fontSize: '24px',
+          lineHeight: '38px',
         },
         '@md': {
-          fontSize: '30px',
+          fontSize: '28px',
+        },
+        '@lg': {
+          fontSize: '32px',
         },
         '@xl': {
-          fontSize: '38px',
+          fontSize: '36px',
         },
       },
 

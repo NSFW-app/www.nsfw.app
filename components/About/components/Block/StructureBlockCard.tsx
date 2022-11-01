@@ -74,7 +74,9 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
               key={`${i}-${bullet}`}
               css={{ alignItems: 'center', gap: '12px' }}
             >
-              <CheckIcon css={{ width: 12, height: 12 }} />
+              <Flex>
+                <CheckIcon css={{ width: 12, height: 12 }} />
+              </Flex>
               <Text type='body3' css={{ color: '$gray900' }}>
                 {bullet}
               </Text>

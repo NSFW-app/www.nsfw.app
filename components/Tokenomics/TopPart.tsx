@@ -3,45 +3,39 @@ import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
-import { VectorPurple } from 'components/Icons/VectorPurple'
-import { VectorPink } from 'components/Icons/VectorPink'
-import { VectorYellow } from 'components/Icons/VectorYellow'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
+import { BlopsComponents } from 'components/About/components/BlopsComponents'
 
 const FlexLayout = Stitches.styled(Flex, {
   gap: '40px',
   justifyContent: 'center',
   alignItems: 'center',
-  '@xs': {
-    minHeight: '40vh',
-    marginTop: '18vw',
-  },
-  '@lg': {
-    minHeight: '100vh',
-    marginTop: '2vw',
-  },
 })
 
 export const TopPart: React.FC = ({}) => {
   return (
-    <GridSection>
+    <GridSection css={{ paddingTop: '5vh', '@lg': { paddingTop: '10vh' } }}>
       <GridContent
+        css={{ minHeight: '50vh', '@lg': { minHeight: '550px' } }}
         columns={{
-          tablet: '1 / 12',
-          desktop: '1 / 24',
+          tablet: '1 / 9',
+          desktop: '2 / 13',
         }}
       >
-        <FlexLayout row css={{ overflowX: 'hidden', width: '100%' }}>
+        <FlexLayout row css={{ width: '100%' }}>
           <InnerGrid>
             <Flex
               column
               css={{
                 '@xs': {
                   textAlign: 'center',
+                  minWidth: '350px',
                 },
                 '@md': {
                   textAlign: 'left',
-                  paddingRight: '100px',
+                },
+                '@lg': {
+                  maxWidth: '500px',
                 },
               }}
             >
@@ -69,8 +63,8 @@ export const TopPart: React.FC = ({}) => {
                   marginTop: '1vw',
                   width: '80%',
                   whiteSpace: 'nowrap',
-                  '@xs': { alignSelf: 'center' },
-                  '@md': { alignSelf: 'start' },
+                  alignSelf: 'center',
+                  '@lg': { alignSelf: 'start' },
                 }}
               >
                 <Link button theme='primary' href='#'>
@@ -82,30 +76,8 @@ export const TopPart: React.FC = ({}) => {
                 </Link>
               </Box>
             </Flex>
-            <Flex
-              css={{
-                width: '100px',
-                position: 'relative',
-                top: -100,
-                '@xs': { display: 'none' },
-                '@lg': { display: 'flex' },
-              }}
-            >
-              <VectorPink css={{ position: 'absolute', top: -190 }} />
-              <VectorPurple
-                css={{ position: 'absolute', left: 50, top: 250 }}
-              />
-              <VectorPurple css={{ position: 'absolute', left: 260 }} />
-              <VectorYellow
-                css={{ position: 'absolute', left: -50, bottom: 0 }}
-              />
-              <VectorYellow
-                css={{ position: 'absolute', left: 450, top: 100 }}
-              />
-              <VectorYellow
-                css={{ position: 'absolute', left: 310, top: 200 }}
-              />
-            </Flex>
+
+            <BlopsComponents />
           </InnerGrid>
         </FlexLayout>
       </GridContent>

@@ -20,6 +20,7 @@ interface Props extends Stitches.CSSProp {
  */
 export const GridContent: React.FC<Props> = ({
   children,
+  // deprecate this.. just use the css api.
   columns = defaultColumns,
   css,
 }) => {
@@ -27,13 +28,15 @@ export const GridContent: React.FC<Props> = ({
     <Box
       css={{
         gridColumn: '1',
+        ...css,
         '@md': {
           gridColumn: columns['tablet'],
+          ...css?.['@md'],
         },
         '@xxl': {
           gridColumn: columns['desktop'],
+          ...css?.['@xxl'],
         },
-        ...css,
       }}
     >
       {children}

@@ -59,8 +59,8 @@ export const TokenUtility: React.FC = ({}) => {
       />
       <GridContent
         columns={{
-          tablet: '1 / 12',
-          desktop: '1 / 24',
+          tablet: '1 / 13',
+          desktop: '1 / 13',
         }}
       >
         <InnerGrid
@@ -77,8 +77,6 @@ export const TokenUtility: React.FC = ({}) => {
             <TokenUtilityGraph css={{ width: '100%' }} />
           </Flex>
         </InnerGrid>
-        <LockStake />
-        <Features />
       </GridContent>
     </GridSection>
   )

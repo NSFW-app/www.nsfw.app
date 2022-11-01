@@ -7,9 +7,8 @@ export const Text = Stitches.styled(UIText, {
     type: {
       // Commonly marked as H3 in the Figma, though is long-form text.
       subhead1: {
-        fontSize: '22px',
         fontWeight: 400,
-        lineHeight: '28px',
+        lineHeight: '32px',
         wordSpacing: 0,
         letterSpacing: '1.2%',
         '@xs': {
@@ -19,7 +18,7 @@ export const Text = Stitches.styled(UIText, {
           fontSize: '18px',
         },
         '@lg': {
-          fontSize: '22px',
+          fontSize: '20px',
         },
       },
       // Not seen in designs but body1 should be standard 16px.
@@ -36,7 +35,7 @@ export const Text = Stitches.styled(UIText, {
       },
       // Bullet points in OKRs
       body3: {
-        fontSize: '13px',
+        fontSize: '14px',
         fontWeight: 500,
         wordSpacing: 0,
         lineHeight: '16px',
