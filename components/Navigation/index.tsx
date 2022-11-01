@@ -108,23 +108,23 @@ export const Navigation = () => {
           </Link>
         </LeftSection>
         <MiddleSection>
-          <NextJsLink passHref href={APP_ROUTES.HOME}>
+          <NextJsLink passHref href={APP_ROUTES.HOME} prefetch>
             <NavLink active={router.pathname === APP_ROUTES.HOME}>Fans</NavLink>
           </NextJsLink>
-          <NextJsLink passHref href={APP_ROUTES.CREATORS}>
+          <NextJsLink passHref href={APP_ROUTES.CREATORS} prefetch>
             <NavLink active={router.pathname === APP_ROUTES.CREATORS}>
               Creators
             </NavLink>
           </NextJsLink>
-          <NextJsLink passHref href={APP_ROUTES.DAO}>
+          <NextJsLink passHref href={APP_ROUTES.DAO} prefetch>
             <NavLink active={router.pathname === APP_ROUTES.DAO}>DAO</NavLink>
           </NextJsLink>
-          <NextJsLink passHref href={APP_ROUTES.TOKENOMICS}>
+          <NextJsLink passHref href={APP_ROUTES.TOKENOMICS} prefetch>
             <NavLink active={router.pathname === APP_ROUTES.TOKENOMICS}>
               Tokenomics
             </NavLink>
           </NextJsLink>
-          <NextJsLink passHref href={APP_ROUTES.FAQ}>
+          <NextJsLink passHref href={APP_ROUTES.FAQ} prefetch>
             <NavLink active={router.pathname === APP_ROUTES.FAQ}>FAQs</NavLink>
           </NextJsLink>
         </MiddleSection>
