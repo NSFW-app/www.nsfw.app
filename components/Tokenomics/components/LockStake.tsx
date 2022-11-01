@@ -20,7 +20,7 @@ const HeaderIcon = Stitches.styled(Flex, {
 
 export const LockStake: React.FC = ({}) => {
   return (
-    <GridSection css={{ '@lg': { padding: '0 50px' } }}>
+    <GridSection>
       <GridContent
         columns={{
           tablet: '1 / 13',

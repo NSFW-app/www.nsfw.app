@@ -1,11 +1,9 @@
-import { Box, Flex } from '@nsfw-app/ui'
+import { Box, Flex, Grid, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
-import { InnerGrid } from 'components/About/components/Block/Blocks'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { ArrowLink } from 'components/ArrowLink'
 import { CheckIcon } from 'components/Icons/Check'
 import { spaces } from 'config'
-import { styled } from '@stitches/react'
 
 const PlatformFeesBullets = ['DMs', 'PetrificationTotalus', 'Wingman Blopster']
 const CreatorFeatures = ['DMs', 'PetrificationTotalus', 'Wingman Blopster']
@@ -21,7 +19,7 @@ const BulletPoint: React.FC<{ title: string }> = ({ title }) => {
   )
 }
 
-const FeatureIcon = styled(Flex, {
+const FeatureIcon = Stitches.styled(Flex, {
   padding: '10px',
   backgroundColor: '$gray100',
   borderRadius: '100%',
@@ -30,95 +28,104 @@ const FeatureIcon = styled(Flex, {
   height: '54px',
 })
 
+const FeatureCard = Stitches.styled(Flex, {
+  backgroundColor: '$gray300',
+  gap: '11px',
+  padding: '40px',
+  borderRadius: '8px',
+  justifyContent: 'space-between',
+  maxHeight: '394px',
+  maxWidth: '320px',
+  width: '100%',
+  '@xl': {
+    order: 2,
+  },
+})
+
 export const Ecosystem: React.FC = ({}) => {
   return (
     <GridSection css={{ backgroundColor: '$gray400', paddingTop: '50px' }}>
       <GridContent
         columns={{
-          tablet: '1 / 13',
+          tablet: '1 / 9',
           desktop: '1 / 13',
         }}
       >
-        <InnerGrid>
+        <Flex
+          className='foo'
+          css={{
+            flexDirection: 'column-reverse',
+            '@xl': { flexDirection: 'row' },
+          }}
+        >
           <Flex
-            column
             css={{
-              backgroundColor: '$gray300',
-              gap: '11px',
-              padding: '50px',
-              borderRadius: '8px',
-              minWidth: '300px',
-              justifyContent: 'space-between',
-              '@xs': { order: 2 },
-              '@lg': {
-                maxWidth: '330px',
-                order: 2,
-                maxHeight: '450px',
-              },
+              flexDirection: 'row',
+              justifyContent: 'center',
             }}
           >
-            <Box>
-              <FeatureIcon center>
-                <Text css={{ fontSize: '32px' }}>💰</Text>
-              </FeatureIcon>
+            <FeatureCard
+              className='feature-card'
+              column
+              css={{
+                marginRight: 16,
+                '@xs': { order: 2 },
+                '@md': { marginRight: '48px' },
+              }}
+            >
+              <Box>
+                <FeatureIcon center>
+                  <Text css={{ fontSize: '32px' }}>💰</Text>
+                </FeatureIcon>
 
-              <Heading as='h2' css={{ marginTop: '16px' }}>
-                Platform Fees
-              </Heading>
-              <Flex column css={{ gap: '15px', marginTop: spaces[3] }}>
-                {PlatformFeesBullets.map((bullet, i) => (
-                  <BulletPoint key={bullet + i} title={bullet} />
-                ))}
-              </Flex>
-            </Box>
+                <Heading as='h2' css={{ marginTop: '16px' }}>
+                  Platform Fees
+                </Heading>
+                <Flex column css={{ gap: '15px', marginTop: spaces[3] }}>
+                  {PlatformFeesBullets.map((bullet, i) => (
+                    <BulletPoint key={bullet + i} title={bullet} />
+                  ))}
+                </Flex>
+              </Box>
 
-            <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
-          </Flex>
+              <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
+            </FeatureCard>
 
-          <Flex
-            column
-            css={{
-              backgroundColor: '$gray300',
-              gap: '11px',
-              padding: '50px',
-              borderRadius: '8px',
-              minWidth: '300px',
-              justifyContent: 'space-between',
-              '@xs': { order: 3 },
-              '@lg': {
-                maxWidth: '330px',
-                maxHeight: '450px',
-                order: 2,
-              },
-            }}
-          >
-            <Box>
-              <FeatureIcon center>
-                <Text css={{ fontSize: '32px' }}>🎨</Text>
-              </FeatureIcon>
-              <Heading as='h2' css={{ marginTop: '16px' }}>
-                Creator ‘Pro’ Features
-              </Heading>
+            <FeatureCard
+              column
+              css={{
+                '@xs': { order: 3 },
+              }}
+            >
+              <Box>
+                <FeatureIcon center>
+                  <Text css={{ fontSize: '32px' }}>🎨</Text>
+                </FeatureIcon>
+                <Heading as='h2' css={{ marginTop: '16px' }}>
+                  Creator ‘Pro’ Features
+                </Heading>
 
-              <Flex column css={{ gap: '15px', marginTop: spaces[3] }}>
-                {CreatorFeatures.map((bullet, i) => (
-                  <BulletPoint key={bullet + i} title={bullet} />
-                ))}
-              </Flex>
-            </Box>
+                <Flex column css={{ gap: '15px', marginTop: spaces[3] }}>
+                  {CreatorFeatures.map((bullet, i) => (
+                    <BulletPoint key={bullet + i} title={bullet} />
+                  ))}
+                </Flex>
+              </Box>
 
-            <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
+              <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
+            </FeatureCard>
           </Flex>
 
           <Flex
             column
             css={{
               gap: '40px',
-              marginTop: '-3vw',
-              '@xs': { order: 1, textAlign: 'center' },
+              width: '100%',
+              marginBottom: 64,
+              '@xs': { textAlign: 'center' },
               '@md': { textAlign: 'left' },
-              '@lg': { minWidth: '340px', order: 3 },
-              '@xxl': { minWidth: '550px' },
+              '@lg': { marginLeft: 48 },
+              '@xl': { width: '50%' },
             }}
           >
             <Heading as='h1'>NSFW.app Ecosystem</Heading>
@@ -140,10 +147,6 @@ export const Ecosystem: React.FC = ({}) => {
               The app will be eventually be monetised via these two methods.
             </Text>
           </Flex>
-        </InnerGrid>
-
-        <Flex center css={{ marginTop: '8vw' }}>
-          <Heading as='h1'>Voices from the community</Heading>
         </Flex>
       </GridContent>
     </GridSection>

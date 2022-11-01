@@ -67,86 +67,91 @@ export const CommunityReviews = () => {
   }, [])
 
   return (
-    <Carousel
-      // withIndicators
-      slideSize='33.33%'
-      styles={{
-        slide: { overflow: 'hidden' },
-        control: {
+    <>
+      <Flex center css={{ paddingTop: '8vw', backgroundColor: '$gray400' }}>
+        <Heading as='h1'>Voices from the community</Heading>
+      </Flex>
+      <Carousel
+        // withIndicators
+        slideSize='33.33%'
+        styles={{
+          slide: { overflow: 'hidden' },
+          control: {
+            backgroundColor: `${Stitches.theme.colors.gray400}`,
+            border: 0,
+            opacity: 1,
+            boxShadow: 'none',
+          },
+        }}
+        dragFree
+        withControls={isDesktop ? true : false}
+        slideGap={isDesktop ? 60 : 10}
+        sx={{
+          padding: isDesktop ? '50px 35px' : '20px 0px',
           backgroundColor: `${Stitches.theme.colors.gray400}`,
-          border: 0,
-          opacity: 1,
-          boxShadow: 'none',
-        },
-      }}
-      dragFree
-      withControls={isDesktop ? true : false}
-      slideGap={isDesktop ? 60 : 10}
-      sx={{
-        padding: isDesktop ? '50px 35px' : '20px 0px',
-        backgroundColor: `${Stitches.theme.colors.gray400}`,
-      }}
-      breakpoints={[
-        { maxWidth: 'xs', slideSize: '85%' },
-        { maxWidth: 'sm', slideSize: '88%' },
-        { maxWidth: 'md', slideSize: '60%' },
-        { maxWidth: 'lg', slideSize: '50%' },
-        { maxWidth: 'xl', slideSize: '33.33%' },
-      ]}
-      loop={true}
-      align='center'
-      nextControlIcon={<NextIcon />}
-      previousControlIcon={<PreviousIcon />}
-    >
-      {CreatorsData.map((cc, i) => (
-        <Carousel.Slide key={cc.href + i}>
-          <CreatorCard>
-            <Flex
-              css={{
-                position: 'absolute',
-                overflowX: 'hidden !important',
-                right: '-80px',
-                top: 0,
-                filter: 'blur(10px) opacity(0.5)',
-              }}
-            >
-              {cc.backgroundImg}
-            </Flex>
-            <SemiColons
-              css={{ position: 'absolute', top: 135, left: 40, zIndex: 1 }}
-            />
-            <Grid
-              css={{
-                gridTemplateColumns: '90px 2fr',
-                alignItems: 'center',
-                marginLeft: '-20px',
-              }}
-            >
-              <Image
-                src={cc.avatar}
-                layout='fixed'
-                height={70}
-                width={70}
-                alt='avatar'
-              />
-              <Flex column css={{ gap: '5px' }}>
-                <Heading as='h5'>{cc.name}</Heading>
-                <Text subText type='body3'>
-                  {cc.lastSeen}
-                </Text>
-                <Anchor href={cc.href} css={{ color: '$voilet100' }}>
-                  <Text type='body3' css={{ color: 'inherit' }}>
-                    view profile
-                  </Text>
-                </Anchor>
+        }}
+        breakpoints={[
+          { maxWidth: 'xs', slideSize: '85%' },
+          { maxWidth: 'sm', slideSize: '88%' },
+          { maxWidth: 'md', slideSize: '60%' },
+          { maxWidth: 'lg', slideSize: '50%' },
+          { maxWidth: 'xl', slideSize: '33.33%' },
+        ]}
+        loop={true}
+        align='center'
+        nextControlIcon={<NextIcon />}
+        previousControlIcon={<PreviousIcon />}
+      >
+        {CreatorsData.map((cc, i) => (
+          <Carousel.Slide key={cc.href + i}>
+            <CreatorCard>
+              <Flex
+                css={{
+                  position: 'absolute',
+                  overflowX: 'hidden !important',
+                  right: '-80px',
+                  top: 0,
+                  filter: 'blur(10px) opacity(0.5)',
+                }}
+              >
+                {cc.backgroundImg}
               </Flex>
-            </Grid>
-            <Text type='body2' css={{ zIndex: 2 }}>
-              {cc.bio}
-            </Text>
-          </CreatorCard>
-        </Carousel.Slide>
-      ))}
-    </Carousel>
+              <SemiColons
+                css={{ position: 'absolute', top: 135, left: 40, zIndex: 1 }}
+              />
+              <Grid
+                css={{
+                  gridTemplateColumns: '90px 2fr',
+                  alignItems: 'center',
+                  marginLeft: '-20px',
+                }}
+              >
+                <Image
+                  src={cc.avatar}
+                  layout='fixed'
+                  height={70}
+                  width={70}
+                  alt='avatar'
+                />
+                <Flex column css={{ gap: '5px' }}>
+                  <Heading as='h5'>{cc.name}</Heading>
+                  <Text subText type='body3'>
+                    {cc.lastSeen}
+                  </Text>
+                  <Anchor href={cc.href} css={{ color: '$voilet100' }}>
+                    <Text type='body3' css={{ color: 'inherit' }}>
+                      view profile
+                    </Text>
+                  </Anchor>
+                </Flex>
+              </Grid>
+              <Text type='body2' css={{ zIndex: 2 }}>
+                {cc.bio}
+              </Text>
+            </CreatorCard>
+          </Carousel.Slide>
+        ))}
+      </Carousel>
+    </>
   )
 }

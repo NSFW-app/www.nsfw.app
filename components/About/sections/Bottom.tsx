@@ -23,11 +23,12 @@ export const BottomSection = () => {
       css={{
         backgroundColor: '$gray100',
         position: 'relative',
+        marginBottom: '80px',
         '@md': {
           paddingTop: '2vw',
         },
         '@lg': {
-          paddingTop: '10vw',
+          paddingTop: '15vw',
         },
       }}
     >
