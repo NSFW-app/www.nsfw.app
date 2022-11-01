@@ -67,7 +67,7 @@ const FeatureCard = Stitches.styled(Flex, {
 
 export const Ecosystem: React.FC = ({}) => {
   return (
-    <GridSection css={{ backgroundColor: '$gray400', paddingTop: '50px' }}>
+    <GridSection css={{ backgroundColor: '$gray400', paddingTop: '117px' }}>
       <GridContent
         columns={{
           tablet: '1 / 9',

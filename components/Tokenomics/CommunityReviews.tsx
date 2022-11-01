@@ -68,7 +68,14 @@ export const CommunityReviews = () => {
 
   return (
     <>
-      <Flex center css={{ paddingTop: '8vw', backgroundColor: '$gray400' }}>
+      <Flex
+        center
+        css={{
+          padding: '8vh 0 24px 0',
+          backgroundColor: '$gray400',
+          '@lg': { paddingBottom: 42 },
+        }}
+      >
         <Heading as='h1'>Voices from the community</Heading>
       </Flex>
       <Carousel
