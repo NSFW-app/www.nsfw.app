@@ -16,7 +16,8 @@ export const StructureHeading: React.FC = ({}) => {
             gap: '20px',
             maxWidth: '800px',
             justifyContent: 'center',
-            textAlign: 'left',
+            '@xs': { textAlign: 'center' },
+            '@md': { textAlign: 'left' },
           }}
         >
           <Text type='subhead1' subText>

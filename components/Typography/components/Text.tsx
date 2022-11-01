@@ -29,17 +29,17 @@ export const Text = Stitches.styled(UIText, {
       },
       // Marked as P2 in designs
       body2: {
-        fontSize: '14px',
+        fontSize: '15px',
         fontWeight: 400,
         letterSpacing: '1.5%',
-        lineHeight: '20px',
+        lineHeight: '22px',
       },
       // Bullet points in OKRs
       body3: {
         fontSize: '14px',
-        fontWeight: 500,
+        fontWeight: 400,
         wordSpacing: 0,
-        lineHeight: '16px',
+        lineHeight: '20px',
         letterSpacing: '1.5%',
       },
       // Button label e.g: Learn more about DAO

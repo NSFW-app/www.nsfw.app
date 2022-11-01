@@ -105,7 +105,8 @@ export const Operate = () => {
           textAlign: 'right',
           justifyContent: 'center',
           alignItems: 'end',
-          '@xs': { order: 1 },
+          '@xs': { order: 1, textAlign: 'center', alignItems: 'center' },
+          '@md': { textAlign: 'end', alignItems: 'end' },
           '@lg': { order: 3 },
         }}
       >
@@ -118,7 +119,9 @@ export const Operate = () => {
           commited to creating an inclusive and transparent DAO which pioneers a
           new type of modern workplace.
         </Text>
-        <ArrowLink href='#'>More info</ArrowLink>
+        <ArrowLink href='#' css={{ marginTop: spaces[2] }}>
+          More info
+        </ArrowLink>
       </Flex>
     </InnerGrid>
   )

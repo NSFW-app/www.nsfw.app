@@ -44,6 +44,8 @@ export const DAO = () => {
         css={{
           zIndex: 2,
           justifyContent: 'center',
+          '@xs': { textAlign: 'center' },
+          '@md': { textAlign: 'start' },
         }}
       >
         <Heading

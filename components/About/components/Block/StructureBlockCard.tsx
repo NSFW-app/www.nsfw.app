@@ -68,14 +68,14 @@ export const StructureBlock: React.FC<Stitches.CSSProp &
         <Text type='body2' subText>
           {subheading}
         </Text>
-        <Flex column css={{ gap: '10px' }}>
+        <Flex column css={{ gap: '15px' }}>
           {bullets.map((bullet, i) => (
             <Flex
               key={`${i}-${bullet}`}
               css={{ alignItems: 'center', gap: '12px' }}
             >
               <Flex>
-                <CheckIcon css={{ width: 12, height: 12 }} />
+                <CheckIcon css={{ width: 15, height: 15 }} />
               </Flex>
               <Text type='body3' css={{ color: '$gray900' }}>
                 {bullet}
