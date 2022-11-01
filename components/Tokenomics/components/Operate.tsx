@@ -24,7 +24,10 @@ export const Operate: React.FC = ({}) => {
       }}
     >
       <BackgroundBlurIcons />
-      <Flex column css={{ gap: '15px', zIndex: 2 }}>
+      <Flex
+        column
+        css={{ gap: '15px', zIndex: 2, order: 2, '@lg': { order: 1 } }}
+      >
         <Flex row css={{ gap: '15px' }}>
           <Flex
             column
@@ -96,29 +99,31 @@ export const Operate: React.FC = ({}) => {
         </Flex>
       </Flex>
 
-      <Flex
-        column
-        css={{
-          textAlign: 'left',
-          justifyContent: 'center',
-          gap: '30px',
-          maxWidth: '580px',
-        }}
-      >
-        <Heading as='h1' css={{ marginBottom: spaces[3] }}>
-          The NSFW+ token captures value from all ecosystem projects.
-        </Heading>
+      <Flex center css={{ '@lg': { order: 2 } }}>
+        <Flex
+          column
+          css={{
+            textAlign: 'left',
+            justifyContent: 'center',
+            gap: '30px',
+            maxWidth: '580px',
+          }}
+        >
+          <Heading as='h1' css={{ marginBottom: spaces[3] }}>
+            The NSFW+ token captures value from all ecosystem projects.
+          </Heading>
 
-        <Text type='subhead1' subText>
-          Each project will have its own way of generating revenue within the
-          ecosystem, but the mandate across all projects share a common theme.
-          Drive value to token holders with the mandate of empowering and
-          rewarding content creators, fans and community members.
-        </Text>
-        <Text type='subhead1' subText>
-          Drive value to token holders with the mandate of empowering and
-          rewarding content creators, fans and community members.
-        </Text>
+          <Text type='subhead1' subText>
+            Each project will have its own way of generating revenue within the
+            ecosystem, but the mandate across all projects share a common theme.
+            Drive value to token holders with the mandate of empowering and
+            rewarding content creators, fans and community members.
+          </Text>
+          <Text type='subhead1' subText>
+            Drive value to token holders with the mandate of empowering and
+            rewarding content creators, fans and community members.
+          </Text>
+        </Flex>
       </Flex>
     </InnerGrid>
   )
