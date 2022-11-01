@@ -16,7 +16,11 @@ export const TopPart: React.FC = ({}) => {
   return (
     <GridSection css={{ paddingTop: '5vh', '@lg': { paddingTop: '10vh' } }}>
       <GridContent
-        css={{ minHeight: '50vh', '@lg': { minHeight: '550px' } }}
+        css={{
+          minHeight: '50vh',
+          '@lg': { minHeight: '550px' },
+          '@xl': { minHeight: '620px' },
+        }}
         columns={{
           tablet: '1 / 9',
           desktop: '2 / 13',

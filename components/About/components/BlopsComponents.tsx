@@ -73,6 +73,10 @@ export const BlopsComponents: React.FC = () => {
             top: 300,
             left: '15%',
           },
+          '@xxl': {
+            top: 370,
+            left: '22%',
+          },
         }}
       />
       <BlopGreen
