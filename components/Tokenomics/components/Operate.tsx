@@ -15,6 +15,50 @@ const FeatureIcon = Stitches.styled(Flex, {
   height: '54px',
 })
 
+const FeatureCards = Stitches.styled(Flex, {
+  flexDirection: 'column',
+  gap: '15px',
+  zIndex: 2,
+  order: 2,
+  '@lg': { order: 1 },
+})
+
+const FeatureHeadingContainer = Stitches.styled(Flex, {
+  '@lg': {
+    order: 2,
+  },
+  [`& > ${Flex}`]: {
+    flexDirection: 'column',
+    textAlign: 'left',
+    justifyContent: 'center',
+    gap: '30px',
+    maxWidth: '580px',
+  },
+})
+
+const FeatureCard = Stitches.styled(Flex, {
+  flexDirection: 'column',
+  backgroundColor: '$gray300',
+  gap: '15px',
+  borderRadius: '8px',
+})
+
+const TopFeatureCard = Stitches.styled(FeatureCard, {
+  width: '50%',
+  '@xs': {
+    padding: '25px',
+    minWidth: '150px',
+  },
+  '@md': {
+    padding: '30px 35px 60px 35px',
+    minWidth: '250px',
+  },
+})
+
+const BottomFeatureCard = Stitches.styled(FeatureCard, {
+  padding: '40px',
+})
+
 export const Operate: React.FC = ({}) => {
   return (
     <InnerGrid
@@ -24,28 +68,9 @@ export const Operate: React.FC = ({}) => {
       }}
     >
       <BackgroundBlurIcons />
-      <Flex
-        column
-        css={{ gap: '15px', zIndex: 2, order: 2, '@lg': { order: 1 } }}
-      >
+      <FeatureCards>
         <Flex row css={{ gap: '15px' }}>
-          <Flex
-            column
-            css={{
-              backgroundColor: '$gray300',
-              gap: '15px',
-              borderRadius: '8px',
-              width: '50%',
-              '@xs': {
-                padding: '25px',
-                minWidth: '150px',
-              },
-              '@md': {
-                padding: '30px 35px 60px 35px',
-                minWidth: '250px',
-              },
-            }}
-          >
+          <TopFeatureCard>
             <FeatureIcon>
               <Text css={{ fontSize: '32px' }}>💸</Text>
             </FeatureIcon>
@@ -54,41 +79,17 @@ export const Operate: React.FC = ({}) => {
             <Text type='body2'>
               XX% of platform fees are earned by NSFW stakers and lockers.
             </Text>
-          </Flex>
+          </TopFeatureCard>
 
-          <Flex
-            column
-            css={{
-              backgroundColor: '$gray300',
-              gap: '15px',
-              borderRadius: '8px',
-              width: '50%',
-              '@xs': {
-                padding: '25px',
-                minWidth: '150px',
-              },
-              '@md': {
-                padding: '30px 35px 60px 35px',
-                minWidth: '250px',
-              },
-            }}
-          >
+          <TopFeatureCard>
             <FeatureIcon>
               <Text css={{ fontSize: '32px' }}>⚡</Text>
             </FeatureIcon>
             <Heading as='h2'>Fast creator withdrawals</Heading>
             <Text type='body2'>Creators are able to cash out.</Text>
-          </Flex>
+          </TopFeatureCard>
         </Flex>
-        <Flex
-          column
-          css={{
-            backgroundColor: '$gray300',
-            gap: '12px',
-            borderRadius: '8px',
-            padding: '40px',
-          }}
-        >
+        <BottomFeatureCard>
           <FeatureIcon center css={{ minHeight: '50px', minWidth: '50px' }}>
             <Icon icon='BadgePolygon' css={{ height: 28, width: 32 }} />
           </FeatureIcon>
@@ -96,19 +97,11 @@ export const Operate: React.FC = ({}) => {
             We will be operating on the Polygon to enjoy low-cost fee
             environment.
           </Heading>
-        </Flex>
-      </Flex>
+        </BottomFeatureCard>
+      </FeatureCards>
 
-      <Flex center css={{ '@lg': { order: 2 } }}>
-        <Flex
-          column
-          css={{
-            textAlign: 'left',
-            justifyContent: 'center',
-            gap: '30px',
-            maxWidth: '580px',
-          }}
-        >
+      <FeatureHeadingContainer center>
+        <Flex>
           <Heading as='h1' css={{ marginBottom: spaces[3] }}>
             The NSFW+ token captures value from all ecosystem projects.
           </Heading>
@@ -124,7 +117,7 @@ export const Operate: React.FC = ({}) => {
             rewarding content creators, fans and community members.
           </Text>
         </Flex>
-      </Flex>
+      </FeatureHeadingContainer>
     </InnerGrid>
   )
 }
