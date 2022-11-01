@@ -29,10 +29,11 @@ const FeatureHeadingContainer = Stitches.styled(Flex, {
   },
   [`& > ${Flex}`]: {
     flexDirection: 'column',
-    textAlign: 'left',
     justifyContent: 'center',
     gap: '30px',
     maxWidth: '580px',
+    '@xs': { textAlign: 'center' },
+    '@md': { textAlign: 'left' },
   },
 })
 
@@ -102,7 +103,7 @@ export const Operate: React.FC = ({}) => {
 
       <FeatureHeadingContainer center>
         <Flex>
-          <Heading as='h1' css={{ marginBottom: spaces[3] }}>
+          <Heading as='h1' css={{ '@md': { marginBottom: spaces[3] } }}>
             The NSFW+ token captures value from all ecosystem projects.
           </Heading>
 

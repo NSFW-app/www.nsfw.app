@@ -30,14 +30,14 @@ export const FAQ: React.FC = () => {
         }}
         css={{ zIndex: 2 }}
       >
-        <Heading as='h1' css={{ '@lg': { marginBottom: spaces[4] } }}>
+        <Heading as='h1' css={{ '@md': { marginBottom: spaces[4] } }}>
           FAQs
         </Heading>
         <Text
           css={{
             wordSpacing: 2,
             color: '$gray800',
-            '@lg': {
+            '@md': {
               maxWidth: '400px',
               marginBottom: spaces[5],
             },

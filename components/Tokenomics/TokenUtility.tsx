@@ -11,8 +11,16 @@ import { Features } from './components/Features'
 
 const UtilityHeading: React.FC = () => {
   return (
-    <Flex column css={{ gap: '25px', marginTop: '1vw' }}>
-      <Heading as='h1' css={{ marginBottom: spaces[3] }}>
+    <Flex
+      column
+      css={{
+        gap: '25px',
+        marginTop: '1vw',
+        '@xs': { textAlign: 'center', alignItems: 'center' },
+        '@md': { textAlign: 'left', alignItems: 'start' },
+      }}
+    >
+      <Heading as='h1' css={{ '@md': { marginBottom: spaces[3] } }}>
         Token Utility
       </Heading>
       <Text subText type='subhead1'>
