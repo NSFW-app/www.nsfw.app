@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Stitches } from '@nsfw-app/ui'
+import { Box, Flex, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { ArrowLink } from 'components/ArrowLink'
@@ -28,18 +28,41 @@ const FeatureIcon = Stitches.styled(Flex, {
   height: '54px',
 })
 
+const GridContentFlexContainer = Stitches.styled(Flex, {
+  flexDirection: 'column-reverse',
+  '@xl': { flexDirection: 'row' },
+})
+
+const FeatureHeadingContainer = Stitches.styled(Flex, {
+  flexDirection: 'column',
+  gap: '40px',
+  width: '100%',
+  marginBottom: 64,
+  '@xs': { textAlign: 'center' },
+  '@md': { textAlign: 'left' },
+  '@lg': { marginLeft: 48 },
+  '@xl': { width: '50%' },
+})
+
+const FeatureCards = Stitches.styled(Flex, {
+  flexDirection: 'column',
+  alignItems: 'center',
+  '@md': {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'start',
+  },
+})
+
 const FeatureCard = Stitches.styled(Flex, {
   backgroundColor: '$gray300',
   gap: '11px',
   padding: '40px',
   borderRadius: '8px',
   justifyContent: 'space-between',
-  maxHeight: '394px',
+  height: '394px',
   maxWidth: '320px',
   width: '100%',
-  '@xl': {
-    order: 2,
-  },
 })
 
 export const Ecosystem: React.FC = ({}) => {
@@ -51,26 +74,13 @@ export const Ecosystem: React.FC = ({}) => {
           desktop: '1 / 13',
         }}
       >
-        <Flex
-          className='foo'
-          css={{
-            flexDirection: 'column-reverse',
-            '@xl': { flexDirection: 'row' },
-          }}
-        >
-          <Flex
-            css={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-            }}
-          >
+        <GridContentFlexContainer>
+          <FeatureCards>
             <FeatureCard
-              className='feature-card'
               column
               css={{
-                marginRight: 16,
-                '@xs': { order: 2 },
-                '@md': { marginRight: '48px' },
+                '@xs': { marginBottom: 16 },
+                '@md': { marginRight: 48, marginBottom: 0 },
               }}
             >
               <Box>
@@ -91,12 +101,7 @@ export const Ecosystem: React.FC = ({}) => {
               <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
             </FeatureCard>
 
-            <FeatureCard
-              column
-              css={{
-                '@xs': { order: 3 },
-              }}
-            >
+            <FeatureCard column>
               <Box>
                 <FeatureIcon center>
                   <Text css={{ fontSize: '32px' }}>🎨</Text>
@@ -114,20 +119,9 @@ export const Ecosystem: React.FC = ({}) => {
 
               <ArrowLink href='#'>Visit the NSFW.app</ArrowLink>
             </FeatureCard>
-          </Flex>
+          </FeatureCards>
 
-          <Flex
-            column
-            css={{
-              gap: '40px',
-              width: '100%',
-              marginBottom: 64,
-              '@xs': { textAlign: 'center' },
-              '@md': { textAlign: 'left' },
-              '@lg': { marginLeft: 48 },
-              '@xl': { width: '50%' },
-            }}
-          >
+          <FeatureHeadingContainer>
             <Heading as='h1'>NSFW.app Ecosystem</Heading>
             <Text subText type='subhead1'>
               An independent creator marketplace, with a focus on zero commisons
@@ -146,8 +140,8 @@ export const Ecosystem: React.FC = ({}) => {
             <Text subText type='subhead1'>
               The app will be eventually be monetised via these two methods.
             </Text>
-          </Flex>
-        </Flex>
+          </FeatureHeadingContainer>
+        </GridContentFlexContainer>
       </GridContent>
     </GridSection>
   )
