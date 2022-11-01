@@ -26,18 +26,18 @@ export const Heading = Stitches.styled(UIHeading, {
       // e.g  Structure OKR / #standups heading
       // e.g DOA "Proposals" heading
       h2: {
-        fontWeight: 700,
+        fontWeight: 600,
         lineHeight: '36px',
         wordSpacing: 0,
         letterSpacing: '1.2%',
         '@xs': {
-          fontSize: '22px',
+          fontSize: '18px',
         },
         '@md': {
           fontSize: '24px',
         },
         '@xl': {
-          fontSize: '28px',
+          fontSize: '26px',
         },
       },
 

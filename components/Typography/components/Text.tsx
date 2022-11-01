@@ -25,6 +25,7 @@ export const Text = Stitches.styled(UIText, {
       body1: {
         fontSize: '16px',
         lineHeight: '28px',
+        fontWeight: 300,
       },
       // Marked as P2 in designs
       body2: {
