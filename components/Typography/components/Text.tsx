@@ -63,6 +63,12 @@ export const Text = Stitches.styled(UIText, {
         borderRadius: '4px',
         color: '$gray800',
       },
+
+      banner: {
+        fontWeight: 400,
+        fontSize: '13px',
+        lineHeight: '16px',
+      },
     },
   },
 })
