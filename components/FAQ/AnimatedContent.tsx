@@ -1,5 +1,4 @@
 import { animated, useTransition } from '@react-spring/web'
-import { Text } from 'components/Typography'
 
 interface ContentProps {
   id: string

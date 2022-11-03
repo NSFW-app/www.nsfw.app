@@ -140,6 +140,7 @@ export const Navigation = () => {
             css={{
               marginLeft: sizes.navigationItemMargin,
               '@xs': { padding: '6px 12px' },
+              '@md': { padding: '12px' },
               '@lg': { display: 'inline-flex' },
             }}
             onClick={() => analytics.track(NSFW_EVENT.LAUNCH_APP)}

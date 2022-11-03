@@ -2,7 +2,8 @@ import { DiagonalBgBreak } from 'components/DiagonalBgBreak'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Heading, Text } from 'components/Typography'
 import { spaces } from 'config'
-import { FAQitem } from './components/FAQs/FaqItem'
+import { FAQitem } from './components/FaqItem'
+
 import { FAQdata } from './data/FAQ'
 
 export const FAQ: React.FC = () => {

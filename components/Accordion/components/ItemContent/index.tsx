@@ -1,8 +1,7 @@
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { animated, useTransition } from '@react-spring/web'
-
-import { spaces } from 'config'
-import { Anchor, Text } from '@nsfw-app/ui'
+import { Anchor } from '@nsfw-app/ui'
+import { Text } from 'components/Typography'
 
 interface Props {
   id: string
@@ -12,14 +11,20 @@ interface Props {
 
 const components = {
   p: (props: any) => (
-    <Text type='body2' subText css={{ marginTop: spaces[2] }}>
+    <Text
+      type='body1'
+      css={{
+        cursor: 'default',
+        color: '$gray800',
+      }}
+    >
       {props.children}
     </Text>
   ),
   a: (props: any) => (
     <Anchor
-      theme='secondary'
-      css={{ cursor: 'pointer' }}
+      nounderline
+      css={{ cursor: 'pointer', color: '$violet300' }}
       href={props.href}
       target='_blank'
       rel='noopener noreferrer'
