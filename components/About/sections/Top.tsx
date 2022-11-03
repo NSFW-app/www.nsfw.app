@@ -1,6 +1,6 @@
 import { Stitches, Icon, Flex, Box } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
-import { spaces } from 'config'
+import { SOCIAL_LINKS, spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
 import { Blocks } from '../components/Block/Blocks'
@@ -26,7 +26,7 @@ export const TopSection = () => {
               marginBottom: spaces[3],
             }}
           >
-            Not Safe for Work (NSFW) is an Impact DAO
+            NSFW is an impact DAO
           </Heading>
 
           <Text
@@ -34,8 +34,8 @@ export const TopSection = () => {
             subText
             css={{ marginBottom: spaces[4], lineHeight: '28px' }}
           >
-            NSFW focusses to provide stable services to content creators and
-            rewarding long-term participants through the use of Web3 technology.
+            We provide safe, inclusive and fair services for adult content
+            creators and reward users in our ecosystem.
           </Text>
 
           <Blocks />
@@ -61,7 +61,7 @@ export const TopSection = () => {
             <Link
               button
               theme='primary'
-              href='#'
+              href={SOCIAL_LINKS.find((o) => o.icon === 'Discord')?.href}
               css={{
                 '@xs': { marginBottom: '50px' },
                 '@lg': { marginBottom: '0px' },
@@ -69,7 +69,7 @@ export const TopSection = () => {
             >
               <Text type='body4' css={{ color: '$gray900' }}>
                 {' '}
-                Learn more about the DAO
+                Join the community
               </Text>
               <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />
             </Link>

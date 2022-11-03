@@ -1,7 +1,7 @@
-import { Flex, Button, Box, Stitches } from '@nsfw-app/ui'
+import { Flex, Button, Box, Stitches, Anchor, Icon } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from './Block/Blocks'
-import { spaces } from 'config'
+import { APP_ROUTES, EXTERNAL_LINKS, spaces } from 'config'
 import { ArrowLink } from 'components/ArrowLink'
 import { BackgroundBlurIcons } from 'components/BackgroundBlurAsterisk'
 
@@ -54,13 +54,12 @@ export const DAO = () => {
             marginBottom: spaces[3],
           }}
         >
-          Participate in the DAO
+          How to participate?
         </Heading>
 
         <Text type='subhead1' subText>
-          Part of being DAO-run means holders of the NSFW token are able to
-          participate in governance proposals that inform the direction of this
-          project.
+          Holders of the <Anchor href={APP_ROUTES.TOKENOMICS}>NSFW+</Anchor>{' '}
+          token can vote on proposals that shape the direction of this project.
         </Text>
       </Flex>
 
@@ -69,35 +68,61 @@ export const DAO = () => {
           <Text css={{ fontSize: '30px' }}>💎</Text>
         </DoaCardIcon>
         <Heading as='h2' css={{ color: '$voilet300' }}>
-          Proposals
+          Vote
         </Heading>
         <Text type='body2' subText css={{ margin: '15px 0 22px 0' }}>
-          We support the right of (legal) freedom of expression, without
-          corporate and federal oversight.
+          Proposals are suggested by the core team or community and voted on by
+          token holders.
         </Text>
-        <Button theme='primary' css={{ padding: '10px 10px', fontWeight: 500 }}>
-          View proposals in discussion
+        {/* FIXME: Should be a nice Component <ButtonWithIcon /> or similar */}
+        <Button
+          onClick={() => {
+            window.open(EXTERNAL_LINKS.DISCORD_PROPOSALS_CHANNEL, '_blank')
+          }}
+          theme='primary'
+          css={{ padding: '10px 10px', fontWeight: 500 }}
+        >
+          <Flex row css={{ gap: '5px' }}>
+            Discuss proposals{' '}
+            {/* <Icon
+              icon='ExternalLink'
+              css={{ '.primary': { stroke: '$gray900' } }}
+            /> */}
+          </Flex>
         </Button>
-        {/* <Button theme='secondary'>Proposals In Discussion</Button> */}
-        <ArrowLink href='#'>View past proposals</ArrowLink>
+        <Anchor
+          css={{ alignSelf: 'center', marginTop: '10px' }}
+          target='_BLANK'
+          href={EXTERNAL_LINKS.SNAPSHOT}
+        >
+          <Flex row css={{ gap: '5px' }}>
+            Executed proposals
+          </Flex>
+        </Anchor>
       </ProposalCard>
 
       <DelegatesCard>
         <Box>
           <DoaCardIcon center>
-            <Text css={{ fontSize: '30px' }}>🤝</Text>
+            <Text css={{ fontSize: '30px' }}>✋</Text>
           </DoaCardIcon>
           <Heading as='h2' css={{ marginTop: '12px' }}>
-            Delegates
+            Contribute
           </Heading>
           <Text type='body2' subText css={{ margin: '25px 0' }}>
-            Work in the industrsy and can condribute your skills? Become a
-            delegate.
+            If you have skills or networks that can help us achieve our goals,
+            please apply as a volunteer.
           </Text>
         </Box>
 
-        <Button theme='primary' css={{ padding: '10px', fontWeight: 500 }}>
-          View delegate proposals
+        <Button
+          onClick={() => {
+            window.open(EXTERNAL_LINKS.DISCORD_VOLUNTEER_CHANNEL, '_blank')
+          }}
+          theme='primary'
+          css={{ padding: '10px', fontWeight: 500 }}
+        >
+          Volunteer to contribute
         </Button>
       </DelegatesCard>
     </InnerGrid>

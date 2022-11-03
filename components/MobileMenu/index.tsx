@@ -75,7 +75,7 @@ export const MobileMenu: React.FC<Props> = ({ visible, onClose, onOpen }) => {
             highlightPosition='vertical'
             active={router.pathname === APP_ROUTES.TOKENOMICS}
           >
-            Tokenomics
+            NSFW+
           </NavLink>
         </NextJsLink>
         <NextJsLink passHref href={APP_ROUTES.FAQ}>

@@ -1,7 +1,7 @@
 import { Flex, Span, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from './Block/Blocks'
-import { spaces } from 'config'
+import { EXTERNAL_LINKS, spaces } from 'config'
 import { BlopOrange } from '../../Icons/Blops/BlopOrange'
 import { BlopGreen } from '../../Icons/Blops/BlopGreen'
 import { BlopViolet } from '../../Icons/Blops/BlopViolet'
@@ -59,7 +59,7 @@ export const Operate = () => {
               <Span>
                 <Text type='pill'>OPEN SOURCE</Text>
               </Span>
-              <Text type='subhead1'>Community Portal</Text>
+              <Text type='subhead1'>Community website</Text>
             </Flex>
           </CommPortalCard>
         </Link>
@@ -90,7 +90,7 @@ export const Operate = () => {
             <BlopGreen css={{ height: '100%' }} />
             <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
               <Span>
-                <Text type='pill'>OPEN SOURCE</Text>
+                <Text type='pill'>PUBLIC</Text>
               </Span>
               <Text type='subhead1'>DAO Playbook</Text>
             </Flex>
@@ -115,11 +115,10 @@ export const Operate = () => {
         </Heading>
 
         <Text type='subhead1' subText>
-          Drawing from collective leadership experience spanning 30 years we are
-          commited to creating an inclusive and transparent DAO which pioneers a
-          new type of modern workplace.
+          Drawing from decades of leadership, product management and engineering
+          experience we are pioneering new ways of decentralised working.
         </Text>
-        <ArrowLink href='#' css={{ marginTop: spaces[2] }}>
+        <ArrowLink href={EXTERNAL_LINKS.DEWORK} css={{ marginTop: spaces[2] }}>
           More info
         </ArrowLink>
       </Flex>

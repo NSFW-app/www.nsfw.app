@@ -128,7 +128,7 @@ export const Navigation = () => {
           </NextJsLink>
           <NextJsLink passHref href={APP_ROUTES.TOKENOMICS} prefetch>
             <NavLink active={router.pathname === APP_ROUTES.TOKENOMICS}>
-              Tokenomics
+              NSFW+
             </NavLink>
           </NextJsLink>
           <NextJsLink passHref href={APP_ROUTES.FAQ} prefetch>
