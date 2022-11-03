@@ -6,8 +6,8 @@ import { Link } from 'components/Link'
 import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
 
 const HeroFlex = Stitches.styled(Flex, {
-  height: '100vh',
-  minHeight: '600px',
+  height: '55vh',
+  // minHeight: '600px',
   textAlign: 'center',
 })
 
@@ -29,7 +29,10 @@ export const CreatorsHeroSection = () => {
         }}
       >
         <HeroFlex center column>
-          <Heading css={{ marginBottom: spaces[3] }}>
+          <Heading
+            as='h1'
+            css={{ marginBottom: spaces[3], marginTop: spaces[5] }}
+          >
             Are you a content creator?
           </Heading>
           <Text

@@ -15,7 +15,19 @@ export interface FeatureCardProps {
   body: string
   primaryLink?: string
   secondaryLink?: string
+  emoji?: string
 }
+
+const EmojIcon = Stitches.styled(Flex, {
+  padding: '10px',
+  justifyContent: 'center',
+  backgroundColor: '$gray100',
+  borderRadius: '100%',
+  border: '1px solid $gray500',
+  width: '40px',
+  height: '40px',
+  alignItems: 'center',
+})
 
 export const FeatureCard: React.FC<Stitches.CSSProp & FeatureCardProps> = ({
   icon = 'Asterisk',
@@ -23,6 +35,7 @@ export const FeatureCard: React.FC<Stitches.CSSProp & FeatureCardProps> = ({
   body,
   primaryLink,
   secondaryLink,
+  emoji,
   css,
 }) => {
   return (
@@ -31,18 +44,21 @@ export const FeatureCard: React.FC<Stitches.CSSProp & FeatureCardProps> = ({
         backgroundColor: '$gray400',
         borderRadius: '8px',
         padding: '36px 28px 36px 36px',
-        gridGap: '16px',
+        gridGap: '26px',
         gridTemplateColumns: '30px auto',
         alignItems: 'start',
         ...css,
       }}
     >
-      <Icon icon={icon} css={{ width: '30px', height: '30px' }} />
+      {/* <Icon icon={icon} css={{ width: '30px', height: '30px' }} /> */}
+      <EmojIcon>{emoji}</EmojIcon>
+
       <div>
         <Heading
           as='h5'
           css={{
             marginBottom: '20px',
+            marginTop: '4px',
           }}
         >
           {heading}

@@ -9,7 +9,7 @@ const BannerContainer = Stitches.styled(Flex, {
   justifyContent: 'center',
   alignItems: 'center',
   '@xs': {
-    height: '100px',
+    height: '70px',
     padding: '0 10px ',
   },
   '@md': {
@@ -22,10 +22,9 @@ export const Banner = () => {
   return (
     <BannerContainer>
       <Text type='banner'>
-        Disclaimer: Cryptocurrency tokens are created and distributed using
-        distributed ledger or blockchain technology. This technology is very
-        experimental; therefore, participating in cryptocurrency token sales is
-        very risky.{' '}
+        Disclaimer: The content provided here is for informational purposes
+        only, and should not be relied upon as legal, business, investment, or
+        tax advice.
       </Text>
     </BannerContainer>
   )

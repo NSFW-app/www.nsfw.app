@@ -25,7 +25,7 @@ const TopbarNav = Stitches.styled(Nav, {
   backdropFilter: 'blur(8px)',
   transition: 'all 200ms ease',
   '@xs': {
-    marginTop: '100px',
+    marginTop: '70px',
   },
   '@md': {
     padding: `0 ${spaces[4]}`,

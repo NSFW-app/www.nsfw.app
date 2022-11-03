@@ -52,6 +52,7 @@ export const CreatorFeaturesSection: React.FC = () => {
               body={card.body}
               primaryLink={card.primaryLink}
               secondaryLink={card.secondaryLink}
+              emoji={card.emoji}
             />
           ))}
         </InnerGrid>

@@ -8,6 +8,7 @@ export const data: FeatureCardProps[] = [
       'All our creators are verified using enterprise grade KYC/AML. You can be sure that content is authentic.',
     // primaryLink: 'Learn More',
     // secondaryLink: 'About Us',
+    emoji: '🔐',
   },
   {
     // icon: 'Cash',
@@ -16,6 +17,7 @@ export const data: FeatureCardProps[] = [
       'No more awkward bank statements, pay with crypto. We support all popular wallets.',
     // primaryLink: 'Become a creator',
     // secondaryLink: 'View Creators',
+    emoji: '🙈',
   },
   {
     // icon: 'Compass',
@@ -23,5 +25,6 @@ export const data: FeatureCardProps[] = [
     body: 'No ads, no clutter, smooth experience on any device.',
     // primaryLink: 'About Currency',
     // secondaryLink: 'Buy Coins',
+    emoji: '⛔',
   },
 ]

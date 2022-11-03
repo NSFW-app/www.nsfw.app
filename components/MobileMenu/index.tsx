@@ -11,6 +11,7 @@ import { APP_ROUTES, SOCIAL_LINKS } from 'config'
 import NextJsLink from 'next/link'
 import { useAnalytics, NSFW_EVENT } from 'lib/analytics'
 import { useEffect, useRef } from 'react'
+import { ExternalLink } from 'components/Icons/ExternalLink'
 
 const MOBILE_NAV_GESTURE_EDGE = 25
 interface Props {
@@ -106,8 +107,8 @@ export const MobileMenu: React.FC<Props> = ({ visible, onClose, onOpen }) => {
             }}
           >
             <Flex row css={{ gap: '5px' }}>
-              Launch App
-              <Icon icon='ExternalLink' />
+              Open app
+              <ExternalLink />
             </Flex>
           </NavLink>
         </NextJsLink>

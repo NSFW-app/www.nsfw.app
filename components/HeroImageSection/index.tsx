@@ -15,7 +15,7 @@ export const HeroImageSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 13',
+          desktop: '2 / 12',
         }}
         css={{
           zIndex: 1,
