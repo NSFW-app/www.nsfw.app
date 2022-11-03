@@ -17,6 +17,7 @@ export const APP_ROUTES = {
 }
 
 export const EXTERNAL_LINKS = {
+  DISCORD: 'https://discord.gg/XR8Ek4v7EM',
   SNAPSHOT: 'https://snapshot.org/#/nsfwgov.eth',
   DISCORD_PROPOSALS_CHANNEL: 'https://discord.gg/tqZHy7hprD',
   DISCORD_VOLUNTEER_CHANNEL: 'https://discord.gg/VTyB2TQc7U',

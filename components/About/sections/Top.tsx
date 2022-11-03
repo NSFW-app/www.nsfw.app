@@ -1,6 +1,6 @@
 import { Stitches, Icon, Flex, Box } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
-import { SOCIAL_LINKS, spaces } from 'config'
+import { EXTERNAL_LINKS, spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
 import { Link } from 'components/Link'
 import { Blocks } from '../components/Block/Blocks'
@@ -61,7 +61,7 @@ export const TopSection = () => {
             <Link
               button
               theme='primary'
-              href={SOCIAL_LINKS.find((o) => o.icon === 'Discord')?.href}
+              href={EXTERNAL_LINKS.DISCORD}
               css={{
                 '@xs': { marginBottom: '50px' },
                 '@lg': { marginBottom: '0px' },
