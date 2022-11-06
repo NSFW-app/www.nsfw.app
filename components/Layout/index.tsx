@@ -10,7 +10,6 @@ import {
 } from 'config'
 import { Navigation } from 'components/Navigation'
 import { Footer } from 'components/Footer'
-import { Banner } from 'components/Banner'
 
 export interface SeoProps {
   metaTitle?: string
@@ -68,7 +67,6 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta property='twitter:image' content={og?.image || metaImg} />
         <meta content='summary_large_image' name='twitter:card' />
       </Nexthead>
-      <Banner />
       <Navigation />
       <Box
         css={{ ...css, minHeight: `calc(100vh - ${sizes.footerHeight})` }}

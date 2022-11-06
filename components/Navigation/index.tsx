@@ -12,6 +12,7 @@ import { MobileMenu } from 'components/MobileMenu'
 import { LaunchButton } from 'components/LaunchButton'
 import { Link } from 'components/Link'
 import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
+import { Banner } from 'components/Banner'
 
 const TopbarNav = Stitches.styled(Nav, {
   display: 'grid',
@@ -71,6 +72,7 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const analytics = useAnalytics()
+  const isTokenomicsPage = router.asPath == APP_ROUTES.TOKENOMICS
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -108,7 +110,13 @@ export const Navigation = () => {
 
   return (
     <>
-      <TopbarNav css={containerStyles}>
+      {isTokenomicsPage && <Banner />}
+      <TopbarNav
+        css={{
+          marginTop: !isTokenomicsPage ? 0 : '',
+          ...containerStyles,
+        }}
+      >
         <LeftSection>
           <Link href={APP_ROUTES.HOME}>
             <Icons.LogoGradient />
