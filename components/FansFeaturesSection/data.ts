@@ -22,7 +22,7 @@ export const data: FeatureCardProps[] = [
   {
     // icon: 'Compass',
     heading: 'Free of advertising',
-    body: 'No ads, no clutter, smooth experience on any device.',
+    body: 'No ads, no clutter. A smooth experience on modern devices.',
     // primaryLink: 'About Currency',
     // secondaryLink: 'Buy Coins',
     emoji: '⛔',

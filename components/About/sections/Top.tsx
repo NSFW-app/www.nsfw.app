@@ -61,6 +61,7 @@ export const TopSection = () => {
             <Link
               button
               theme='primary'
+              target='_blank'
               href={EXTERNAL_LINKS.DISCORD}
               css={{
                 '@xs': { marginBottom: '50px' },
@@ -69,7 +70,7 @@ export const TopSection = () => {
             >
               <Text type='body4' css={{ color: '$gray900' }}>
                 {' '}
-                Join the community
+                Join our Discord
               </Text>
               <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />
             </Link>

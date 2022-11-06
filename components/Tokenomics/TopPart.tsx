@@ -49,7 +49,7 @@ export const TopPart: React.FC = ({}) => {
                   marginBottom: spaces[3],
                 }}
               >
-                NSFW+ tokenomics
+                Tokenomics
               </Heading>
 
               <Text
@@ -57,9 +57,8 @@ export const TopPart: React.FC = ({}) => {
                 subText
                 css={{ marginBottom: spaces[4], wordBreak: 0 }}
               >
-                Nisl rhoncus mattis rhoncus urna neque viverra justo nec
-                ultrices dui sapien eget mi proin sed libero enim sed faucibus
-                turpis in eu mi bibendum.
+                The NSFW+ token serves as the utility token within the NSFW
+                ecosystem
               </Text>
 
               <Box

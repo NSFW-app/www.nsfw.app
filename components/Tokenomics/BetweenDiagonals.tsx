@@ -24,8 +24,8 @@ export const BetweenDiagonals: React.FC = ({}) => {
           marginTop: '8vw',
         }}
       >
+        {/* <TokenSupply /> */}
         <Operate />
-        <TokenSupply />
       </GridContent>
     </GridSection>
   )

@@ -21,35 +21,30 @@ const UtilityHeading: React.FC = () => {
       }}
     >
       <Heading as='h1' css={{ '@md': { marginBottom: spaces[3] } }}>
-        Token Utility
+        Utility
       </Heading>
+
       <Text subText type='subhead1'>
-        Protocol revenue is generated from the business models from projects
-        within the NSFW ecosystem.
+        We have designed a sustainable growth model where revenue is directed to
+        initiatives aligned with the DAO and its mission.
       </Text>
       <Text subText type='subhead1'>
-        We have opted for a symbiotic growth model where revenue is directed to
-        participants. As the ecosystem evolves we aim to delight our users with.
+        As the ecosystem evolves we aim to delight our users with:
       </Text>
       <Flex column css={{ gap: '25px' }}>
         <Flex row css={{ gap: '10px', alignItems: 'center' }}>
           <CheckIcon />
-          <Text type='subhead1'>novel projects</Text>
+          <Text type='subhead1'>Novel projects</Text>
         </Flex>
         <Flex row css={{ gap: '10px', alignItems: 'center' }}>
           <CheckIcon />
-          <Text type='subhead1'>unique incentives</Text>
+          <Text type='subhead1'>Unique incentives</Text>
         </Flex>
         <Flex row css={{ gap: '10px', alignItems: 'center' }}>
           <CheckIcon />
-          <Text type='subhead1'>distinct design</Text>
+          <Text type='subhead1'>Distinct design</Text>
         </Flex>
       </Flex>
-
-      <Text subText type='subhead1'>
-        We have opted for a symbiotic growth model where revenue is directed to
-        participants. As the ecosystem evolves we aim to delight our users with.
-      </Text>
     </Flex>
   )
 }

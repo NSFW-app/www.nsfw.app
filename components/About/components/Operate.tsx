@@ -47,7 +47,11 @@ export const Operate = () => {
           '@lg': { order: 1 },
         }}
       >
-        <Link nounderline href='https://github.com/nsfw-app' target='_blank'>
+        <Link
+          nounderline
+          href='https://github.com/NSFW-app/www.nsfw.app'
+          target='_blank'
+        >
           <CommPortalCard>
             <BlopViolet
               css={{
@@ -85,7 +89,11 @@ export const Operate = () => {
           </OperateCard>
         </Link>
 
-        <Link nounderline href='#' target='_blank'>
+        <Link
+          nounderline
+          href={EXTERNAL_LINKS.NOTION_DAO_INDEX}
+          target='_blank'
+        >
           <OperateCard>
             <BlopGreen css={{ height: '100%' }} />
             <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
@@ -116,7 +124,7 @@ export const Operate = () => {
 
         <Text type='subhead1' subText>
           Drawing from decades of leadership, product management and engineering
-          experience we are pioneering new ways of decentralised working.
+          experience we are establishing new ways of decentralised working.
         </Text>
         <ArrowLink href={EXTERNAL_LINKS.DEWORK} css={{ marginTop: spaces[2] }}>
           More info

@@ -54,12 +54,12 @@ export const DAO = () => {
             marginBottom: spaces[3],
           }}
         >
-          How to participate?
+          Want to participate?
         </Heading>
 
         <Text type='subhead1' subText>
-          Holders of the <Anchor href={APP_ROUTES.TOKENOMICS}>NSFW+</Anchor>{' '}
-          token can vote on proposals that shape the direction of this project.
+          Obtain <Anchor href={APP_ROUTES.TOKENOMICS}>NSFW+</Anchor> tokens to
+          vote on proposals that shape the direction of this project.
         </Text>
       </Flex>
 
@@ -68,7 +68,7 @@ export const DAO = () => {
           <Text css={{ fontSize: '30px' }}>💎</Text>
         </DoaCardIcon>
         <Heading as='h2' css={{ color: '$voilet300' }}>
-          Vote
+          Voting
         </Heading>
         <Text type='body2' subText css={{ margin: '15px 0 22px 0' }}>
           Proposals are suggested by the core team or community and voted on by
@@ -107,11 +107,11 @@ export const DAO = () => {
             <Text css={{ fontSize: '30px' }}>✋</Text>
           </DoaCardIcon>
           <Heading as='h2' css={{ marginTop: '12px' }}>
-            Contribute
+            Contributors
           </Heading>
           <Text type='body2' subText css={{ margin: '25px 0' }}>
             If you have skills or networks that can help us achieve our goals,
-            please apply as a volunteer.
+            please consider applying as a volunteer.
           </Text>
         </Box>
 

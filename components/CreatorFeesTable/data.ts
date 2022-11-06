@@ -58,13 +58,13 @@ export const DATA: Data = {
       rows: [
         [
           { label: 'Minimum withdrawal' },
-          { label: '$30' },
+          { label: '$25' },
           { label: '$20 - $100' },
         ],
         [
           { label: 'Settlement period' },
-          { label: 'Minutes' },
-          { label: 'Days' },
+          { label: 'Same day' },
+          { label: 'Days - Months' },
         ],
         [{ label: 'Chargebacks' }, { label: 'No' }, { label: 'Yes' }],
         [
