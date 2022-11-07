@@ -25,7 +25,7 @@ export const CreatorsHeroSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 13',
+          desktop: '2 / 12',
         }}
       >
         <HeroFlex center column>
