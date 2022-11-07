@@ -77,7 +77,9 @@ export const Operate: React.FC = ({}) => {
             </FeatureIcon>
 
             <Heading as='h2'>Memberships</Heading>
-            <Text type='body2'>Something else</Text>
+            <Text type='body2' css={{ color: '$gray' }}>
+              Soon&trade;
+            </Text>
           </TopFeatureCard>
 
           <TopFeatureCard>
@@ -85,7 +87,7 @@ export const Operate: React.FC = ({}) => {
               <Text css={{ fontSize: '32px' }}>👁️</Text>
             </FeatureIcon>
             <Heading as='h2'>Rewards</Heading>
-            <Text type='body2'>something else.</Text>
+            <Text type='body2'>Soon&trade;</Text>
           </TopFeatureCard>
         </Flex>
         <BottomFeatureCard>
