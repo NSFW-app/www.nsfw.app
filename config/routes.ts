@@ -15,3 +15,13 @@ export const APP_ROUTES = {
   ADMIRER_SIGNUP: `${APP_SITE_DOMAIN}/signup?utm_source=cta&utm_medium=website&utm_campaign=fan-cta`,
   CREATOR_SIGNUP: `${APP_SITE_DOMAIN}/signup?accountType=creator&utm_source=cta&utm_medium=website&utm_campaign=creator-cta`,
 }
+
+export const EXTERNAL_LINKS = {
+  DISCORD: 'https://discord.gg/XR8Ek4v7EM',
+  SNAPSHOT: 'https://snapshot.org/#/nsfwgov.eth',
+  DISCORD_PROPOSALS_CHANNEL: 'https://discord.gg/tqZHy7hprD',
+  DISCORD_VOLUNTEER_CHANNEL: 'https://discord.gg/VTyB2TQc7U',
+  DEWORK: 'https://app.dework.xyz/nsfw',
+  NOTION_DAO_INDEX:
+    'https://nsfwapp.notion.site/Index-bb16149cf78648c1a157b086ab64b628',
+}

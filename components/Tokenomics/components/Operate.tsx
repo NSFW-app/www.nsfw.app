@@ -29,10 +29,11 @@ const FeatureHeadingContainer = Stitches.styled(Flex, {
   },
   [`& > ${Flex}`]: {
     flexDirection: 'column',
-    textAlign: 'left',
     justifyContent: 'center',
     gap: '30px',
     maxWidth: '580px',
+    '@xs': { textAlign: 'center' },
+    '@md': { textAlign: 'left' },
   },
 })
 
@@ -72,21 +73,21 @@ export const Operate: React.FC = ({}) => {
         <Flex row css={{ gap: '15px' }}>
           <TopFeatureCard>
             <FeatureIcon>
-              <Text css={{ fontSize: '32px' }}>💸</Text>
+              <Text css={{ fontSize: '32px' }}>🎟️</Text>
             </FeatureIcon>
 
-            <Heading as='h2'>Share the platform fees</Heading>
-            <Text type='body2'>
-              XX% of platform fees are earned by NSFW stakers and lockers.
+            <Heading as='h2'>Memberships</Heading>
+            <Text type='body2' css={{ color: '$gray' }}>
+              Soon&trade;
             </Text>
           </TopFeatureCard>
 
           <TopFeatureCard>
             <FeatureIcon>
-              <Text css={{ fontSize: '32px' }}>⚡</Text>
+              <Text css={{ fontSize: '32px' }}>👁️</Text>
             </FeatureIcon>
-            <Heading as='h2'>Fast creator withdrawals</Heading>
-            <Text type='body2'>Creators are able to cash out.</Text>
+            <Heading as='h2'>Rewards</Heading>
+            <Text type='body2'>Soon&trade;</Text>
           </TopFeatureCard>
         </Flex>
         <BottomFeatureCard>
@@ -94,27 +95,19 @@ export const Operate: React.FC = ({}) => {
             <Icon icon='BadgePolygon' css={{ height: 28, width: 32 }} />
           </FeatureIcon>
           <Heading as='h2' css={{ lineHeight: 1.2 }}>
-            We will be operating on the Polygon to enjoy low-cost fee
-            environment.
+            Operating on Polygon network, with a multichain strategy.
           </Heading>
         </BottomFeatureCard>
       </FeatureCards>
 
       <FeatureHeadingContainer center>
         <Flex>
-          <Heading as='h1' css={{ marginBottom: spaces[3] }}>
-            The NSFW+ token captures value from all ecosystem projects.
+          <Heading as='h1' css={{ '@md': { marginBottom: spaces[3] } }}>
+            Value is captured on-chain across ecosystem projects.
           </Heading>
-
-          <Text type='subhead1' subText>
-            Each project will have its own way of generating revenue within the
-            ecosystem, but the mandate across all projects share a common theme.
-            Drive value to token holders with the mandate of empowering and
-            rewarding content creators, fans and community members.
-          </Text>
-          <Text type='subhead1' subText>
-            Drive value to token holders with the mandate of empowering and
-            rewarding content creators, fans and community members.
+          <Text subText type='subhead1'>
+            Participation is front and center to ensure a balanced and
+            incentivised community.
           </Text>
         </Flex>
       </FeatureHeadingContainer>

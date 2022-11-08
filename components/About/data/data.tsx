@@ -7,21 +7,21 @@ import { BlopYellow } from '../../Icons/Blops/BlopYellow'
 export const serviceData: BlockCardProps[] = [
   {
     body:
-      'We support the right of (legal) freedom of expression, without corporate and federal oversight.',
+      'Our consumer applications follow best practice creator and content moderation while advocating for true freedom of expression.',
     gradient:
       'linear-gradient(248.77deg, rgba(59, 172, 236, 0.1) 1.24%, rgba(52, 152, 209, 0.0885417) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
     blopIcon: <BlopPurple css={{ height: '100%' }} />,
   },
   {
     body:
-      'We support the right of (legal) freedom of expression, without corporate and federal oversight.',
+      'Our Ecosystem explores modern uses of crypto-technology to delite users with new experiences.',
     gradient:
       'linear-gradient(248.77deg, rgba(251, 194, 47, 0.1) 1.24%, rgba(251, 194, 47, 0.0885417) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
     blopIcon: <BlopYellow css={{ height: '100%' }} />,
   },
   {
     body:
-      'We support the right of (legal) freedom of expression, without corporate and federal oversight.',
+      'We are pioneering how next generation companies are owned and operated.',
     gradient:
       'linear-gradient(248.77deg, rgba(233, 75, 75, 0.15) 1.24%, rgba(233, 75, 75, 0.132813) 44.85%, rgba(0, 0, 0, 0) 104.62%)',
     blopIcon: <BlopPink css={{ height: '100%' }} />,

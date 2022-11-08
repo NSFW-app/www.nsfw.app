@@ -12,6 +12,7 @@ import { MobileMenu } from 'components/MobileMenu'
 import { LaunchButton } from 'components/LaunchButton'
 import { Link } from 'components/Link'
 import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
+import { Banner } from 'components/Banner'
 
 const TopbarNav = Stitches.styled(Nav, {
   display: 'grid',
@@ -19,11 +20,17 @@ const TopbarNav = Stitches.styled(Nav, {
   alignItems: 'center',
   position: 'fixed',
   width: '100%',
+
+  top: 0,
   padding: `0 ${spaces[2]}`,
   backdropFilter: 'blur(8px)',
   transition: 'all 200ms ease',
+  '@xs': {
+    marginTop: '70px',
+  },
   '@md': {
     padding: `0 ${spaces[4]}`,
+    marginTop: '49px',
   },
   '@lg': {
     gridTemplateColumns: '1fr auto 1fr',
@@ -65,6 +72,7 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const analytics = useAnalytics()
+  const isTokenomicsPage = router.asPath == APP_ROUTES.TOKENOMICS
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -84,6 +92,7 @@ export const Navigation = () => {
   const containerStyles = isScrolled
     ? {
         height: sizes.navigationHeight,
+        marginTop: 0,
         background: 'rgba(27, 28, 32, 0.1)',
         borderBottom: `1px solid ${Stitches.theme.colors.gray400}`,
         '@lg': {
@@ -101,7 +110,13 @@ export const Navigation = () => {
 
   return (
     <>
-      <TopbarNav css={containerStyles}>
+      {isTokenomicsPage && <Banner />}
+      <TopbarNav
+        css={{
+          marginTop: !isTokenomicsPage ? 0 : '',
+          ...containerStyles,
+        }}
+      >
         <LeftSection>
           <Link href={APP_ROUTES.HOME}>
             <Icons.LogoGradient />
@@ -121,7 +136,7 @@ export const Navigation = () => {
           </NextJsLink>
           <NextJsLink passHref href={APP_ROUTES.TOKENOMICS} prefetch>
             <NavLink active={router.pathname === APP_ROUTES.TOKENOMICS}>
-              Tokenomics
+              NSFW+
             </NavLink>
           </NextJsLink>
           <NextJsLink passHref href={APP_ROUTES.FAQ} prefetch>
@@ -133,6 +148,7 @@ export const Navigation = () => {
             css={{
               marginLeft: sizes.navigationItemMargin,
               '@xs': { padding: '6px 12px' },
+              '@md': { padding: '12px' },
               '@lg': { display: 'inline-flex' },
             }}
             onClick={() => analytics.track(NSFW_EVENT.LAUNCH_APP)}

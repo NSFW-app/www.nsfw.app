@@ -25,20 +25,21 @@ export const Text = Stitches.styled(UIText, {
       body1: {
         fontSize: '16px',
         lineHeight: '28px',
+        fontWeight: 300,
       },
       // Marked as P2 in designs
       body2: {
-        fontSize: '14px',
+        fontSize: '15px',
         fontWeight: 400,
         letterSpacing: '1.5%',
-        lineHeight: '20px',
+        lineHeight: '22px',
       },
       // Bullet points in OKRs
       body3: {
         fontSize: '14px',
-        fontWeight: 500,
+        fontWeight: 400,
         wordSpacing: 0,
-        lineHeight: '16px',
+        lineHeight: '20px',
         letterSpacing: '1.5%',
       },
       // Button label e.g: Learn more about DAO
@@ -61,6 +62,12 @@ export const Text = Stitches.styled(UIText, {
         padding: '2px 6px',
         borderRadius: '4px',
         color: '$gray800',
+      },
+
+      banner: {
+        fontWeight: 400,
+        fontSize: '13px',
+        lineHeight: '16px',
       },
     },
   },

@@ -25,7 +25,7 @@ export const FansHeroSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 13',
+          desktop: '2 / 12',
         }}
       >
         <HeroFlex center column>
@@ -54,15 +54,6 @@ export const FansHeroSection = () => {
               button
               uppercase
               theme='primary'
-              css={buttonCss}
-              href='#features'
-            >
-              Features
-            </Link>
-            <Link
-              button
-              uppercase
-              theme='secondary'
               css={buttonCss}
               href={APP_ROUTES.ADMIRER_SIGNUP}
               onClick={() => analytics.track(NSFW_EVENT.GET_STARTED_CLICK)}

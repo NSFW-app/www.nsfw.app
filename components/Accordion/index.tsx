@@ -1,38 +1,14 @@
 import { useState } from 'react'
-import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { Stitches, Flex, Heading } from '@nsfw-app/ui'
-
-import { spaces } from 'config'
 import { SerializedFAQ } from 'lib/cms/queries/faqs'
-
-import { Filter } from './components/Filter'
 import { ItemContent } from './components/ItemContent'
-import { Pill } from './components/Pill'
+import { ChevronIcon } from 'components/FAQ/Chevron'
+import { Heading } from 'components/Typography'
+import { FaqContainer } from 'components/FAQ/Container'
 
 /**
  * a11y guidelines
  * - https://davatron5000.github.io/a11y-nutrition-cards/components/accordion
  */
-const List = Stitches.styled('dl', {
-  textAlign: 'left',
-  width: '100%',
-})
-
-const ListItem = Stitches.styled('div', {
-  padding: `${spaces[3]} 0`,
-})
-
-const Title = Stitches.styled('dt', {})
-
-const Button = Stitches.styled('button', {
-  background: 'transparent',
-  border: 'none',
-  padding: 0,
-  width: '100%',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'baseline',
-})
 
 interface Props {
   data: SerializedFAQ[]
@@ -65,42 +41,22 @@ export const Accordion: React.FC<Props> = ({ data, filterValues }) => {
 
   return (
     <>
-      <Filter
-        values={filterValues}
-        selectedValue={selected}
-        handleSelect={handleSelect}
-      />
-      <List>
-        {items.map((item, i) => (
-          <ListItem
-            key={item.id}
-            css={{
-              borderTop:
-                i === 0 ? '' : `1px solid ${Stitches.theme.colors.gray400}`,
-            }}
-          >
-            <Title>
-              <Button
-                aria-controls={item.id}
-                aria-expanded={item.id === expanded ? 'true' : 'false'}
-                onClick={() => handleExpanded(item.id)}
-              >
-                <Heading as='h4'>{item.title}</Heading>
-                <Flex row center>
-                  {item.category.map((c) => (
-                    <Pill key={c}>{c}</Pill>
-                  ))}
-                </Flex>
-              </Button>
-            </Title>
-            <ItemContent
-              id={item.id}
-              hidden={item.id !== expanded}
-              content={item.content}
-            />
-          </ListItem>
-        ))}
-      </List>
+      {items.map((item, i) => (
+        <FaqContainer
+          key={item.id}
+          aria-controls={item.id}
+          aria-expanded={item.id === expanded ? 'true' : 'false'}
+          onClick={() => handleExpanded(item.id)}
+        >
+          <ChevronIcon expanded={expanded} id={item.id} />
+          <Heading as='h2'>{item.title}</Heading>
+          <ItemContent
+            id={item.id}
+            hidden={item.id !== expanded}
+            content={item.content}
+          />
+        </FaqContainer>
+      ))}
     </>
   )
 }

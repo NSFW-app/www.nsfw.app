@@ -27,7 +27,9 @@ export const LockStake: React.FC = ({}) => {
           desktop: '1 / 13',
         }}
       >
-        <InnerGrid css={{ '@lg': { marginTop: '8vw' } }}>
+        <InnerGrid
+          css={{ '@xs': { marginTop: 0 }, '@md': { marginTop: '8vw' } }}
+        >
           <Flex
             column
             css={{

@@ -40,7 +40,7 @@ export const CreatorFeaturesSection: React.FC = () => {
       >
         <Flex css={{ padding: 32 }} center fullWidth>
           <Heading as='h4'>
-            We have built the best crypto-powered creator platform
+            The best in class creator platform, powered by crypto.
           </Heading>
         </Flex>
         <InnerGrid>
@@ -52,6 +52,7 @@ export const CreatorFeaturesSection: React.FC = () => {
               body={card.body}
               primaryLink={card.primaryLink}
               secondaryLink={card.secondaryLink}
+              emoji={card.emoji}
             />
           ))}
         </InnerGrid>

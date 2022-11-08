@@ -6,7 +6,7 @@ export const StructureHeading: React.FC = ({}) => {
   return (
     <>
       <Heading as='h1' css={{ marginBottom: spaces[3] }}>
-        NSFW App Structure
+        Organisational structure
       </Heading>
 
       <Flex column center>
@@ -16,18 +16,13 @@ export const StructureHeading: React.FC = ({}) => {
             gap: '20px',
             maxWidth: '800px',
             justifyContent: 'center',
-            textAlign: 'left',
+            '@xs': { textAlign: 'center' },
+            '@md': { textAlign: 'left' },
           }}
         >
           <Text type='subhead1' subText>
-            The core team is supported by a dedicated “delegates” group
-            responsible for the discussion of sensitive topics before it is put
-            to the community for a DAO vote.
-          </Text>
-          <Text type='subhead1' subText>
-            Within the #delegates group; We are commiting to complete
-            transparancy into the workings of various departments, following
-            Agile product development best practices.
+            The core team is supported by a community elected delegates and peer
+            reviewed contributors.
           </Text>
         </Flex>
       </Flex>

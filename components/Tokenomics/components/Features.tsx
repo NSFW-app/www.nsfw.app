@@ -1,10 +1,19 @@
-import { Box, Flex, Icon, Grid } from '@nsfw-app/ui'
+import { Box, Flex, Icon, Grid, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from 'components/About/components/Block/StructureBlocks'
 import { CheckIcon } from 'components/Icons/Check'
 import { Link } from 'components/Link'
 import { spaces } from 'config'
 import { GridContent, GridSection } from 'components/GridLayout'
+
+const FeatureContainer = Stitches.styled(Flex, {
+  minHeight: '70px',
+  backgroundColor: '$gray400',
+  alignItems: 'center',
+  borderRadius: '8px',
+  padding: '20px',
+  gap: '10px',
+})
 
 export const Features: React.FC = ({}) => {
   const features = [
@@ -85,23 +94,12 @@ export const Features: React.FC = ({}) => {
               }}
             >
               {features.map((text) => (
-                <Flex
-                  row
-                  key={text}
-                  css={{
-                    minHeight: '70px',
-                    backgroundColor: '$gray400',
-                    alignItems: 'center',
-                    borderRadius: '8px',
-                    padding: '20px',
-                    gap: '10px',
-                  }}
-                >
+                <FeatureContainer row key={text}>
                   <Box css={{ minWidth: '21px' }}>
                     <CheckIcon />
                   </Box>
                   <Text type='body2'>{text}</Text>
-                </Flex>
+                </FeatureContainer>
               ))}
             </Grid>
           </Flex>

@@ -1,7 +1,7 @@
 import { Flex, Span, Stitches } from '@nsfw-app/ui'
 import { Heading, Text } from 'components/Typography'
 import { InnerGrid } from './Block/Blocks'
-import { spaces } from 'config'
+import { EXTERNAL_LINKS, spaces } from 'config'
 import { BlopOrange } from '../../Icons/Blops/BlopOrange'
 import { BlopGreen } from '../../Icons/Blops/BlopGreen'
 import { BlopViolet } from '../../Icons/Blops/BlopViolet'
@@ -47,7 +47,11 @@ export const Operate = () => {
           '@lg': { order: 1 },
         }}
       >
-        <Link nounderline href='https://github.com/nsfw-app' target='_blank'>
+        <Link
+          nounderline
+          href='https://github.com/NSFW-app/www.nsfw.app'
+          target='_blank'
+        >
           <CommPortalCard>
             <BlopViolet
               css={{
@@ -59,7 +63,7 @@ export const Operate = () => {
               <Span>
                 <Text type='pill'>OPEN SOURCE</Text>
               </Span>
-              <Text type='subhead1'>Community Portal</Text>
+              <Text type='subhead1'>Community website</Text>
             </Flex>
           </CommPortalCard>
         </Link>
@@ -85,12 +89,16 @@ export const Operate = () => {
           </OperateCard>
         </Link>
 
-        <Link nounderline href='#' target='_blank'>
+        <Link
+          nounderline
+          href={EXTERNAL_LINKS.NOTION_DAO_INDEX}
+          target='_blank'
+        >
           <OperateCard>
             <BlopGreen css={{ height: '100%' }} />
             <Flex column css={{ gap: '10px', justifyContent: 'center' }}>
               <Span>
-                <Text type='pill'>OPEN SOURCE</Text>
+                <Text type='pill'>PUBLIC</Text>
               </Span>
               <Text type='subhead1'>DAO Playbook</Text>
             </Flex>
@@ -105,7 +113,8 @@ export const Operate = () => {
           textAlign: 'right',
           justifyContent: 'center',
           alignItems: 'end',
-          '@xs': { order: 1 },
+          '@xs': { order: 1, textAlign: 'center', alignItems: 'center' },
+          '@md': { textAlign: 'end', alignItems: 'end' },
           '@lg': { order: 3 },
         }}
       >
@@ -114,11 +123,12 @@ export const Operate = () => {
         </Heading>
 
         <Text type='subhead1' subText>
-          Drawing from collective leadership experience spanning 30 years we are
-          commited to creating an inclusive and transparent DAO which pioneers a
-          new type of modern workplace.
+          Drawing from decades of leadership, product management and engineering
+          experience we are establishing new ways of decentralised working.
         </Text>
-        <ArrowLink href='#'>More info</ArrowLink>
+        <ArrowLink href={EXTERNAL_LINKS.DEWORK} css={{ marginTop: spaces[2] }}>
+          More info
+        </ArrowLink>
       </Flex>
     </InnerGrid>
   )

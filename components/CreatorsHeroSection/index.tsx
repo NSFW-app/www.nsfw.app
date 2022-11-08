@@ -6,8 +6,8 @@ import { Link } from 'components/Link'
 import { NSFW_EVENT, useAnalytics } from 'lib/analytics'
 
 const HeroFlex = Stitches.styled(Flex, {
-  height: '100vh',
-  minHeight: '600px',
+  height: '55vh',
+  // minHeight: '600px',
   textAlign: 'center',
 })
 
@@ -25,19 +25,22 @@ export const CreatorsHeroSection = () => {
       <GridContent
         columns={{
           tablet: '2 / 8',
-          desktop: '2 / 13',
+          desktop: '2 / 12',
         }}
       >
         <HeroFlex center column>
-          <Heading css={{ marginBottom: spaces[3] }}>
-            Are you a creative professional?
+          <Heading
+            as='h1'
+            css={{ marginBottom: spaces[3], marginTop: spaces[5] }}
+          >
+            Are you a content creator?
           </Heading>
           <Text
             type='subhead1'
             subText
             css={{ marginBottom: spaces[4], '@md': { width: '80%' } }}
           >
-            We charge 0% commission on your content and pay out instantly.
+            We offer near-instant payments and withdrawals and 0% fees.
           </Text>
           <Flex
             fullWidth
@@ -54,19 +57,10 @@ export const CreatorsHeroSection = () => {
               uppercase
               theme='primary'
               css={buttonCss}
-              href='#features'
-            >
-              Features
-            </Link>
-            <Link
-              button
-              uppercase
-              theme='secondary'
-              css={buttonCss}
               href={APP_ROUTES.CREATOR_SIGNUP}
               onClick={() => analytics.track(NSFW_EVENT.GET_STARTED_CLICK)}
             >
-              Get started
+              Sign up
               <Icon icon='Arrow' css={{ paddingLeft: spaces[1], height: 0 }} />
             </Link>
           </Flex>
